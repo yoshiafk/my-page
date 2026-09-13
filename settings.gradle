@@ -1,0 +1,119 @@
+pluginManagement {
+	repositories {
+		maven {
+			url "https://artifactory.asia.axa-cloud.com/artifactory/ext-repository-liferay-com/"
+			credentials {
+				username = System.getProperty('artifactory_user', 'default')
+				password = System.getProperty('artifactory_password', 'default')
+			}
+		}
+		gradlePluginPortal()
+	}
+}
+
+buildscript {
+	dependencies {
+		classpath group: "biz.aQute.bnd", name: "biz.aQute.bnd", version: "5.2.0"
+		classpath(group: "com.liferay", name: "com.liferay.gradle.plugins.workspace", version: "4.0.9") {
+			exclude group: "biz.aQute.bnd", module: "biz.aQute.bnd"
+		}
+		classpath group: "net.saliman", name: "gradle-properties-plugin", version: "1.4.6"
+	}
+
+	repositories {
+		maven {
+			url "https://artifactory.asia.axa-cloud.com/artifactory/ext-repository-liferay-com/"
+			credentials {
+				username = System.getProperty('artifactory_user', 'default')
+				password = System.getProperty('artifactory_password', 'default')
+			}
+		}
+	}
+}
+
+apply plugin: "net.saliman.properties"
+
+// Comment out Liferay workspace plugin to avoid dependency issues
+// apply plugin: "com.liferay.workspace"
+
+// ============================================================================
+// MODULES - Service-based modules with subprojects
+// ============================================================================
+
+// AgencyPortal module
+include 'modules:AgencyPortal'
+include ':modules:AgencyPortal:AgencyPortal-api'
+include ':modules:AgencyPortal:AgencyPortal-service'
+include ':modules:AgencyPortal:AgencyPortal-web'
+project(':modules:AgencyPortal:AgencyPortal-api').projectDir = file('modules/AgencyPortal/AgencyPortal-api')
+project(':modules:AgencyPortal:AgencyPortal-service').projectDir = file('modules/AgencyPortal/AgencyPortal-service')
+project(':modules:AgencyPortal:AgencyPortal-web').projectDir = file('modules/AgencyPortal/AgencyPortal-web')
+
+// aii-esppk-admin module
+include 'modules:aii-esppk-admin'
+include ':modules:aii-esppk-admin:aii-esppk-admin-api'
+include ':modules:aii-esppk-admin:aii-esppk-admin-service'
+include ':modules:aii-esppk-admin:aii-esppk-admin-web'
+project(':modules:aii-esppk-admin:aii-esppk-admin-api').projectDir = file('modules/aii-esppk-admin/aii-esppk-admin-api')
+project(':modules:aii-esppk-admin:aii-esppk-admin-service').projectDir = file('modules/aii-esppk-admin/aii-esppk-admin-service')
+project(':modules:aii-esppk-admin:aii-esppk-admin-web').projectDir = file('modules/aii-esppk-admin/aii-esppk-admin-web')
+
+// MypageAdminProduct module
+include 'modules:MypageAdminProduct'
+include ':modules:MypageAdminProduct:MypageAdminProduct-api'
+include ':modules:MypageAdminProduct:MypageAdminProduct-service'
+include ':modules:MypageAdminProduct:MypageAdminProduct-web'
+project(':modules:MypageAdminProduct:MypageAdminProduct-api').projectDir = file('modules/MypageAdminProduct/MypageAdminProduct-api')
+project(':modules:MypageAdminProduct:MypageAdminProduct-service').projectDir = file('modules/MypageAdminProduct/MypageAdminProduct-service')
+project(':modules:MypageAdminProduct:MypageAdminProduct-web').projectDir = file('modules/MypageAdminProduct/MypageAdminProduct-web')
+
+// MypageLeads module
+include 'modules:MypageLeads'
+include ':modules:MypageLeads:MypageLeads-api'
+include ':modules:MypageLeads:MypageLeads-service'
+include ':modules:MypageLeads:MypageLeads-web'
+project(':modules:MypageLeads:MypageLeads-api').projectDir = file('modules/MypageLeads/MypageLeads-api')
+project(':modules:MypageLeads:MypageLeads-service').projectDir = file('modules/MypageLeads/MypageLeads-service')
+project(':modules:MypageLeads:MypageLeads-web').projectDir = file('modules/MypageLeads/MypageLeads-web')
+
+// MypageUser module
+include 'modules:MypageUser'
+include ':modules:MypageUser:MypageUser-api'
+include ':modules:MypageUser:MypageUser-service'
+include ':modules:MypageUser:MypageUser-web'
+project(':modules:MypageUser:MypageUser-api').projectDir = file('modules/MypageUser/MypageUser-api')
+project(':modules:MypageUser:MypageUser-service').projectDir = file('modules/MypageUser/MypageUser-service')
+project(':modules:MypageUser:MypageUser-web').projectDir = file('modules/MypageUser/MypageUser-web')
+
+// SmartPay module
+include 'modules:SmartPay'
+include ':modules:SmartPay:SmartPay-api'
+include ':modules:SmartPay:SmartPay-service'
+include ':modules:SmartPay:SmartPay-web'
+project(':modules:SmartPay:SmartPay-api').projectDir = file('modules/SmartPay/SmartPay-api')
+project(':modules:SmartPay:SmartPay-service').projectDir = file('modules/SmartPay/SmartPay-service')
+project(':modules:SmartPay:SmartPay-web').projectDir = file('modules/SmartPay/SmartPay-web')
+
+// SmartTravelInternational module
+include 'modules:SmartTravelInternational'
+include ':modules:SmartTravelInternational:SmartTravelInternational-web'
+project(':modules:SmartTravelInternational:SmartTravelInternational-web').projectDir = file('modules/SmartTravelInternational/SmartTravelInternational-web')
+
+// ============================================================================
+// MODULES - Standalone modules
+// ============================================================================
+include 'modules:aii-esppk-web'
+include 'modules:Asmik-web'
+include 'modules:Pet'
+include 'modules:SmartActive'
+include 'modules:SmartTravelInternational2'
+
+// ============================================================================
+// THEMES
+// ============================================================================
+include 'themes:agency-theme'
+include 'themes:aii-esppk-theme'
+include 'themes:myPage-Product-V1-theme'
+include 'themes:myPage-Product-V2-theme'
+include 'themes:mypage-theme'
+include 'themes:payment-theme'

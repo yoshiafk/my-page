@@ -1,0 +1,11 @@
+{
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "themes\\agency-theme",
+            "themes\\myPage-Product-V1-theme",
+            "themes\\myPage-Product-V2-theme",
+            "themes\\mypage-theme"
+        ]
+    }
+}
