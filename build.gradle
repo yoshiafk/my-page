@@ -1,0 +1,174 @@
+// Check GETTING_STARTED.markdown for information regarding usage.
+
+// Gradle imports must come before any executable code; bundle task uses Zip.
+
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://artifactory.asia.axa-cloud.com/artifactory/ext-repository-liferay-com/'
+            credentials {
+                username = System.getProperty('artifactory_user') ?: (project.hasProperty('artifactory_user') ? project.artifactory_user : 'default')
+                password = System.getProperty('artifactory_password') ?: (project.hasProperty('artifactory_password') ? project.artifactory_password : 'default')
+            }
+        }
+        maven {
+            url 'https://artifactory.asia.axa-cloud.com/artifactory/axa-magi-id_aii-prod-maven-release/'
+            credentials {
+                username = System.getProperty('artifactory_user') ?: (project.hasProperty('artifactory_user') ? project.artifactory_user : 'default')
+                password = System.getProperty('artifactory_password') ?: (project.hasProperty('artifactory_password') ? project.artifactory_password : 'default')
+            }
+        }
+        // mavenCentral() removed - Jenkins is firewalled from public internet
+    }
+    dependencies {
+        classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:4.4.1.3373'
+    }
+}
+
+plugins {
+    id "jacoco"
+}
+
+apply plugin: 'org.sonarqube'
+
+ext {
+    mockitoVersion = '5.14.2'
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'jacoco'
+
+    // Ensure Liferay-specific configurations exist for modules that use them
+    configurations.maybeCreate('cssBuilder')
+    configurations.maybeCreate('compileInclude')
+    
+    // Make compileInclude dependencies available at compile-time
+    // compileInclude is used to bundle external JARs in OSGi modules (like gson, owasp-sanitizer)
+    // Without Liferay workspace plugin, we must manually wire implementation to include compileInclude deps
+    configurations.implementation.extendsFrom(configurations.compileInclude)
+    
+    repositories {
+        maven {
+            url 'https://artifactory.asia.axa-cloud.com/artifactory/ext-repository-liferay-com/'
+            credentials {
+                username = System.getProperty('artifactory_user') ?: (project.hasProperty('artifactory_user') ? project.artifactory_user : 'default')
+                password = System.getProperty('artifactory_password') ?: (project.hasProperty('artifactory_password') ? project.artifactory_password : 'default')
+            }
+            allowInsecureProtocol = false
+        }
+
+        maven {
+            url 'https://artifactory.asia.axa-cloud.com/artifactory/axa-magi-id_aii-prod-maven-release/'
+            credentials {
+                username = System.getProperty('artifactory_user') ?: (project.hasProperty('artifactory_user') ? project.artifactory_user : 'default')
+                password = System.getProperty('artifactory_password') ?: (project.hasProperty('artifactory_password') ? project.artifactory_password : 'default')
+            }
+            allowInsecureProtocol = false
+        }
+        // mavenCentral() removed - Jenkins is firewalled from public internet
+    }
+    
+    jacoco {
+        toolVersion = "0.8.11"
+    }
+    
+    tasks.withType(Test).configureEach {
+        useJUnitPlatform()
+        finalizedBy jacocoTestReport
+        // Enable XML report for SonarQube
+        jacoco {
+            destinationFile = file("${buildDir}/jacoco/test.exec")
+        }
+    }
+    
+    tasks.withType(JacocoReport).configureEach {
+        dependsOn test
+        reports {
+            xml.required = true
+            html.required = true
+        }
+    }
+}
+
+// Ensure sonar task depends on test reports
+tasks.named('sonar') {
+    dependsOn subprojects.collect { it.tasks.withType(Test) }
+}
+
+subprojects {
+    // Add Liferay Service Builder DSL extension methods
+    // These modules have service.xml and use buildService { apiDir = "..." }
+    // Instead of applying full plugin, provide minimal DSL support
+    ext {
+        buildService = { Closure closure ->
+            // No-op: accept the configuration closure but don't execute Service Builder tasks
+            // The generated code already exists in the repo (committed by developers)
+        }
+    }
+    
+    configurations.all {
+        resolutionStrategy {
+            eachDependency { details ->
+                if (details.requested.group == 'com.liferay.portal' && details.requested.name == 'release.dxp.api') {
+                    details.useVersion '7.3.10.1'   
+                }
+                if (details.requested.group == 'org.json' && details.requested.name == 'json') {
+                    details.useVersion '20180813'
+                }
+                if (details.requested.group == 'org.mockito' && [
+                        'mockito-core',
+                        'mockito-junit-jupiter'
+                ].contains(details.requested.name)) {
+                    details.useVersion rootProject.ext.mockitoVersion
+                }
+            }
+        }
+        // Exclude corrupted CSS Builder JAR from classpath analysis
+        exclude group: 'com.liferay', module: 'com.liferay.css.builder'
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "aii.mypage-liferay"
+        property "sonar.host.url", System.getenv("SONAR_HOST_URL") ?: "http://localhost:9000"
+        property "sonar.exclusions", "**/build/**,**/gradle/**,**/TestResults/**,**/src/test/**,**/*Test.java,**/*IT.java,**/node_modules/**,**/dist/**,**/*.min.js,**/*.min.css,**/*.map,**/target/**,**/*-api/**/src/main/java/**,**/modules/**/**/service/base/**,**/modules/**/**/service/persistence/**,**/themes/**/src/**/dist/**,**/themes/**/node_modules/**"
+        property "sonar.java.binaries", "**/build/classes"
+        property "sonar.gradle.skipCompile", "true"
+        property "sonar.test.exclusions", "**/src/test/**,**/*Test.java,**/*IT.java"
+        property "sonar.coverage.jacoco.xmlReportPaths", [
+            "**/build/reports/jacoco/test/jacocoTestReport.xml",
+            "**/build/reports/jacoco/jacocoTestReport.xml",
+            "**/build/reports/jacoco/**/*.xml"
+        ].join(',')
+    }
+}
+
+// -----------------------------------------------------------------------------
+// convenience task for creating a release bundle
+// -----------------------------------------------------------------------------
+// Use via `./gradlew assemble releaseBundle` or
+// `./gradlew -PreleaseVersion=1.2.3 releaseBundle`.
+
+// The version can be overridden via `-PreleaseVersion` on the command line.
+// (import statement already appears at the top of this file)
+
+def releaseVersion = project.findProperty('releaseVersion') ?: 'local'
+
+task releaseBundle(type: Zip) {
+    description = "Collects all war/jar outputs from subprojects into a single zip file."
+    group = "distribution"
+    dependsOn subprojects.collect { it.tasks.matching { t -> t.name in ['jar','war'] } }
+
+    from (fileTree(dir: rootDir, include: '**/build/libs/*.{jar,war}')) {
+        // preserve relative paths so names don't collide
+        eachFile { fileCopyDetails ->
+            fileCopyDetails.path = fileCopyDetails.path.replace('build/libs/', '')
+        }
+        includeEmptyDirs = false
+    }
+    archiveBaseName.set("my-page-liferay-${releaseVersion}")
+    destinationDirectory.set(file("${buildDir}/release"))
+}
