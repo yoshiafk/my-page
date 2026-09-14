@@ -1,0 +1,561 @@
+.body-blue {
+  @apply bg-[#4976ba];
+}
+
+.body-smoke {
+  @apply bg-[#fafafa];
+}
+
+.is-overflow {
+  @apply overflow-hidden;
+}
+
+.text-error {
+  @apply text-[#f48989];
+}
+
+.mt-10px {
+  @apply mt-[10px];
+}
+
+.mb-5px {
+  @apply mb-[5px];
+}
+
+.border-error {
+  @apply border-[#f48989];
+}
+
+.alert-axa-danger {
+  @apply text-white bg-[#f48989] border-[#efb9c2];
+}
+
+.alert-axa-success {
+  @apply text-white bg-[#5aca75] border-[#b9efc9];
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+
+.fade:not(.show) {
+  opacity: 0;
+}
+
+sup {
+  @apply text-[14px] text-axa-red-error ml-[2px] inline-block align-[-4px];
+}
+
+/* Container */
+.container-axa {
+  @apply container mx-auto px-2 xl:px-[30px] 2xl:px-[15px];
+}
+
+/* Button */
+.btn {
+  @apply text-white text-[14px] uppercase tracking-[1px] p-[12px_10px_10px_10px] xl:p-[12px_15px_10px_18px] border-transparent transition-[0.4s];
+}
+
+.btn-sm {
+  @apply py-3 px-4 text-xs rounded-none;
+}
+
+.btn {
+  &.btn--dark-blue {
+    @apply bg-axa-blue-400 relative overflow-hidden transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-axa-blue-100 before:duration-300 before:ease-out hover:before:h-40 hover:before:w-full hover:before:opacity-80;
+  }
+
+  &.btn--green {
+    @apply bg-axa-green-500 relative overflow-hidden transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:bg-green-600 before:duration-300 before:ease-out hover:before:h-40 hover:before:w-full hover:before:opacity-80;
+  }
+
+  &.btn--white-outline {
+    @apply text-white bg-transparent border border-white relative overflow-hidden transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:bg-white before:duration-300 before:ease-out hover:text-axa-blue-300 hover:before:h-40 hover:before:w-full hover:before:opacity-100;
+  }
+
+  &.btn--dark-blue-outline {
+    @apply text-axa-blue-400 bg-white border border-axa-blue-400 relative overflow-hidden transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:bg-axa-blue-300 before:duration-300 before:ease-out hover:text-white hover:before:h-40 hover:before:w-full hover:before:opacity-100;
+  }
+
+  &.btn--sienna-outline {
+    @apply text-axa-sienna-400 bg-white border border-axa-sienna-400 relative overflow-hidden transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:bg-axa-sienna-300 before:duration-300 before:ease-out hover:text-white hover:before:h-40 hover:before:w-full hover:before:opacity-100;
+  }
+
+  &.btn--sienna {
+    @apply bg-axa-sienna-400 relative overflow-hidden transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-axa-sienna-200 before:duration-300 before:ease-out hover:before:h-40 hover:before:w-full hover:before:opacity-80;
+  }
+
+  &.btn--disabled {
+    @apply pointer-events-none cursor-not-allowed text-[#999999] bg-axa-grey-400 relative overflow-hidden transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-axa-grey-500 before:duration-300 before:ease-out hover:before:h-40 hover:before:w-full hover:before:opacity-80;
+  }
+
+  &.btn--grey {
+    @apply text-axa-grey-800 bg-axa-grey-300 relative overflow-hidden transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:bg-axa-grey-400 before:duration-300 before:ease-out hover:before:h-40 hover:before:w-full hover:before:opacity-80;
+  }
+}
+
+.btn-date {
+  @apply text-white uppercase text-[12px] p-[8px_16px];
+  &.btn-apply {
+    @apply bg-axa-blue-400;
+  }
+  &.btn-cancel {
+    @apply text-axa-blue-400;
+  }
+}
+
+.btn-cancel-create-debitur,
+.btn-cancel-edit-debitur {
+  @apply hover:underline;
+}
+
+.btn-create-debitur,
+.btn-edit-debitur {
+  & svg {
+    & path {
+        @apply stroke-white;
+    }
+  }
+}
+
+/* Dashboard */
+.dashboard {
+  @apply bg-[#FAFAFA];
+  & .dashboard__home,
+  & .dashboard__success,
+  & .dashboard__failed,
+  & .dashboard__notfound {
+    @apply pt-[4rem] lg:pt-0 grid;
+    & .dashboard__home--inner,
+    & .dashboard__success--inner,
+    & .dashboard__failed--inner,
+    & .dashboard__notfound--inner {
+      @apply mx-auto;
+    }
+    & .p-bottom {
+      @apply m-[10px_0px_20px_0px];
+    }
+    h1 {
+      @apply font-publico font-bold;
+    }
+  }
+	& .dashboard__debitur,
+  & .dashboard__monitoring {
+		@apply pt-[95px] md:pt-[33px] xl:pt-[45px] md:pb-[33px] xl:pb-[40px];
+	}
+	& .dashboard__debitur,
+  & .dashboard__monitoring {
+		& h1 {
+			@apply text-[32px] font-publico font-bold text-axa-grey-800 mb-[20px] lg:mb-0;
+		}
+	}
+}
+
+/* Table */
+.table-wrapper {
+  @apply max-w-[500px] sm:max-w-full md:max-w-full lg:max-w-full xl:max-w-full mx-auto overflow-x-auto;
+}
+
+table.dataTable {
+  @apply border-collapse;
+}
+
+table.dataTable thead th {
+  @apply bg-white text-[12px] text-[#757575] xl:border-t xl:border-t-axa-grey-300 border-b border-b-axa-sienna-400 p-[15px_10px_12px_10px] uppercase font-semibold !whitespace-nowrap xl:!whitespace-normal;
+}
+
+table.dataTable thead th:last-child {
+  @apply border-r border-r-axa-grey-300;
+}
+
+table.dataTable tbody td {
+  @apply bg-white text-[11px] text-[#343C3D] font-semibold tracking-[0.866px] uppercase border-b border-[#dddddd] p-[15px_10px_15px_10px] transition-all;
+}
+
+table.dataTable tbody td:nth-child(1) {
+  @apply border-l border-l-axa-grey-300 before:bg-white before:absolute before:top-0 before:left-[-1px] before:w-[1px] before:h-full;
+}
+
+table.dataTable tbody td:nth-child(4) {
+  @apply tracking-[0px] font-semibold normal-case;
+}
+
+table.dataTable tbody td:last-child {
+  @apply border-r border-r-axa-grey-300;
+}
+
+table.dataTable tbody tr:nth-child(even) {
+  @apply bg-[#EFEFEF];
+}
+
+.dataTables_wrapper .dataTables_info {
+  @apply text-gray-500 text-sm pt-0 hidden xl:block;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  @apply pt-0;
+}
+
+.dataTables_wrapper .dataTables_length {
+  @apply hidden xl:block;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  @apply border border-gray-300 rounded px-2 py-1 text-gray-700;
+}
+
+table.dataTable.no-footer {
+  @apply border-b-0;
+}
+
+.table {
+  @apply relative w-full table-auto xl:table-fixed !whitespace-nowrap xl:!whitespace-normal before:bg-axa-grey-300 before:w-full before:h-[1px] before:absolute before:top-0 before:left-0 before:xl:hidden before:z-[100];
+  & label {
+      @apply text-[12px];
+  }
+  & thead {
+    & td {
+        @apply bg-white text-[12px] text-[#757575] xl:border-t xl:border-t-axa-grey-300 border-b border-b-axa-sienna-400 p-[15px_10px_12px_10px] uppercase font-semibold !whitespace-nowrap xl:!whitespace-normal;
+        & .checkbox-custom-wrapper {
+            & span {
+                margin-left: 5px;
+            }
+        }
+    }
+    & td:nth-child(1) {
+        @apply relative xl:border-l xl:border-l-axa-grey-300 before:bg-axa-grey-300 before:absolute before:top-0 before:left-[-1px] before:w-[1px] before:h-full xl:before:hidden after:bg-axa-red-error after:absolute after:w-full after:h-[1px] after:bottom-[-1px] after:left-0 xl:after:hidden;
+    }
+    & td:last-child {
+        @apply border-r border-r-axa-grey-300;
+    }
+    & tr {
+        @apply [&>*:nth-child(1)]:sticky xl:[&>*:nth-child(1)]:static [&>*:nth-child(1)]:left-[0px] [&>*:nth-child(1)]:z-50;
+    }
+  }
+  & tbody,
+  & tfoot {
+    & tr {
+        & td {
+            @apply bg-white text-[11px] text-[#343C3D] font-semibold tracking-[0.866px] uppercase border-b border-[#dddddd] p-[15px_10px_15px_10px] transition-all;
+        }
+        & td:nth-child(1) {
+            @apply border-l border-l-axa-grey-300 before:bg-white before:absolute before:top-0 before:left-[-1px] before:w-[1px] before:h-full;
+        }
+        & td:nth-child(4) {
+            @apply tracking-[0px] font-semibold normal-case;
+        }
+        & td:last-child {
+            @apply border-r border-r-axa-grey-300;
+        }
+        &.expire {
+            & td {
+                @apply text-[#999999];
+            }
+        }
+        &.approve {
+            & td {
+                @apply text-axa-green-500;
+            }
+        }
+    }
+    & tr {
+        @apply [&>*:nth-child(1)]:bg-white [&>*:nth-child(3)]:font-normal [&>*:nth-child(3)]:normal-case [&>*:nth-child(3)]:tracking-normal [&>*:nth-child(3)]:text-[12px] even:bg-[#EFEFEF] [&>*:nth-child(1)]:sticky  xl:[&>*:nth-child(1)]:static [&>*:nth-child(1)]:left-[0px];
+    }
+    & tr:nth-child(even) td {
+        @apply bg-[#EFEFEF];
+    }
+  }
+}
+
+.debitur,
+.monitoring {
+	& .debitur__settings,
+  & .monitoring__settings {
+		& .table {
+			& thead {
+				& th {
+					@apply text-[12px] tracking-[1px] border-t border-t-transparent border-b-[1px] border-r-transparent p-[15px];
+				}
+        & th:nth-child(1) {
+          @apply sticky left-[0px] z-50 xl:relative;
+        }
+				& td:nth-child(1) {
+					@apply border-l border-l-transparent;
+				}
+			}
+			& tbody,
+			& tfoot {
+				& td {
+					@apply text-[12px] p-[15px];
+				}
+				& td:nth-child(1) {
+					@apply normal-case tracking-normal;
+				}
+				& td:nth-child(1) {
+					@apply border-l border-l-transparent;
+				}
+				& td:last-child {
+					@apply border-r border-r-transparent;
+				}
+			}
+			& tfoot {
+				& tr.total {
+					& td {
+						@apply uppercase bg-axa-ocean-200 text-white;
+					}
+				}
+			}
+		}
+		& .debitur__settings--table,
+    & .monitoring__settings--table {
+			@apply mt-8;
+		}
+    & .debitur__settings--table .arrow-up,
+    & .monitoring__settings--table .arrow-up {
+				@apply cursor-pointer text-axa-grey-400 text-[12px] hover:text-axa-blue-400 transition ease-in block leading-[0px] relative top-[2px];
+		}
+    & .debitur__settings--table .arrow-bottom,
+    & .monitoring__settings--table .arrow-bottom {
+				@apply cursor-pointer text-axa-grey-400 text-[12px] hover:text-axa-blue-400 transition ease-in block leading-[0px] relative -top-[2px];
+		}
+    & .debitur__settings--table h1,
+    & .monitoring__settings--table h1 {
+				@apply mb-[20px];
+		}
+	}
+	& .debitur__settings,
+  & .monitoring__settings { 
+		& .table {
+			@apply table-auto;
+			& td {
+				& .btn {
+					@apply text-[12px] font-normal p-[10px_10px_8px_15px];	
+					& svg {
+						@apply stroke-white;
+					}
+				}
+			}
+		}
+	}
+	& .debitur__settings,
+  & .monitoring__settings {
+		& tr.disabled {
+			& td {
+				@apply text-axa-grey-700;
+				& .btn--disabled {
+					& svg {
+						@apply stroke-axa-grey-700;
+					} 
+				}
+			}
+		}
+	}
+	& .debitur__settings,
+  & .monitoring__settings {
+		& .table {
+			& tbody {
+				& tr {
+					@apply [&>*:nth-child(3)]:font-semibold;
+				}
+			}
+		}
+	}
+}
+
+/* Input */
+label {
+  @apply font-semibold text-axa-grey-600 text-[16px] mb-[10px] block;
+}
+
+#username,
+#password {
+  &.error-text {
+    @apply border border-[#f48989];
+  }
+}
+
+.input-text-wrapper {
+  & span.error-text {
+    @apply text-[#f48989] font-normal text-[13px] mt-[4px];
+  }
+}
+
+.input-control {
+  &.error-text {
+      @apply border !border-axa-red-error;
+  }
+}
+
+.input-control {
+  @apply p-[14px] w-full rounded-none text-axa-grey-800 uppercase outline-none placeholder:font-normal placeholder:text-[#bababa] placeholder:normal-case;
+  &.input-control--outline {
+      @apply border border-axa-grey-400 focus:outline-2 focus:outline focus:outline-transparent;
+  }
+}
+
+.input-date {
+  @apply bg-[url('../../../images/icon_calendar.svg')] bg-no-repeat bg-[length:22px] bg-[right_15px_center];
+}
+
+/* Modal */
+.modal-backdrop {
+  @apply fixed w-[100vw] h-full bg-black/40 top-0 left-0 z-[1050] backdrop-blur;
+  &.fade {
+    @apply opacity-0;
+  }
+  &.show {
+    @apply opacity-[1];
+  }
+}
+
+.modal-backdrop-alt {
+	@apply fixed w-[100vw] h-full bg-black/40 top-0 left-0 z-20 backdrop-blur
+}
+
+.modal-max-w-400px {
+  @apply max-w-[400px];
+}
+
+.modal-max-w-430px {
+  @apply max-w-[430px];
+}
+
+.modal-max-w-510px {
+  @apply max-w-[510px];
+}
+
+.modal-max-w-560px {
+  @apply max-w-[560px];
+}
+
+.modal-max-w-676px {
+  @apply max-w-[676px];
+}
+
+.modal-max-w-760px {
+  @apply max-w-[760px];
+}
+
+.modal-max-w-1140px {
+  @apply max-w-[1140px];
+}
+
+.modal-sppk {
+  @apply p-[1rem] !important;
+}
+
+.modal-sppk {
+  @apply fixed outline-none z-[1055] top-2/4 left-2/4 translate-y-[-50%] translate-x-[-50%];
+  & .modal-sppk-dialog {
+    @apply mx-auto relative;
+  }
+  & .modal-sppk-content {
+    @apply bg-white w-full h-full;
+  }
+  & .modal-sppk-header {
+    @apply border-b border-axa-grey-200;
+    & h1 {
+        @apply font-publico font-bold text-axa-grey-800 text-[24px] lg:text-[32px];
+    }
+  }
+  & .modal-sppk-footer {
+    @apply flex justify-between border-axa-grey-300 border-t p-[20px_30px] mt-12;
+  }
+  &.fade {
+    & .modal-sppk-dialog {
+      transition: transform 0.3s ease-out;
+      transform: translate(0, -50px);
+    }
+  }
+  &.show {
+    & .modal-sppk-dialog {
+      transform: none;
+    }
+  }
+}
+
+.modal-sppk {
+  @apply h-full overflow-x-hidden overflow-y-auto;
+}
+
+.modal-sppk-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 0px * 2);
+}
+
+.modal-sppk {
+  & span.error-text,
+  & span.note-text {
+    @apply !text-axa-red-error font-normal text-[13px] mt-[4px];
+  }
+  & .modal-sppk-body {
+    & p {
+      @apply mb-6;
+    }
+    & .accordion-button__right {
+      & p {
+        @apply mb-0;
+      }
+    }
+  }
+}
+
+#ModalDebitur,
+#ModalEditDebitur {
+  & .modal-sppk-header {
+    @apply p-[18px_20px];
+  }
+	& .modal-sppk-footer {
+		& .btn-cancel-create-debitur,
+    & .btn-cancel-edit-debitur {
+			@apply text-axa-blue-400 font-semibold;
+		}
+	}
+}
+
+#ModalDebitur,
+#ModalEditDebitur { 
+	& .modal-sppk-footer {
+		@apply mt-0;
+	}
+}
+
+/* Accordion */
+.accordion {
+	& .collapsing {
+		height: 0;
+		transition: height 0.35s ease;
+		overflow: hidden;
+	}
+	& .collapse:not(.show) {
+		display: none;
+	}
+	& .collapse {
+		visibility: visible;
+	}
+}
+
+.accordion-button {
+    @apply bg-[#3A5E94] text-[13px] tracking-[1px] leading-relaxed text-white w-full text-left px-6 py-6 relative uppercase font-bold;
+	transition: 0.4s all;
+	overflow-anchor: none;
+	cursor: pointer;
+    & .fa-chevron-down {
+        @apply right-8 text-[13px];
+		transition: transform 0.4s ease-in-out;
+		backface-visibility: hidden;
+		transform: rotate(0deg);
+        margin-top: 5px;
+    }
+    &[aria-expanded="false"] {
+		@apply border-b border-b-white;
+	}
+	&[aria-expanded="true"] {
+        @apply border-b border-b-axa-sienna-400;
+		& .fa-chevron-down {
+		    transform: rotate(180deg);
+		}
+	}
+}
+

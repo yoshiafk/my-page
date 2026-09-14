@@ -1,0 +1,10 @@
+Bundle-Name: aii-esppk-admin-api
+Bundle-SymbolicName: com.aii.esppk.admin.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.aii.esppk.admin.exception,\
+	com.aii.esppk.admin.model,\
+	com.aii.esppk.admin.service,\
+	com.aii.esppk.admin.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../aii-esppk-admin-service/service.xml

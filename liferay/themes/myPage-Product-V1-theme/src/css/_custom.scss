@@ -1,0 +1,182 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+.portlet {
+	margin: 0px;
+}
+.portlet-layout{
+	.portlet-header {
+		margin-bottom: 0px;
+	}
+	.portlet-decorate{
+		.portlet-content{
+			background: #FAFAFA;
+			border-color: transparent;
+			border-style: none;
+			border-width: 0px;
+			padding: 0;
+			.portlet-header{
+				margin: 0;
+			}
+		}
+	}
+}
+
+select.form-control:not([multiple]):not([size]), 
+.form-control-select {
+	/*background-image: none;*/
+}
+
+#wrapper {
+	padding: 0px;
+}
+
+// custom input
+.form-radio-input {
+    &.custom-img {
+        label {
+            margin: 0px;
+            padding: 0 10px !important;
+        }
+    }
+    &.custom {
+        label {
+            &::before {
+                width: 20px !important;
+                height: 20px !important;
+            }
+        }
+    }
+    &.custom,
+    &.custom-img {
+        width: auto;
+        height: auto;
+            
+        label {
+            position: relative;
+            margin: 0px;
+            padding-left: 30px;
+            width: auto;
+            height: auto;
+
+            &.box-radio {
+                &::before,
+                &::after {
+                    border: none;
+                    background: none !important;
+                }
+            }
+        }
+    }
+}
+
+.modal {
+	z-index: 2200;
+}
+
+.custom-modal {
+    // modal blue
+    &.modal-dark-blue {
+        .modal-content {
+            .modal-header {
+                .modal-title {
+                    color: #fff;
+                }
+            }
+            .modal-body {
+                table {
+                    th,
+                    td {
+                        background-color: transparent;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    
+    .modal-content {
+        .modal-header {
+            .close {
+                top: 18px;
+                right: 22px;
+            }
+        }
+        .modal-body {
+            .wrap-select {
+                select {
+                    background-color: transparent;
+                    color: #fff;
+                    border-color: #fff;
+                }
+                .icon {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+p {
+	margin: 0px;
+}
+
+.has-error select.form-control:not([multiple]):not([size]) {
+	background-image: none;
+}
+
+.modal-backdrop {
+	z-index: 2000;
+}
+
+.ui-datepicker {
+	.ui-datepicker-header {
+		&.ui-widget-header {
+			border: none;
+		    background: #154a7f;
+		    color: #fff;
+		    padding: 8px 0;
+		}
+	}
+	
+	.ui-datepicker-calendar {
+		td {
+			.ui-state-default {
+				line-height: 15px;
+			}
+		}
+	}
+    
+    select {
+    	&.ui-datepicker-month, &.ui-datepicker-year {
+    		background: #154a7f;
+    	}
+    }
+}
+
+.popover {
+	font-family: inherit;
+	border: none;
+	border-radius: 0;
+	
+	.popover-body {
+		border-radius: 0;
+	}
+}
+
+/* Change background color for info notif from yellow to blue */
+.notif {
+    width: 575px;
+    top: 60px;
+    .custom-notif-container {
+        &.info {
+            background-color: #4976BA;
+        }
+    }
+
+}

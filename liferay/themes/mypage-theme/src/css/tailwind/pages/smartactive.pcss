@@ -1,0 +1,1118 @@
+.sa-label {
+  @apply text-axa-grey-600 font-semibold;
+}
+
+.main-smartactive {
+  @apply my-16;
+}
+
+.main-smartactive-inner {
+  @apply grid grid-cols-12 gap-8 lg:gap-16;
+  & .main-smartactive-inner__left {
+    @apply col-span-12 lg:col-span-3;
+  }
+  & .main-smartactive-inner__right {
+    @apply col-span-12 lg:col-span-9;
+  }
+}
+
+.sa-product-excellence,
+.sa-key-benefits,
+.sa-faq,
+.sa-download {
+  & h1 {
+    @apply text-4xl mb-6;
+  }
+}
+
+.sa-product-excellence {
+  & .product {
+    @apply mb-10;
+    & .display-flex-responsive {
+      @apply block xl:flex;
+    }
+    & strong {
+      @apply text-[22px] mb-2 block font-sourcesans font-semibold text-justify;
+    }
+    & p {
+      @apply text-justify;
+    }
+    & img {
+      @apply w-[200px] xl:w-[450px] m-[0px_auto_30px_auto] xl:m-[0px_auto_0px_auto];
+    }
+  }
+
+  & .card-product-excellence-wrapper {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-5;
+    & .card-product-excellence {
+      @apply bg-white text-[14px] text-center border border-[#EEEEEE] px-16 py-10;
+      & img {
+        @apply mx-auto mt-4 w-[85px] h-[85px] object-contain;
+      }
+      p {
+        @apply font-semibold mt-4;
+      }
+      & h3 {
+        @apply text-axa-black-400 font-sourcesans font-semibold text-xl mt-14 mb-2;
+      }
+    }
+  }
+}
+
+.sa-key-benefits,
+.sa-faq,
+.sa-download {
+  @apply mt-12;
+}
+
+.sa-key-benefits {
+  & .panel-table {
+    @apply bg-white border border-[#EEEEEE] mb-4;
+    & .panel-table-header {
+      @apply border-b border-b-[#EEEEEE] p-6;
+      & h3 {
+        @apply text-axa-bluesky-900 font-sourcesans font-semibold text-[28px];
+      }
+    }
+    & .panel-table-body {
+      @apply p-6;
+      & .info-link {
+        @apply ml-0 bg-[#F15A23] hover:bg-axa-blue-400 text-[12px] text-white text-center leading-[16px] w-[16px] h-[16px] rounded-full inline-block transition-all;
+      }
+
+      & .table-axa {
+        @apply w-full table table-auto lg:table-fixed;
+        & strong {
+          @apply font-sourcesans text-[#343C3D];
+        }
+        & tbody {
+          & td {
+            @apply text-[16px] p-3;
+            & span {
+              @apply inline mr-2;
+            }
+            &:nth-child(2) {
+              @apply tracking-[1px] leading-[28px] lg:align-top;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .panel-bg-color {
+    @apply bg-[#F15A23] text-white mt-8;
+    & .panel-bg-header {
+      @apply p-6 border-b border-b-white;
+      & h3 {
+        @apply font-sourcesans font-semibold text-[28px];
+      }
+    }
+    & .panel-bg-color-body {
+      @apply p-6;
+      & li {
+        @apply text-[16px];
+      }
+    }
+  }
+}
+
+.sa-faq {
+  & .accordion-item {
+    @apply border-y-0;
+  }
+  & .sa-accordion-button {
+    @apply bg-[#3A5E94];
+  }
+  & .sa-accordion-body {
+    @apply text-[#343C3D] bg-[#EAF0FA] p-[25px_25px];
+    & p {
+      @apply text-[15px];
+    }
+    & ul {
+      @apply pl-4 list-disc;
+      & li {
+        @apply border-t border-axa-grey-300;
+      }
+    }
+    & ol {
+      @apply pl-4 list-decimal;
+      & li {
+        @apply mb-3;
+      }
+    }
+  }
+}
+
+.sa-download {
+  & .icon {
+    @apply w-[40px] h-[40px] inline-block;
+    &.file-pdf {
+      @apply bg-[url('../../../images/icon_pdf.png')] bg-no-repeat bg-contain bg-center;
+    }
+  }
+  & .btn {
+    @apply tracking-[1px];
+  }
+  & table.table-axa {
+    @apply bg-white w-full table-auto xl:table-fixed;
+    & tbody {
+      & tr {
+        @apply border-y border-y-[#CCCCCC];
+        &:last-child {
+          @apply border-y border-y-transparent;
+        }
+      }
+      & td {
+        @apply text-black px-6 py-4 align-middle;
+        & p {
+          @apply tracking-normal;
+          &.date {
+            @apply font-semibold;
+          }
+        }
+        & .btn {
+          @apply font-semibold m-[0_0_0_auto] p-[10px_20px] flex gap-1 justify-center lg:inline-block;
+          & svg {
+            @apply lg:inline-block self-center;
+          }
+        }
+        &:nth-child(1) {
+          @apply w-[90px];
+        }
+        &:nth-child(3) {
+          @apply text-[#757575] lg:text-right;
+        }
+      }
+    }
+  }
+}
+
+.sa-stepper-wrapper {
+  @apply lg:w-[80%] m-[30px_auto_0px_0] lg:m-[50px_auto_0] flex justify-between mb-5;
+}
+
+.sa-stepper-item {
+  @apply relative flex flex-col items-center flex-1 before:absolute before:content-[""] before:w-full before:z-[2] before:border-b-2 before:border-b-[#ccc] before:border-solid before:-left-2/4 before:top-14 lg:before:top-11 after:top-8 after:absolute after:content-[""] after:w-full after:z-[2] after:border-b-2 after:border-b-[#ccc] after:border-solid after:left-2/4 first:before:content-none last:after:content-none;
+  > div {
+    @apply mb-[10px];
+  }
+}
+
+.sa-stepper-item .step-counter {
+  @apply relative z-[5] flex justify-center items-center w-8 h-8 mb-1.5 rounded-[50%] text-white font-bold;
+  background: #4976ba;
+}
+
+.sa-stepper-item.active {
+  @apply font-bold text-axa-sienna-300;
+}
+
+.sa-stepper-item.completed {
+  @apply font-bold text-axa-bluesky-900;
+}
+
+.sa-stepper-item:not(.active):not(.completed) {
+  @apply font-semibold text-gray-500;
+}
+
+.sa-stepper-item.completed .step-counter {
+  @apply text-axa-blue-500;
+  background: #4976ba;
+}
+
+.sa-stepper-item::after {
+  @apply absolute content-[""] w-full z-[3] border-b-4 border-b-[#4976ba] border-solid left-2/4 top-[52px] lg:top-11;
+}
+
+.sa-stepper-item.active .step-counter::before {
+  @apply bg-axa-sienna-300 border-2 border-white;
+}
+
+.sa-stepper-item.completed .step-counter::before {
+  @apply bg-axa-blue-500 border-2 border-white;
+}
+
+.sa-step-name {
+  @apply text-sm h-[28px] lg:h-auto;
+}
+
+@media (max-width: 640px) {
+  .sa-step-name {
+    @apply text-center leading-snug text-[10px];
+  }
+}
+
+@media (max-width: 400px) {
+  .sa-step-name {
+    @apply text-[10px];
+  }
+}
+
+.sa-choose-policy__left,
+.sa-insured-data__left,
+.sa-agreement__left,
+.sa-payment__left,
+.sa-smartactive__left {
+  & .panel {
+    @apply mb-6;
+  }
+}
+
+.sa-choose-policy__right,
+.sa-insured-data__right,
+.sa-agreement__right,
+.sa-payment__right,
+.sa-smartactive__right {
+  .panel-summary {
+    @apply text-axa-grey-800 border border-[#EEEEEE] bg-white;
+    & h1 {
+      @apply text-[30px] my-1;
+    }
+    & .agent {
+      @apply font-semibold flex justify-between gap-2 mt-2 mb-4 uppercase;
+    }
+    & .text-product,
+    & .text-protection {
+      @apply text-xl;
+    }
+    & .panel-summary__body-inner {
+      @apply border-b border-b-[#EEEEEE] pt-[40px] pb-4 px-3 lg:px-7 xl:px-7;
+      & ul {
+        @apply xl:max-w-[280px] 2xl:max-w-[340px] m-[15px_auto_0_auto];
+        & li {
+          @apply flex justify-between mb-2;
+          & span {
+            @apply first:text-[16px] last:text-sm last:text-[#7698CB];
+          }
+        }
+      }
+    }
+    & .panel-summary__promo {
+      @apply py-[40px] pt-[25px] pb-8 px-3 lg:px-7 xl:px-7;
+      & label {
+        @apply mb-2 inline-block;
+      }
+      & input {
+        @apply uppercase;
+      }
+      & button {
+        @apply p-[13px_15px];
+        & svg {
+          @apply stroke-axa-blue-400;
+          transition: 0.4s all;
+        }
+        &:hover {
+          & svg {
+            @apply stroke-axa-sienna-400;
+          }
+        }
+      }
+      & ul {
+        @apply mt-4 mb-6 grid grid-cols-2 gap-4;
+        & li {
+          & span {
+            @apply block mb-1;
+            &.discount,
+            &.total {
+              @apply font-semibold text-[#3A5E94];
+            }
+            &.discount {
+              @apply text-[16px] line-through;
+            }
+            &.total {
+              @apply text-2xl;
+            }
+          }
+          &:nth-child(1) {
+            & span {
+              @apply text-xl;
+            }
+          }
+          &:nth-child(2) {
+            & span {
+              @apply first:text-[#7698CB];
+            }
+          }
+        }
+      }
+      & .btn {
+        @apply font-semibold tracking-[1px];
+        & span {
+          @apply text-center block;
+          & i {
+            @apply ml-2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sa-choose-policy,
+.sa-insured-data,
+.sa-agreement,
+.sa-payment,
+.sa-smartactive {
+  @apply mt-0 mb-14 lg:mt-10;
+  & .policy-smartactive {
+    @apply pr-4 2xl:pr-[12rem];
+    & p {
+      @apply mb-4 lg:mb-0;
+      & span {
+        @apply text-axa-sienna-300 underline;
+      }
+    }
+  }
+  & .choose-policy-grid,
+  & .insured-data-grid,
+  & .agreement-grid,
+  & .payment-grid {
+    @apply block lg:grid lg:grid-cols-[1.8fr_1fr] 2xl:grid-cols-[2.2fr_1fr] lg:gap-5;
+  }
+
+  & .smartactive-grid {
+    @apply block lg:grid lg:grid-cols-[1.8fr_1fr] 2xl:grid-cols-[2.2fr_1fr] lg:gap-5;
+  }
+
+  & .panel {
+    @apply bg-white py-[20px] lg:py-[40px] px-3 lg:px-8 xl:px-10 border border-[#EEEEEE];
+    & .panel__heading {
+      & h1 {
+        @apply text-[30px] mb-4;
+      }
+    }
+    & .panel__body {
+      @apply leading-[28px] text-axa-grey-800;
+      & p {
+        & a {
+          @apply inline-block text-axa-blue-400 transition-all hover:text-axa-sienna-400 text-sm tracking-[1px] px-2 ml-1 uppercase before:w-full before:h-[2px] before:bg-axa-blue-400 before:absolute before:-bottom-2 before:left-0 before:right-0 hover:before:opacity-0 before:transition-all;
+          & i {
+            @apply ml-2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.policy-smartactive {
+  @apply pr-4 2xl:pr-[12rem];
+  & p {
+    @apply mb-4 lg:mb-0;
+    & span {
+      @apply text-axa-sienna-300 underline;
+    }
+    & a {
+      @apply inline-block text-axa-blue-400 transition-all hover:text-axa-sienna-400 text-sm tracking-[1px] px-2 ml-1 uppercase before:w-full before:h-[2px] before:bg-axa-blue-400 before:absolute before:-bottom-2 before:left-0 before:right-0 hover:before:opacity-0 before:transition-all;
+      & i {
+        @apply ml-2;
+      }
+    }
+  }
+}
+
+.sa-input-group-axa {
+  @apply flex justify-between lg:justify-normal;
+  & span {
+    @apply text-axa-blue-400 flex flex-col ml-4 mr-4;
+  }
+  &.input-group-axa--border {
+    @apply border border-[#EEEEEE];
+  }
+  & .input-control-axa--outline {
+    @apply border-none;
+  }
+  &.disabled {
+    @apply bg-[#dddddd] cursor-not-allowed;
+  }
+}
+
+.sa-coverage,
+.sa-upload-photo-ktp,
+.sa-id-card-identity,
+.sa-id-card-identity-date-of-birth,
+.sa-id-card-identity-gender,
+.sa-employment-desc {
+  & sup {
+    @apply text-[14px] text-axa-red-error ml-[2px] inline-block align-[-4px];
+  }
+}
+
+.sa-checkbox-custom-wrapper input,
+.sa-radio-custom-wrapper input {
+  @apply p-0 w-[initial] h-[initial] mb-0 opacity-0 cursor-pointer absolute;
+}
+
+.sa-radio-custom-label,
+.sa-checkbox-custom-label {
+  @apply text-[15px] cursor-pointer flex gap-x-2 self-center;
+}
+
+.sa-checkbox-custom-wrapper span,
+.sa-radio-custom-wrapper span {
+  @apply cursor-pointer leading-[25px];
+}
+
+.sa-radio-custom-wrapper small {
+  @apply text-[#FF1721] text-[12px] leading-relaxed mt-1;
+}
+
+.sa-checkbox-custom-wrapper label,
+.sa-radio-custom-wrapper label {
+  @apply font-normal relative cursor-pointer;
+}
+
+.sa-checkbox-custom-wrapper label span.checkbox-cloak:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.4s all;
+}
+
+.sa-checkbox-custom-wrapper input:checked + label span.checkbox-cloak:before {
+  background-color: #00008f;
+  border: 1px solid #00008f;
+}
+
+.sa-checkbox-custom-wrapper input:checked + label span.checkbox-cloak:after {
+  @apply top-[7px] lg:top-[6px];
+  content: "";
+  display: block;
+  position: absolute;
+  left: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.sa-radio-custom-wrapper {
+  position: relative;
+}
+
+.sa-radio-custom-wrapper label span.radio-cloak:before {
+  @apply top-0 lg:top-[3px] lg:mr-[5px] absolute lg:relative;
+  content: "";
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.4s all;
+  position: relative;
+}
+
+.sa-radio-custom-wrapper input:checked + label span.radio-cloak:before {
+  background-color: #fff;
+  border: 1px solid #00008f;
+}
+
+.sa-radio-custom-wrapper input + label span.radio-cloak:after {
+  content: "";
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s all;
+}
+
+.sa-radio-custom-wrapper input:checked + label span.radio-cloak:after {
+  @apply top-[3px] lg:top-[6px];
+  content: "";
+  display: block;
+  background-color: #00008f;
+  position: absolute;
+  border-radius: 50%;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+}
+
+.sa-checkbox-custom-wrapper span {
+  @apply ml-1;
+}
+
+.sa-checkbox-custom-wrapper label {
+  @apply relative cursor-pointer;
+}
+
+.sa-checkbox-custom-wrapper label span.checkbox-cloak:before {
+  content: "";
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  padding: 8px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.4s all;
+}
+
+.sa-checkbox-custom-wrapper input:checked + label span.checkbox-cloak:before {
+  background-color: #00008f;
+  border: 1px solid #00008f;
+}
+
+.sa-checkbox-custom-wrapper input:checked + label span.checkbox-cloak:after {
+  @apply top-[7px];
+  content: "";
+  display: block;
+  position: absolute;
+  left: 10px;
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.sa-switch-wrapper {
+  @apply grid grid-cols-[32px_1fr] relative mb-4 last:mb-0;
+  & .label-toggle {
+    @apply cursor-pointer w-[32px] h-[16px] block relative rounded-full after:content-[''] after:absolute after:w-[12px] after:h-[12px] after:transition-[0.3s] after:rounded-full after:left-[1px] after:top-[1px] active:after:w-[24px];
+    background: #f0f0f0;
+    border: 1px solid #cccccc;
+    top: 4px;
+  }
+  & span {
+    @apply ml-4;
+    &.span-bold {
+      @apply font-bold;
+    }
+  }
+  & .label-toggle:after {
+    background: #cccccc;
+  }
+  & input {
+    @apply absolute;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+  & input:checked + .label-toggle {
+    background: #00008f;
+  }
+  & input:checked + .label-toggle:after {
+    @apply left-[calc(100%_-_2px)] -translate-x-full;
+    background: #ffffff;
+  }
+}
+
+.sa-type-of-work-datebirth,
+.sa-main-benefit-value,
+.sa-id-card-identity,
+.sa-id-card-identity-date-of-birth,
+.sa-upload-photo-ktp,
+.sa-id-card-identity-address {
+  @apply mt-6 mb-6;
+  & label {
+    @apply mb-2 inline-block;
+  }
+}
+
+.sa-type-of-work-datebirth,
+.sa-main-benefit-value,
+.sa-id-card-identity,
+.sa-id-card-identity-date-of-birth,
+.sa-employment-desc {
+  @apply max-w-[600px] 2xl:max-w-[720px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4;
+}
+
+.sa-id-card-identity-date-of-birth {
+  & #id-card-identity-place-of-birth-wrapper {
+    & input {
+      @apply text-[#757575];
+    }
+  }
+  & .sa-input-group-axa {
+    & span {
+      @apply text-axa-black-400;
+    }
+  }
+  & #age {
+    @apply text-axa-black-400;
+  }
+}
+
+.sa-id-card-identity-gender {
+  & label {
+    @apply mb-2 inline-block;
+  }
+  & #id-card-identity-gender-wrapper {
+    @apply max-w-[600px] 2xl:max-w-[720px] mb-6 grid grid-cols-2 md:grid-cols-[140px_140px] lg:grid-cols-[140px_140px] gap-4;
+  }
+}
+
+.sa-type-of-work-datebirth,
+.sa-id-card-identity-date-of-birth,
+#from-wrapper,
+#until-wrapper {
+  & input {
+    @apply text-axa-blue-400;
+  }
+}
+
+.sa-coverage {
+  & #coverage-period-wrapper {
+    @apply max-w-[600px] 2xl:max-w-[720px] mt-6 mb-6 grid grid-cols-1 md:grid-cols-[1fr_12px_1fr] lg:grid-cols-[1fr_12px_1fr] gap-4 relative;
+    & .col,
+    & .label-hidden {
+      @apply hidden md:block lg:block;
+    }
+    & .fas {
+      @apply text-axa-blue-400 inline-block align-[10px];
+    }
+  }
+  & label,
+  & .label-hidden {
+    @apply mb-2 inline-block;
+  }
+  & .col-arrow {
+    @apply leading-[9.4rem];
+  }
+  & .sa-input-group-axa {
+    & span {
+      @apply mr-2;
+    }
+  }
+  & .col-calendar {
+    & svg {
+      @apply mr-2;
+    }
+  }
+  & small {
+    @apply text-axa-grey-600;
+  }
+  & .text-reminder {
+    @apply w-full block text-[#F15A23] text-sm md:absolute lg:absolute md:bottom-2 lg:bottom-2 -mt-4 lg:mt-0;
+  }
+}
+
+.sa-panel-inside {
+  @apply border border-[#EEEEEE];
+  & .panel-inside__heading {
+    @apply border-b border-b-[#EEEEEE] p-6;
+    & h3 {
+      @apply text-axa-bluesky-900 font-sourcesans font-semibold text-[28px];
+    }
+  }
+  & .panel-inside__body {
+    @apply p-3 lg:p-6;
+    &.main-benefit {
+      @apply grid grid-cols-2 gap-x-4;
+      & .col-panel {
+        &:first-child {
+          & p {
+            @apply mb-3;
+          }
+        }
+        &:last-child {
+          & p {
+            @apply tracking-[1px];
+          }
+        }
+      }
+    }
+    &.add-protection {
+      & .col-panel-row {
+        @apply grid grid-cols-1 md:grid-cols-[2.5fr_1.6fr_1fr] lg:grid-cols-[2.5fr_1.6fr_1fr] gap-x-4 mb-5;
+        & .col-panel {
+          & a {
+            @apply text-[#D75D3D] transition-all underline hover:no-underline hover:text-axa-blue-400;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            @apply pl-12 lg:pl-0;
+          }
+          &:nth-child(2) {
+            @apply py-2;
+            & p {
+              @apply tracking-[1px] uppercase;
+            }
+          }
+          &:nth-child(3) {
+            @apply lg:text-right;
+          }
+        }
+      }
+    }
+  }
+}
+
+#valueSelect-wrapper {
+  @apply w-full;
+  & span {
+    @apply ml-0 mr-0;
+  }
+  & .select2-container--default .select2-selection--single {
+    @apply border-none;
+  }
+}
+
+.sa-fv-outline-none {
+  @apply focus-visible:outline-none;
+}
+
+#input-slider {
+  @apply mt-[30px];
+}
+
+.sa-upload-photo-ktp {
+  @apply max-w-[600px] 2xl:max-w-[720px] mb-2;
+  & .thumbnail-wrapper {
+    @apply grid grid-cols-2 md:grid-cols-[200px_1fr] lg:grid-cols-[200px_1fr] gap-x-24 lg:gap-x-10;
+    & div {
+      @apply first:w-[200px];
+    }
+  }
+  & input {
+    @apply w-[104px] h-[46px] absolute opacity-0 invisible;
+  }
+  & .file-name {
+    @apply block mt-2 text-sm;
+  }
+  & button {
+    @apply bg-[#E5E5E5] border border-[#999999] hover:border-axa-blue-400 text-[#343C3D] uppercase text-[12px] tracking-[1px] font-semibold px-5 py-2 relative overflow-hidden transition-all duration-300 before:text-white before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:bg-axa-blue-300 before:duration-300 before:ease-out hover:text-white hover:before:h-40 hover:before:w-full hover:before:opacity-100;
+    & span {
+      @apply relative z-10;
+    }
+  }
+}
+
+#age-wrapper {
+  & .text-reminder {
+    @apply text-[#F15A23];
+  }
+}
+
+.sa-disabled {
+  @apply !bg-[#dddddd] cursor-not-allowed pointer-events-none;
+}
+
+.sa-employment-desc {
+  & #income-per-month-wrapper {
+    & label {
+      @apply text-axa-black-400 mb-0;
+    }
+    & .radio-wrapper {
+      @apply block;
+      & .sa-radio-custom-wrapper {
+        @apply first:mt-3 mb-2;
+      }
+    }
+  }
+}
+
+.sa-id-card-identity-gender {
+  & .radio-icon {
+    @apply relative;
+  }
+  & .radio-icon input[type="radio"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+  }
+  & .box-radio-wrapper .box-radio {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    width: 100%;
+    min-height: 125px;
+    position: relative;
+    padding: 0 10px;
+  }
+  & .radio-icon img {
+    width: 100px;
+    height: 125px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+  & .box-radio-wrapper .box-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #757575;
+    margin: 8px 0 10px;
+    display: block;
+  }
+  & .radio-icon input[type="radio"]:checked + .box-radio-wrapper .box-radio {
+    border: 1px solid #3033c1;
+  }
+  & .radio-icon input[type="radio"]:checked + .box-radio-wrapper .box-text {
+    color: #3033c1;
+  }
+}
+
+.sa-agreement__left {
+  & .riplay {
+    @apply mt-6 mb-10;
+    & li {
+      @apply grid grid-cols-[1fr_2.8fr] gap-2 mb-1 last:mb-0;
+      & span {
+        @apply first:font-semibold;
+      }
+    }
+  }
+  & #accordionRiplay {
+    & .accordion-item {
+      @apply last:border-b last:border-b-[#CCCCCC] border-y-0;
+    }
+    & .accordion-header {
+      @apply border-t border-t-[#CCCCCC];
+    }
+    & .sa-accordion-button {
+      @apply bg-white text-axa-grey-800;
+      &[aria-expanded="false"] {
+        @apply border-b border-transparent;
+      }
+      &[aria-expanded="true"] {
+        @apply border-b border-b-[#CCCCCC];
+        & .fa-chevron-down {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    & .sa-accordion-body {
+      @apply bg-white;
+      & ul {
+        & li {
+          @apply border-t-0;
+        }
+      }
+      & .radio-wrapper {
+        @apply grid grid-cols-[100px_100px] gap-0 mt-6 mb-2;
+        & .sa-radio-custom-wrapper {
+          @apply mt-0 mb-0;
+        }
+      }
+    }
+  }
+  & #accordionAgreement {
+    & .accordion-header {
+      @apply border-b border-b-[#CCCCCC];
+    }
+    & .sa-checkbox-custom-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translate(80%, -58%);
+      z-index: 1;
+    }
+    & .btn-text {
+      @apply pl-8;
+    }
+    & .accordion-header {
+      @apply relative;
+    }
+    & .accordion-item {
+      @apply border-y-0;
+    }
+    & .sa-accordion-button {
+      @apply bg-white text-axa-grey-800 flex gap-x-4 justify-between;
+      & .fa-chevron-down {
+        @apply mt-0 self-center text-right;
+      }
+      &[aria-expanded="true"] {
+        @apply bg-[#3A5E94] text-white;
+        & .fa-chevron-down {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    & .sa-accordion-body {
+      @apply border-b border-b-axa-sienna-400 text-[#343C3D] bg-[#EAF0FA] p-[25px_25px];
+      & p {
+        @apply text-[15px];
+      }
+      & ul {
+        @apply pl-4 list-disc;
+        & li {
+          @apply border-t border-axa-grey-300;
+        }
+      }
+      & ol {
+        @apply pl-4 list-decimal;
+        & li {
+          @apply mb-3;
+        }
+      }
+    }
+  }
+}
+
+.sa-accordion-button {
+  @apply bg-[#3A5E94] text-[13px] tracking-[1px] leading-relaxed text-white w-full text-left px-6 py-6 relative uppercase font-bold;
+  transition: 0.4s all;
+  overflow-anchor: none;
+  cursor: pointer;
+  & .fa-chevron-down {
+    @apply right-8 text-[13px];
+    transition: transform 0.4s ease-in-out;
+    backface-visibility: hidden;
+    transform: rotate(0deg);
+    margin-top: 5px;
+  }
+  &[aria-expanded="false"] {
+    @apply border-b border-b-white;
+  }
+  &[aria-expanded="true"] {
+    @apply border-b border-b-axa-sienna-400;
+    & .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+& .sa-accordion-body {
+  @apply text-[#343C3D] bg-[#EAF0FA] p-[25px_25px];
+  & p {
+    @apply text-[15px];
+  }
+  & ul {
+    @apply pl-4 list-disc;
+    & li {
+      @apply border-t border-axa-grey-300;
+    }
+  }
+  & ol {
+    @apply pl-4 list-decimal;
+    & li {
+      @apply mb-3;
+    }
+  }
+}
+
+.sa-payment__left {
+  & .radio-payment {
+    @apply flex items-center justify-between border border-gray-300 mt-3 mb-4 px-[1.5rem] py-4 cursor-pointer;
+    transition: 0.4s all;
+    & img {
+      @apply w-[40px] lg:w-[80px] h-[55px] object-contain;
+    }
+    &.highlight {
+      @apply border-axa-blue-400;
+    }
+    & .sa-radio-custom-wrapper input:checked + label span.radio-cloak:after {
+      @apply top-[6px];
+    }
+  }
+}
+
+.modal-axa-smartactive {
+  @apply p-[1rem];
+}
+
+.modal-axa-smartactive {
+  @apply fixed outline-none z-[1055] top-2/4 left-2/4 translate-y-[-50%] translate-x-[-50%];
+  & h1,
+  & h3,
+  & h4 {
+    @apply font-sourcesans font-semibold;
+  }
+  & .modal-axa-smartactive-dialog {
+    @apply mx-auto relative pointer-events-none;
+  }
+  & .modal-axa-smartactive-content {
+    @apply bg-white w-full h-full pointer-events-auto;
+  }
+  & .modal-axa-smartactive-header {
+    @apply px-6 py-4 border-b border-axa-grey-200 relative;
+    & .btn-close {
+      @apply absolute right-0 top-0 m-[25px];
+      & i {
+        @apply text-[#1F1F9C] transition-all hover:text-axa-sienna-400 text-[26px];
+      }
+    }
+    & h1 {
+      @apply text-[30px];
+    }
+  }
+  & .modal-axa-smartactive-body {
+    @apply px-6 pt-6 pb-8;
+    & h3 {
+      @apply text-[#274168] mb-2 text-[24px];
+    }
+    & h4,
+    & img {
+      @apply my-2;
+    }
+    & h4 {
+      @apply text-[#274168] text-[20px];
+    }
+    & img {
+      @apply mx-auto;
+    }
+    & p {
+      @apply text-[#999999] leading-7 text-justify;
+    }
+    & ul {
+      @apply text-[#999999] leading-7 list-disc ml-12 text-justify;
+    }
+  }
+  & .modal-axa-smartactive-footer {
+    @apply flex justify-between border-axa-grey-300 border-t mt-12;
+    & .btn {
+      @apply p-[10px_20px];
+    }
+  }
+  &.fade {
+    & .modal-axa-smartactive-dialog {
+      transition: transform 0.3s ease-out;
+      transform: translate(0, -50px);
+    }
+  }
+  &.show {
+    & .modal-axa-smartactive-dialog {
+      transform: none;
+    }
+  }
+}
+
+.modal-axa-smartactive {
+  @apply w-full h-full overflow-x-hidden overflow-y-auto;
+}
+
+.modal-axa-smartactive-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 0px * 2);
+}
+
+#modalAlertFailed,
+#modalAlertSuccess {
+  & h1 {
+    @apply text-axa-grey-800 font-publico font-bold text-32px mb-15px
+  }
+  & p {
+      @apply text-[#999999] mb-[20px];
+  }
+  & .warning {
+      @apply mt-4 mb-4 mx-auto;
+  }
+  & .success { 
+      @apply mt-6 mb-4 mx-auto;
+  }
+  & .btn-close {
+      @apply p-[12px_25px_10px_30px] mt-8 mb-4;
+      & span {
+          @apply flex gap-x-2;
+      }
+  }
+}

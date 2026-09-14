@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+ <!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 7.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_7_0_0.dtd">
+
+ <routes>
+	<route>
+		<pattern>/configuration</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/configuration.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/premi</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/premi/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/premi/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/premi/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/benefit</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/benefit/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/benefit/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/benefit/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/benefit-group</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/benefit_group/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/benefit-group/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/benefit_group/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+	<route>
+		<pattern>/traveller-type</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/traveller_type/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/traveller-type/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/traveller_type/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/duration</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/duration/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/duration/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/duration/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+	<route>
+		<pattern>/relationship</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/relationship/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/relationship/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/relationship/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/plan</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/plan/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/plan/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/plan/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/insured-type</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/insured_type/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/insured-type/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/insured_type/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/email-template</pattern>
+		<implicit-parameter name="mvcPath">/product/domestic_travel/email_template.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>			
+ </routes>

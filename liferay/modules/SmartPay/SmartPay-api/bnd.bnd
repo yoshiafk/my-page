@@ -1,0 +1,10 @@
+Bundle-Name: SmartPay-api
+Bundle-SymbolicName: com.axa.payment.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.axa.payment.exception,\
+	com.axa.payment.model,\
+	com.axa.payment.service,\
+	com.axa.payment.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../SmartPay-service/service.xml

@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.mypage.agencyportal.model.AgentCalendar">
+		<field name="agentCalendarId" type="long" />
+		<field name="title" type="String" />
+		<field name="location" type="String" />
+		<field name="address" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="startTime" type="String" />
+		<field name="endDate" type="Date" />
+		<field name="endTime" type="String" />
+		<field name="mypageUserRoleId" type="long" />
+		<field name="role" type="String" />
+		<field name="mypageUserGroupId" type="long" />
+		<field name="group" type="String" />
+		<field name="description" type="String" />
+		<field name="link" type="String" />
+		<field name="category" type="String" />
+		<field name="fileUploadEntryId" type="long" />
+		<field name="fileUploadUrl" type="String" />
+		<field name="isAllDay" type="int" />
+		<field name="active" type="int" />
+		<field name="mypageUserId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.agencyportal.model.AgentCategorySalesTools">
+		<field name="agentCategorySalesToolsId" type="long" />
+		<field name="category" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.agencyportal.model.AgentEmailBucket">
+		<field name="agentEmailBucketId" type="long" />
+		<field name="activity" type="String" />
+		<field name="subject" type="String" />
+		<field name="sender" type="String" />
+		<field name="recipient" type="String" />
+		<field name="recipientCC" type="String" />
+		<field name="recipientBCC" type="String" />
+		<field name="template" type="String" />
+		<field name="params" type="String" />
+		<field name="bodyText" type="String" />
+		<field name="status_" type="String" />
+		<field name="counter" type="int" />
+		<field name="message" type="String" />
+		<field name="resendCount" type="int" />
+		<field name="delay" type="String" />
+		<field name="attachmentId" type="long" />
+		<field name="attachmentUrl" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.agencyportal.model.AgentFAQ">
+		<field name="agentFaqId" type="long" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="categoryId" type="long" />
+		<field name="category" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.agencyportal.model.AgentFAQCategory">
+		<field name="agentFaqCategoryId" type="long" />
+		<field name="category" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.agencyportal.model.AgentMarkCalendar">
+		<field name="agentMarkCalendarId" type="long" />
+		<field name="agentCalendarId" type="long" />
+		<field name="mypageUserId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.agencyportal.model.AgentNotification">
+		<field name="agentNotificationId" type="long" />
+		<field name="title" type="String" />
+		<field name="location" type="String" />
+		<field name="address" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="startTime" type="String" />
+		<field name="endDate" type="Date" />
+		<field name="endTime" type="String" />
+		<field name="mypageUserRoleId" type="long" />
+		<field name="role" type="String" />
+		<field name="mypageUserGroupId" type="long" />
+		<field name="group" type="String" />
+		<field name="referenceId" type="long" />
+		<field name="description" type="String" />
+		<field name="link" type="String" />
+		<field name="category" type="String" />
+		<field name="fileUploadEntryId" type="long" />
+		<field name="fileUploadUrl" type="String" />
+		<field name="isAllDay" type="int" />
+		<field name="isRead" type="int" />
+		<field name="active" type="int" />
+		<field name="mypageUserId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.agencyportal.model.AgentSalesTools">
+		<field name="agentSalesToolsId" type="long" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="categoryId" type="long" />
+		<field name="category" type="String" />
+		<field name="fileUploadEntryId" type="long" />
+		<field name="fileUploadUrl" type="String" />
+		<field name="mypageUserRoleId" type="long" />
+		<field name="role" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.agencyportal.model.AgentToken">
+		<field name="agentTokenId" type="long" />
+		<field name="deptCode" type="String" />
+		<field name="token" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="isValid" type="int" />
+		<field name="apiRequestToken" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="apiRequestTokenExpired" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.agencyportal.model.AgentTokenLimiter">
+		<field name="agentTokenLimiterId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="deptCode" type="String" />
+		<field name="token" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="isValid" type="int" />
+		<field name="tokenType" type="String" />
+	</model>
+</model-hints>

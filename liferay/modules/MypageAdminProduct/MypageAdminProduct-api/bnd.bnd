@@ -1,0 +1,10 @@
+Bundle-Name: MypageAdminProduct-api
+Bundle-SymbolicName: com.mypage.admin.product.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.mypage.admin.product.exception,\
+	com.mypage.admin.product.model,\
+	com.mypage.admin.product.service,\
+	com.mypage.admin.product.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../MypageAdminProduct-service/service.xml

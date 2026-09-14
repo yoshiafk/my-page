@@ -1,0 +1,30 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+
+// mypage
+//@import 'fontawesome/fontawesome';
+//@import 'fontawesome/solid'; 
+//@import 'fontawesome/regular';
+//@import 'fontawesome/brands';
+//@import 'fontawesome/duotone';
+//@import 'fontawesome/light';
+
+
+@import 'mypage/main-fonts';
+@import 'mypage/main';
+
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+//////////
+// LIFERAY CUSTOM
+
+.portlet {
+	margin-bottom: 0;
+}
+
+.portlet-layout .portlet-header {
+    margin-bottom: 0;
+}

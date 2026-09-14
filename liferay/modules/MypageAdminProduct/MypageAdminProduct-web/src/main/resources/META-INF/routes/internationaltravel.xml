@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+ <!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 7.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_7_0_0.dtd">
+
+ <routes>
+	<route>
+		<pattern>/configuration</pattern>
+		<implicit-parameter name="mvcPath">/product/international_travel/configuration.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/premi</pattern>
+		<implicit-parameter name="mvcPath">/product/international_travel/premi/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/premi/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/international_travel/premi/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/benefit</pattern>
+		<implicit-parameter name="mvcPath">/product/international_travel/benefit/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+		<route>
+		<pattern>/benefit/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/international_travel/benefit/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+		<route>
+		<pattern>/benefitValue</pattern>
+		<implicit-parameter name="mvcPath">/product/international_travel/benefit_value/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+		<route>
+		<pattern>/benefitValue/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/international_travel/benefit_value/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+	<route>
+		<pattern>/email-template</pattern>
+		<implicit-parameter name="mvcPath">/product/international_travel/email_template.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>			
+ </routes>

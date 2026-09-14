@@ -1,0 +1,349 @@
+.nav-axa-wrapper {
+    @apply bg-white flex-nowrap flex w-full items-center justify-between py-3 lg:flex-wrap lg:justify-start xl:py-6 border-b border-gray-100 fixed lg:static xl:static top-0 z-[1030];
+    & .brand-logo {
+        @apply flex items-center xl:hidden;
+    }
+    & .brand-logo-responsive  {
+        @apply mb-4 lg:mr-2 xl:mr-8 mt-3 items-center lg:mb-0 lg:mt-0 hidden lg:flex;
+    }
+}
+
+.nav-ul {
+  @apply list-none mr-auto xl:flex flex-col pl-0 xl:flex-row xl:gap-2 lg:mt-0;
+  & li {
+    @apply relative lg:self-center;
+    & a {
+      @apply text-axa-grey-800 transition ease-in p-[6px_10px_6px_10px] min-[1700px]:p-[8px_18px_8px_18px];
+      & svg {
+        @apply relative top-[-2px];
+      }
+      & svg path {
+        @apply stroke-axa-grey-800 transition ease-in;
+      }   
+      &.is-active {
+        @apply bg-axa-ocean-100 text-white;
+      }
+      &.is-active svg path {
+        @apply stroke-white;
+      }
+      &.is-active-link {
+        @apply text-axa-ocean-100;
+      }
+      &.is-active-link svg path {
+        @apply stroke-axa-ocean-100;
+      }
+      &:hover {
+        @apply text-axa-ocean-100;
+      }
+      &:hover svg path {
+        @apply stroke-axa-ocean-100;
+      }
+      &.is-active:hover {
+        @apply text-white;
+      }
+      &.is-active:hover svg path {
+        @apply stroke-white;
+      }
+    }
+  }
+}
+
+.nav-right {
+    @apply relative items-center hidden xl:flex xl:gap-6;
+    & .dropdown-toggle--user {
+        @apply uppercase whitespace-nowrap flex gap-[20px] items-center transition duration-150 ease-in-out text-axa-blue-300
+        hover:text-axa-ocean-200;
+        &.show {
+            @apply text-axa-ocean-200;
+        }
+    }
+}
+
+.dropdown-menu-alt {
+    @apply !top-[25px] !ml-[15px];
+}
+
+.dropdown-menu-alt {
+  @apply absolute bg-white opacity-0 invisible z-[1030];
+  transition: 0.4s all;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  &.dropdown-menu--data-desktop,
+  &.dropdown-menu--monitoring-desktop {
+    @apply w-[232px];
+  }
+  &.dropdown-menu--user {
+    @apply w-full lg:w-[250px] invisible opacity-0 !ml-[0px] !left-[-130px];
+  }
+  & li {
+    @apply border-b border-b-[#EEEEEE] last:border-none;
+  }
+  & .dropdown-item {
+    @apply text-[15px] lg:text-[16px] block p-[10px_15px_10px_15px] transition-all ease-in hover:bg-axa-blue-400 hover:text-white;
+    &.dropdown-item--logout {
+      @apply p-[15px] hover:bg-transparent;
+    }
+    &.dropdown-item {
+      &.is-active-link {
+        @apply text-white hover:text-white bg-axa-blue-300;
+      }
+    }
+  }
+  & .sub-dropdown-item {
+      @apply flex justify-between;
+      & i {
+          @apply self-center;
+      }
+  }
+  & span.dropdown-item {
+      @apply cursor-pointer;
+  }
+  & .sub-dropdown-menu {
+      @apply bg-white w-full absolute top-0 right-[-25rem] opacity-0 invisible; 
+      transition: 0.4s all;
+      & li {
+          & a {
+              @apply p-[10px_15px_10px_15px] block hover:bg-axa-blue-400 hover:text-white;
+          }
+      }
+  }
+  & .sub-dropdown-item-trigger {
+      &.is-active {
+          & .sub-dropdown-menu {
+              @apply opacity-100 visible;
+          }
+      }
+  }
+  &.show {
+    @apply visible opacity-100;
+    transition: 0.4s all;
+  }
+}
+
+.dropdown-menu-alt {
+  @apply w-[232px] absolute bg-white opacity-0 invisible z-[1030];
+  transition: 0.4s all;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  &.dropdown-menu--user {
+    @apply w-full lg:w-[250px] invisible opacity-0 !ml-[0px] !left-[-130px];
+  }
+  & li {
+    @apply border-b border-b-[#EEEEEE] last:border-none;
+  }
+  & .dropdown-item {
+    @apply text-[16px] block p-[10px_15px_10px_15px] transition-all ease-in hover:bg-axa-blue-400 hover:text-white;
+    &.dropdown-item--logout {
+      @apply p-[15px] hover:bg-transparent;
+    }
+    &.dropdown-item {
+      &.is-active-link {
+        @apply text-white hover:text-white bg-axa-blue-300;
+      }
+    }
+  }
+  &.show {
+    @apply visible opacity-100;
+    transition: 0.4s all;
+  }
+}
+
+.dropdown-menu--data-mobile,
+.dropdown-menu--monitoring-mobile {
+    @apply w-full !static hidden !ml-0;
+    transform: translate3d(0px, 0px, 0px) !important;
+    box-shadow: none;
+    &.dropdown-item {
+        &.is-active-link,
+        &:hover,
+        &:focus,
+        &:active {
+            @apply bg-transparent outline-none shadow-none text-axa-ocean-200;
+        }
+    }
+    &.show {
+        @apply block;
+    }
+}
+
+.dropdown-menu--monitoring {
+  @apply w-full !static hidden !ml-0;
+  transform: translate3d(0px, 0px, 0px) !important;
+  box-shadow: none;
+  &.dropdown-item {
+    &.is-active-link {
+      @apply text-axa-ocean-200;
+    }
+  }
+  &.show {
+    @apply block;
+  }
+}
+
+.dropdown-toggle-alt {
+  & .fa-caret-down {
+      @apply transition ease-in;
+  }
+  &.show {
+      @apply text-axa-ocean-100;
+      & .fa-caret-down {
+          transform: rotate(180deg);
+      }
+  }
+  &.dropdown-toggle--user {
+      @apply p-[8px_10px] rounded-[35px] underline hover:no-underline ease-in hover:text-axa-ocean-100;
+      &.show {
+          @apply no-underline;
+      }
+  }
+}
+
+#toggle-menu {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#hamburger {
+  @apply relative outline-none shadow-none focus:outline-none;
+  & span {
+    @apply bg-axa-blue-400 w-[28px] h-[3px] absolute right-0;
+    transition: 0.4s all;
+  }
+  & span:nth-child(1) {
+    @apply top-[-12px];
+  }
+  & span:nth-child(2) {
+    @apply top-[-4px];
+  }
+  & span:nth-child(3) {
+    @apply top-[4px] visible;
+    transition: 0.4s all;
+    opacity: 1;
+  }
+  &.is-anime {
+    & span:nth-child(1) {
+      transform: rotate(45deg);
+      top: -4px;
+    }
+    & span:nth-child(2) {
+      top: -4px;
+      transform: rotate(-45deg);
+    }
+    & span:nth-child(3) {
+      @apply invisible opacity-0;
+      transform: rotate(45deg);
+      top: -4px;
+    }
+  }
+}
+
+#navbar {
+  @apply bg-white w-full fixed h-[100dvh] top-[75px] left-[100%] z-[1020];
+  transition: 0.4s all;
+  &.is-show {
+    @apply xl:hidden;
+  }
+  & .dropdown-item {
+    &:hover {
+      @apply bg-transparent text-axa-ocean-100;
+    }
+  }
+  & .dropdown-item--logout {
+    @apply block px-[15px];
+  }
+  &.is-show {
+    @apply left-[0%];
+  }
+  & .btn-logout {
+    @apply bg-white w-full absolute bottom-[15%] p-3 left-0;
+  }
+}
+
+#navbar ul {
+    @apply pt-[5px];
+}
+
+#navbar ul li {
+    @apply border-b border-[#EEEEEE] last:border-none;
+}
+
+#navbar ul li a.is-active-link {
+    @apply bg-transparent text-axa-ocean-100;
+}
+
+#navbar ul li a.is-active-link .span-wrapper {
+    @apply bg-axa-ocean-100;
+}
+
+#navbar ul a.is-active-link:hover svg path {
+    @apply stroke-white;
+}
+
+@media (max-width: 768px) {
+  .nav-axa-wrapper {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media (min-width: 600px) {
+  .nav-axa-wrapper {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-axa-wrapper {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-axa-wrapper {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-axa-wrapper {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-axa-wrapper {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  #navbar ul {
+    max-height: 390px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  #navbar ul {
+    max-height: 380px;
+  }
+}
+
+@media only screen and (min-width: 390px) {
+  #navbar ul {
+    max-height: 560px;
+  }
+}
+
+@media only screen and (min-width: 393px) {
+  #navbar ul {
+    max-height: 480px;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  #navbar ul {
+    max-height: 450px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #navbar ul {
+    max-height: 100%;
+  }
+}

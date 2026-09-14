@@ -1,0 +1,291 @@
+.container-axa-login {
+	@apply container sm:max-w-[500px] md:max-w-[1140px] lg:max-w-[1170px] min-[1300px]:max-w-[1200px] min-[1440px]:max-w-[1400px] xl:max-w-[1336px] 2xl:max-w-[1336px] px-[1rem] sm:px-[1rem] md:px-[1rem] lg:px-[1rem] 2xl:px-0 md:mx-auto lg:mx-auto h-full;
+}
+
+.topbar {
+	@apply absolute lg:static w-full bg-white pt-4 pb-4 border-b border-b-axa-grey-300;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+	& .topbar__link {
+		@apply text-axa-blue-300 underline self-center pt-1 hover:no-underline;
+
+		& a {
+			@apply hover:text-inherit hover:no-underline;
+		}
+	}
+}
+
+.login-wrapper {
+	@apply h-auto sm:h-auto md:h-auto lg:h-full;
+	& .login-wrapper__container {
+		@apply lg:flex justify-between h-full;
+	}
+	& .login-wrapper__heading {
+		& p,
+		& h1 {
+			@apply text-white;
+		}
+		& p {
+			@apply text-[28px] md:text-[48px];
+		}
+		& h1 {
+			@apply text-[45px] md:text-[64px];
+		}
+	}
+}
+
+.login-wrapper {  
+	& .login-wrapper__style-bg-img {
+		@apply bg-[url('../../../images/bg_axa_agen.jpg')] h-[100%] lg:h-[100vh] bg-no-repeat bg-cover bg-top sm:bg-top md:bg-top lg:bg-[center_0px] pt-[10rem] pb-[4rem] lg:pt-0 lg:pb-0;
+	}
+	& .login-wrapper__heading {
+		@apply self-center;
+	}
+	& .login-wrapper__form {
+		@apply self-center;
+		& #login,
+		& #otp,
+		& #forgotpass,
+		& #create-new-password,
+		& #account-activation {
+			& h3 {
+				@apply text-axa-grey-800 font-publico font-bold text-32px mb-6px;
+			}
+			& p {
+				@apply text-axa-grey-600 text-16px mb-10px;
+			}
+		}
+		& #create-new-password {
+			& .text-otp {
+				@apply text-axa-grey-600;
+				& span {
+					@apply text-axa-blue-400;
+				}
+			}
+			& .otp-timer {
+				& a,
+				& button {
+					@apply text-axa-blue-300 font-semibold hover:underline;
+				}
+			}
+			& .btn--disabled {
+				@apply text-white;
+			}
+		}
+		& #forgotpass {
+			& .btn-cancel-forgot-password,
+			& .btn-prev-forgot-password {
+				@apply text-axa-blue-400 font-semibold;
+			}
+		}
+	}
+	& .login-wrapper__heading {
+		@apply font-publico leading-[normal] p-[15px_0px_10px_0px] sm:p-[15px_0px_10px_0px] md:p-[15px_0px_10px_0px] lg:p-[0px_0px_0px_0px];
+	}
+	& .login-form__body {
+		& label {
+			& span {
+				& button {
+					@apply text-axa-sienna-400 hover:underline hover:text-axa-sienna-600;
+				}
+			}
+		}
+	}
+	& .login-wrapper__form { 
+		@apply bg-white lg:w-[430px] shadow-[0_12px_16px_0px_rgba(0,0,0,0.2)];
+	}
+	& .login-form__footer {
+		@apply border-axa-grey-300 border-t;
+		& a,
+		& .btn-modal-activation,
+		& .btn-prev-activation,
+		& .btn-cancel-forgot-password,
+		& .btn-back-otp {
+			@apply font-semibold text-axa-blue-300 hover:underline;
+		}
+		& .btn-prev-forgot-password {
+			@apply hover:underline;
+		}
+	}
+	& span.error-text, span.success-text {
+		@apply text-white block font-semibold text-[14px];
+	}
+}
+
+#login {
+	& p {
+		& a {
+			@apply text-axa-blue-400 underline pl-2px hover:no-underline;
+		}
+	}
+}
+
+#forgotpass,
+#create-new-password,
+#account-activation {
+	& .btn-prev-create-reminder,
+	& .btn-back-otp,
+	& .btn-prev-activation,
+	& .btn-modal-activation {
+		@apply hover:underline;
+	}
+}
+
+.login-display {
+	@apply lg:flex h-full;
+}
+
+.error-text-wrapper {
+	@apply text-center p-[10px_15px_10px_15px] bg-axa-red-error;
+	& span {
+		@apply block;
+	}
+}
+
+.success-text-wrapper {
+	@apply text-center p-[10px_15px_10px_15px] bg-axa-green-500;
+	& span {
+		@apply block;
+	}
+}
+
+#ModalBack {
+	& .btn-no {
+		@apply hover:underline;
+	}
+}
+
+.toggle-password {
+	& .eye-close {
+		& svg {
+			& path {
+				@apply stroke-axa-blue-400 stroke-2;
+			}
+		}
+	}
+	& .eye-open {
+		@apply hidden;
+		& svg {
+			& path {
+				@apply fill-axa-blue-400;
+			}
+		}
+	}
+	& .eye-position {
+		@apply right-0 absolute;
+	}
+	&.is-show {
+		& .eye-close {
+			@apply hidden;
+		}
+		& .eye-open {
+			@apply block;
+		}
+	}
+}
+
+.agency-tooltip {
+	& .tooltip__wrapper {
+		@apply absolute top-[-33px] left-[50px] z-10 transition-all opacity-0 invisible;
+		& p {
+			@apply font-normal text-gray-500;
+		}
+	}
+	&.is-show {
+		& .tooltip__wrapper { 
+			@apply visible opacity-100;
+		}
+	}
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	@apply appearance-none m-0;
+}
+
+.error-text-wrapper {
+	&.is-error {
+		& #otc_create_password_2-error {
+			@apply hidden !important;
+		}
+		& #otc_create_password_3-error{
+			@apply hidden !important;
+		}
+		& #otc_create_password_4-error {
+			@apply hidden !important;
+		}
+		& #otc_create_password_5-error {
+			@apply hidden !important;
+		}
+		& #otc_create_password_6-error {
+			@apply hidden !important;
+		}
+	} 
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.otp-field {
+	@apply flex flex-row gap-[10px] items-center;
+	& input {
+		@apply text-[23px] text-center border-b-[3px] border-axa-grey-500 bg-transparent w-[30px] h-[55px] outline-none;
+		&.success {
+			@apply border-b-[3px] border-axa-blue-300;
+		}
+	}
+}
+
+.input-control {
+	@apply p-[14px] w-full text-axa-grey-800 outline-none placeholder:font-normal placeholder:text-[#bababa] placeholder:normal-case; 
+}
+
+.input-control { 
+	&.otp_agen_1-error,
+	&.otp_agen_2-error,
+	&.otp_agen_3-error,
+	&.otp_agen_4-error,
+	&.otp_agen_5-error {
+		@apply border border-axa-red-error;
+	}
+}
+
+.link-otp {
+	&.disabled {
+		@apply text-axa-grey-300 cursor-not-allowed;
+	}
+}
+
+.bubble {
+    @apply bg-white w-[150px] md:w-[220px] text-[13px] p-[15px_12px_15px_18px] rounded-[6px] relative border-2 border-[#e5e5e5];
+    box-shadow: 0px 0px 10px 0px rgba(163, 163, 163, 0.2);
+}
+
+.arrow-triangle-right {
+	@apply bg-[url('../../../images/icon_arrow_left_rounded.png')] bg-no-repeat bg-contain absolute w-[50px] h-[70px] top-[10px] left-[-26px];
+}
+
+.h3__login {
+	@apply text-axa-grey-800 font-publico font-bold;
+}
+
+.btn-enter-account-activation {
+	@apply text-axa-blue-300 text-14px font-semibold uppercase hover:underline self-center hover:text-axa-blue-400;
+}
+
+.btn-enter-registration {
+	@apply text-axa-blue-400 underline hover:no-underline hover:text-axa-blue-400;
+}
+
+.btn-forgot-password {
+	@apply text-axa-sienna-400 bg-transparent bg-none normal-case p-0 hover:underline hover:text-axa-sienna-600;
+	font-weight: inherit;
+}
+
+.stroke-eye {
+	@apply stroke-axa-blue-400 stroke-2;
+}
+
+.fill-eye {
+	@apply fill-axa-blue-400;
+}

@@ -1,0 +1,55 @@
+.popover {
+    max-width: 350px;
+    border: none;
+
+    &.bs-popover-top {
+        top: -10px !important;
+        margin-left: 0px;
+
+        > .arrow {
+            &::before {
+                display: none;
+            }
+            &::after {
+                left: -.5rem;
+                bottom: -4px;
+                border-top-color: $_yellow;
+                border-width: 1rem 1rem 0;
+            }
+        }
+    }
+
+    &.bs-popover-right {
+        margin-left: 1rem;
+
+        > .arrow {
+            &::before {
+                display: none;
+            }
+            &::after {
+                top: -6px;
+                left: -2px;
+                border-right-color: $_yellow;
+                border-width: 1rem 1rem 1rem 0;
+            }
+        }
+    }
+    
+    .popover-body {
+        background-color: $_yellow;
+        padding: 12px 20px 12px 12px;
+        border-radius: 3px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 600;
+        font-size: $_font-size-14;
+        color: $_blue-100;
+    }
+
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+}

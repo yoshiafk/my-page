@@ -1,0 +1,35 @@
+<%-- Custom override to exclude Bootstrap files --%>
+<% 
+	List<String> urls = new ArrayList<String>();
+%>
+<c:if test="<%= (portlets != null) && !portlets.isEmpty() %>">
+    <% 
+	    Set<String> portletResourceStaticURLs = (Set<String>)request.getAttribute(WebKeys.PORTLET_RESOURCE_STATIC_URLS);
+	    if (portletResourceStaticURLs == null) {
+	        portletResourceStaticURLs = new LinkedHashSet<String>();
+	        request.setAttribute(WebKeys.PORTLET_RESOURCE_STATIC_URLS, portletResourceStaticURLs);
+	    }
+	
+	    if (useComboServletStaticURLGenerator) {
+	        ComboServletStaticURLGenerator comboServletStaticURLGenerator = new ComboServletStaticURLGenerator();
+	        comboServletStaticURLGenerator.setPortletResourceAccessors(portletResourceAccessors);
+	        comboServletStaticURLGenerator.setPredicate(predicate);
+	        comboServletStaticURLGenerator.setTimestamp(theme.getTimestamp());
+	        comboServletStaticURLGenerator.setURLPrefix(PortalUtil.getStaticResourceURL(request, themeDisplay.getCDNDynamicResourcesHost() + themeDisplay.getPathContext() + "/combo", "minifierType=&themeId=" + themeDisplay.getThemeId(), -1));
+	        comboServletStaticURLGenerator.setVisitedURLs(portletResourceStaticURLs);
+	
+	        urls.addAll(comboServletStaticURLGenerator.generate(portlets).stream()
+	            .filter(url -> !url.contains("bootstrap.bundle.min.js")) // Exclude Bootstrap
+	            .collect(Collectors.toList()));
+	    } else {
+	        PortletResourceStaticURLGenerator portletResourceStaticURLGenerator = new PortletResourceStaticURLGenerator();
+	        portletResourceStaticURLGenerator.setRequest(request);
+	        portletResourceStaticURLGenerator.setVisitedURLs(portletResourceStaticURLs);
+	        for (Portlet curPortlet : portlets) {
+	            urls.addAll(portletResourceStaticURLGenerator.generate(curPortlet, portletResourceAccessors).stream()
+	                .filter(url -> !url.contains("bootstrap.bundle.min.js")) // Exclude Bootstrap
+	                .collect(Collectors.toList()));
+	        }
+	    }
+    %>
+</c:if>

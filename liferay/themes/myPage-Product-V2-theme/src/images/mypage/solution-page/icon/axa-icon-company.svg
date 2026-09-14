@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="46" viewBox="0 0 19 46">
+    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke="#00008F" stroke-width="1.4">
+            <g>
+                <g transform="translate(-688 -2185) translate(627 2146) translate(62 40)">
+                    <path d="M0.402 5.951H16.398V44.149H0.402z"/>
+                    <circle cx="12.628" cy="9.696" r="1.234"/>
+                    <circle cx="8.4" cy="9.696" r="1.234"/>
+                    <circle cx="4.17" cy="9.694" r="1.234"/>
+                    <circle cx="12.628" cy="15.84" r="1.234"/>
+                    <circle cx="8.4" cy="15.84" r="1.234"/>
+                    <circle cx="4.172" cy="15.837" r="1.234"/>
+                    <circle cx="12.628" cy="21.985" r="1.234"/>
+                    <circle cx="8.4" cy="21.985" r="1.234"/>
+                    <circle cx="4.175" cy="21.98" r="1.234"/>
+                    <circle cx="12.628" cy="28.129" r="1.234"/>
+                    <circle cx="8.4" cy="28.129" r="1.234"/>
+                    <circle cx="4.172" cy="28.123" r="1.234"/>
+                    <path d="M10.725 35.811L10.725 43.933M6.081 35.811L6.081 43.933M12.467 35.811L4.34 35.811M3.192 3.496H13.608V5.945H3.192zM8.4.65L8.4 3.323"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

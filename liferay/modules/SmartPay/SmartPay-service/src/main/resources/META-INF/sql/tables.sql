@@ -1,0 +1,22 @@
+create table XP_PaymentTransaction (
+	paymentTransactionId LONG not null primary key,
+	policyNumber VARCHAR(75) null,
+	profileId VARCHAR(75) null,
+	invoiceNumber VARCHAR(75) null,
+	referenceNumber VARCHAR(75) null,
+	requestId VARCHAR(75) null,
+	policyDueDate VARCHAR(75) null,
+	paymentMethod VARCHAR(75) null,
+	paymentChannel VARCHAR(75) null,
+	amount DOUBLE,
+	status_ VARCHAR(75) null,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	createBy VARCHAR(75) null,
+	modifiedDate DATE null,
+	modifiedBy VARCHAR(75) null,
+	checkCounter INTEGER
+);

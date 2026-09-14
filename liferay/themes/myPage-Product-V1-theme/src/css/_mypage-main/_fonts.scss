@@ -1,0 +1,24 @@
+@each $size, $value in $_font-sizes {
+    .fz-#{$size} {
+        font-size: $value;
+    }
+}
+
+@include fonts-variant('SourceSansPro-Regular', 'Source-Sans-Pro/SourceSansPro-Regular', 'ttf', 'normal', 'normal');
+@include fonts-variant('SourceSansPro-Bold', 'Source-Sans-Pro/SourceSansPro-Bold', 'ttf', 'normal', 'normal');
+@include fonts-variant('SourceSansPro-Semibold', 'Source-Sans-Pro/SourceSansPro-Semibold', 'ttf', 'normal', 'normal');
+@include fonts-variant('SourceSansPro-Light', 'Source-Sans-Pro/SourceSansPro-Light', 'ttf', 'normal', 'normal');
+@include fonts-variant('SourceSansPro-Black', 'Source-Sans-Pro/SourceSansPro-Black', 'ttf', 'normal', 'normal');
+@include fonts-variant('Publico-Black', 'Publico/Publico-Black', 'otf', 'normal', 'normal');
+
+.bold {
+    font-family: 'SourceSansPro-Bold', sans-serif;
+}
+
+.semi-bold {
+    font-family: 'SourceSansPro-Semibold', sans-serif;
+}
+
+.light {
+    font-family: 'SourceSansPro-Light', sans-serif;
+}

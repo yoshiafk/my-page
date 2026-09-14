@@ -1,0 +1,76 @@
+plugins {
+	id "java"
+	id "jacoco"
+}
+
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly group: "javax.ws.rs", name: "javax.ws.rs-api", version: "2.1.1"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations", version: "1.4.0"
+	compileOnly group: "org.osgi", name: "org.osgi.service.jaxrs", version: "1.0.0"
+	
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.1.0"
+	
+	//compileOnly project(":modules:SmartTravelInternational:SmartTravelInternational-api")
+	//compileOnly project(":modules:SmartTravelInternational:SmartTravelInternational-service")
+	
+	compileOnly project(":modules:MypageAdminProduct:MypageAdminProduct-api")
+	compileOnly project(":modules:MypageAdminProduct:MypageAdminProduct-service")
+	compileOnly project(":modules:MypageLeads:MypageLeads-api")
+	compileOnly project(":modules:MypageLeads:MypageLeads-service")
+	compileOnly project(":modules:AgencyPortal:AgencyPortal-api")
+	compileOnly project(":modules:AgencyPortal:AgencyPortal-service")
+	
+	compileInclude group: "com.google.code.gson", name: "gson", version: "2.8.6"
+	
+	compileInclude group: "com.googlecode.owasp-java-html-sanitizer", name: "owasp-java-html-sanitizer", version: "20220608.1"
+	
+	// flying-saucer-pdf & freemarker for generate pdf
+	//compileInclude group: 'org.xhtmlrenderer', name: 'flying-saucer-pdf', version: '9.1.22'
+	//compileInclude group: 'org.freemarker', name: 'freemarker', version: '2.3.30'
+  
+	testImplementation group: "com.liferay.portal", name: "release.dxp.api"
+	
+	// Untuk unit test juga perlu disertakan pada classpath
+    testImplementation project(":modules:MypageAdminProduct:MypageAdminProduct-api")
+    testImplementation project(":modules:MypageAdminProduct:MypageAdminProduct-service")
+    testImplementation project(":modules:MypageLeads:MypageLeads-api")
+	testImplementation project(":modules:MypageLeads:MypageLeads-service")
+	testImplementation project(":modules:AgencyPortal:AgencyPortal-api")
+	testImplementation project(":modules:AgencyPortal:AgencyPortal-service")
+	
+	testImplementation group: "com.google.code.gson", name: "gson", version: "2.8.6"
+    
+    testImplementation group: "com.googlecode.owasp-java-html-sanitizer", name: "owasp-java-html-sanitizer", version: "20220608.1"
+
+	// JUnit untuk unit test
+	testImplementation group: "org.junit.jupiter", name: "junit-jupiter-api", version: "5.13.4"
+	testRuntimeOnly group: "org.junit.jupiter", name: "junit-jupiter-engine", version: "5.13.4"
+	testRuntimeOnly group: "org.junit.platform", name: "junit-platform-launcher", version: "1.11.4"
+
+	// Mockito untuk mocking
+	testImplementation group: "org.mockito", name: "mockito-core"
+
+	// AssertJ (opsional, assertion lebih readable)
+	testImplementation group: "org.assertj", name: "assertj-core", version: "3.21.0"
+}
+
+group = "com.mypage.product.it"
+
+jacoco {
+	toolVersion = "0.8.11"
+}
+
+test {
+	useJUnitPlatform() // pastikan JUnit 5 digunakan
+	finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+	dependsOn test
+	reports {
+		xml.required = true   // SonarQube pakai ini
+		csv.required = false
+		html.required = true  // bisa dibuka manual di browser
+	}
+}

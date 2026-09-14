@@ -1,0 +1,16 @@
+// inactive status on list
+.table-list {
+	tbody {
+		.status-inactive {
+			font-style: italic;
+			color: #ccc;
+			text-decoration: line-through;
+			
+			a {
+				font-style: italic;
+				color: #ccc;
+				text-decoration: line-through;
+			}
+		}
+	}
+}

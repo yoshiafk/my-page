@@ -1,0 +1,14 @@
+dependencies {
+	implementation project(":modules:AgencyPortal:AgencyPortal-api")
+	compileOnly project(":modules:MypageUser:MypageUser-api")	
+	compileOnly project(":modules:MypageUser:MypageUser-service")
+	compileOnly project(":modules:MypageAdminProduct:MypageAdminProduct-api")
+	compileOnly project(":modules:MypageAdminProduct:MypageAdminProduct-service")
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../AgencyPortal-api/src/main/java"
+}
+
+group = "com.mypage.agencyportal"

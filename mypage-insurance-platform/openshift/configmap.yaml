@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: insurance-config
+data:
+  API_PORT: "3001"
+  ADMIN_ORIGIN: "https://admin-insurance.axa-cloud.com"
+  OIDC_ISSUER_URL: "https://oneaccount.axa.com"
+  OIDC_REDIRECT_URI: "https://api-insurance.axa-cloud.com/auth/callback"
+  LIFERAY_BASE_URL: "https://mypage.axa.co.id"

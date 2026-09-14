@@ -1,0 +1,363 @@
+.profile {
+    @apply bg-[#FAFAFA];
+    & .profile__hero {
+        & .profile__hero-banner {
+            @apply max-h-[250px] overflow-hidden lg:max-h-[400px] 2xl:max-h-[500px];
+            & img {
+                @apply w-full min-h-[250px] lg:min-h-[400px] 2xl:min-h-[500px] object-cover;
+            }
+        }
+        & .profile__hero-img {
+            @apply mt-[-40px];
+            & img {
+                @apply w-[115px] h-[115px] mx-auto lg:mx-[inherit];
+            }
+        }
+        & .profile__hero-img {
+            & span {
+                @apply block text-[26px] xl:text-[36px] font-bold leading-[30px] mt-[15px] lg:mt-[42px] self-center;
+            }
+        } 
+        & .profile__hero-img-inner {
+            @apply block text-center lg:flex lg:gap-4;
+
+            & picture {
+                @apply rounded-full bg-white;
+
+                & img {
+                    @apply p-[10px];
+                }
+            }
+        }
+    }
+    & .profile-timeline-wrapper {
+        @apply grid lg:grid-cols-12 gap-6;
+    }
+    & .profile__left, 
+    & .profile__right {
+        @apply mt-[30px];
+    }
+    & .profile__left {
+        @apply col-span-12 lg:col-span-5;
+        & .profile-biodata,
+        & .profile-operational-hour,
+        & .profile-social-media,
+        & .products-offered,
+        & .profile-location {
+            & h3 {
+                @apply font-bold font-publico text-[26px] lg:text-[32px];
+            }
+        }
+        & .profile-biodata {
+            @apply mb-6;
+            & li {
+                @apply grid-cols-[50%_50%] lg:grid-cols-[40%_50%] gap-2 lg:gap-0 mb-[12px];
+                &:last-child {
+                    @apply mb-0;
+                }
+            }
+            & span {
+                @apply text-axa-grey-800 text-[14px] font-semibold tracking-[1px] uppercase;
+            }
+            & strong {
+                @apply font-normal text-[16px];
+                & a {
+                    @apply underline text-axa-blue-300 hover:no-underline hover:text-axa-grey-800 transition-all;
+                }
+            }
+        }
+        & .profile-operational-hour { 
+            @apply mb-6;
+            & li {
+                @apply grid-cols-[50%_50%] lg:grid-cols-[40%_50%] gap-2 lg:gap-0 mb-[12px];
+                & span {
+                    @apply text-[16px];
+                }
+                & strong {
+                    @apply text-axa-grey-800 text-[14px] tracking-[1px] uppercase;
+                }
+                &:last-child {
+                    @apply mb-0;
+                } 
+            }
+        } 
+        & .profile-social-media {
+            & ul {
+                @apply flex gap-8;
+            }
+            & li {
+                @apply self-center;
+            }
+            & .twitter-x,
+            & .tiktok,
+            & .instagram {
+                @apply fill-axa-blue-300 transition duration-300 ease-in-out;
+            }
+            a {
+                @apply text-[20px] text-axa-blue-400 transition duration-300 ease-in-out;
+            }
+            & .link-referral {
+                & path {
+                    @apply fill-axa-blue-400;
+                }
+            }
+            & li {
+                &:hover {
+                    a {
+                        @apply hover:text-gray-800;
+                    }
+                    & .twitter-x,
+                    & .tiktok,
+                    & .instagram {
+                        @apply fill-axa-grey-800;
+                    }
+                    & .link-referral {
+                        & path {
+                            @apply fill-axa-grey-800;
+                        }
+                    }
+                }
+            }
+        }
+        & .products-offered {
+            @apply mt-8 overflow-y-scroll max-h-[596px];
+            & ul {
+                @apply grid grid-cols-[1fr_1fr] md:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_1fr] xl:grid-cols-[1fr_1fr_1fr] gap-[28px];
+                & li {
+                    & .insurance-img-wrapper {
+                        @apply bg-white h-[135px] block border border-axa-grey-400 pt-[32px] pb-[32px] transition-all relative;
+                        & .img-normal,
+                        & .img-hover {
+                            @apply absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] transition-all;
+                           & img {
+                                @apply w-[78px] h-[78px] object-contain;
+                            }
+                        }
+                        & .img-hover {
+                            @apply invisible opacity-0; 
+                        }
+                    }
+                    & .text-product {
+                        @apply text-[14px] text-axa-grey-800 font-semibold uppercase mt-2 block transition-all;
+                    }
+                    &:hover {
+                        & .img-normal {
+                            @apply visible opacity-100 filter brightness-0 invert;
+                        }
+                        & .img-hover {
+                            @apply visible opacity-100;
+                        }
+                        & .insurance-img-wrapper { 
+                            @apply bg-axa-blue-300 border border-axa-blue-300;
+                            & svg {
+                                @apply stroke-white;
+                            }
+                        }
+                        & .text-product {
+                            @apply  text-axa-blue-300;
+                        }
+                    }
+                }
+            }
+            & .product-offered-lists {
+                & ul {
+                    @apply mt-4 mb-[28px];
+                    &:last-child {
+                        @apply mt-0;
+                    }
+                }
+                & #see-all {
+                    @apply mb-[28px];
+                }
+            }
+            & .btn__agency {
+                @apply p-[20px_12px];
+            }
+        }
+        & .profile-location {
+            @apply mt-[30px] mb-[0px] lg:mb-[50px];
+            & .profile-location-top {
+                @apply flex justify-between mb-3;
+            }
+            & a {
+                @apply text-axa-sienna-400 text-[14px] uppercase tracking-[1px] hover:text-axa-grey-800 transition-all;
+            }
+            & .gmnoprint.gm-style-mtc-bbw {
+                @apply hidden;
+            }
+            & .gm-style iframe + div { 
+                border: none!important; 
+            }
+        }
+    }
+    & .profile__right {
+        @apply col-span-12 lg:col-span-7;
+        & h1 {
+            @apply font-bold font-publico text-[28px] lg:text-[32px];
+        }
+        & .btn--disabled {
+            @apply text-white;
+        }
+        & #toggle-video {
+            & svg {
+                &:first-child {
+                    @apply hidden;
+                }
+                &:last-child {
+                    @apply fill-axa-blue-300 transition-all;
+                    &:hover {
+                        @apply fill-axa-sienna-400;
+                    }
+                }
+            }
+            &.is-show {
+                & svg {
+                    &:first-child {
+                        @apply block;
+                    }
+                    &:last-child {
+                        @apply hidden;
+                    }
+                }
+            }
+        }
+        & .change-upload-timeline {
+            & input {
+                @apply w-[125px] h-[30px];
+            }
+        }
+        & .dropzone {
+            @apply left-[-95px];
+        }
+        @-moz-document url-prefix() {
+            & .dropzone {
+                @apply left-[-26px];
+            }
+        }
+        & .dropzone-upload-timeline-wrapper {
+            @apply w-[30px] h-[30px] overflow-hidden relative;
+        }
+        & .preview-zone-upload-timeline {
+            @apply p-[0px_25px_25px_25px];
+        }
+        & .dropzone-upload-timeline-desc {
+            @apply w-[30px] h-[22px];
+            & .svg-hover {
+                @apply fill-axa-blue-300 transition-all;
+                &.active {
+                    @apply fill-axa-sienna-400 transition-all;
+                }
+            }
+        }
+        & .box-body {
+            & img {
+                @apply w-full h-full rounded-none;
+            }
+        }
+        & .text-success-upload {
+            @apply mt-4 mb-2;
+        }
+        & .text-upload-desc {
+            @apply mb-2;
+        }
+    }
+    & .profile-timeline-history {
+        @apply mb-14;
+        & .profile-timeline-history__lists--inner {
+            @apply bg-white border border-axa-grey-300 p-[25px_25px] mb-[15px];
+        }
+        & .profile-status {
+            @apply bg-white mb-[15px] border border-axa-grey-300;
+            & .btn__agency {
+                @apply p-[12px_45px_10px_45px];
+                & svg {
+                    @apply stroke-white;
+                }
+            }
+            & .btn-status {
+                @apply flex justify-between pt-7 border-t border-t-axa-grey-300;
+            }
+        }
+        & .timeline {
+            @apply overflow-y-scroll max-h-[1550px];
+
+            & .bg-gradient-bottom-scroll {
+                @apply h-40;
+            }
+        }
+        & .timeline-view {
+            @apply overflow-y-scroll max-h-[1900px];
+
+            & .bg-gradient-bottom-scroll {
+                @apply h-40;
+            }
+        }
+        & .profile-timeline-history__ava {
+            @apply grid grid-cols-[55px_1fr] lg:grid-cols-[68px_1fr] gap-[12px] lg:gap-[20px] relative;
+            & .ava-photo {
+                & img {
+                    @apply w-[55px] h-[55px] object-cover bg-white rounded-full p-[3px] lg:w-[68px] lg:h-[68px];
+                }
+            }
+            & .name-post-dates {
+                @apply self-center;
+                & h4 {
+                    @apply font-bold text-[20px] lg:text-[24px] leading-[28px] mt-1;
+                }
+                & span {
+                    @apply text-[14px] lg:text-[16px] text-axa-grey-600 font-semibold tracking-[1px] uppercase;
+                    & i {
+                        @apply bg-axa-grey-600 inline-block w-[4px] h-[4px] mx-2 rounded-full align-middle;
+                    }
+                }
+            }
+            & .timeline-delete {
+                @apply absolute right-0;
+                & a,
+                & svg {
+                    @apply transition-all;
+                }
+                & a {
+                    @apply text-axa-sienna-300 font-semibold uppercase tracking-[1px];
+                    & span {
+                        @apply text-[14px] mt-[3px] lg:block;
+                    }
+                }
+                & svg {
+                    @apply stroke-axa-sienna-300;
+                }
+                &:hover {
+                    & a {
+                        @apply text-axa-blue-300;
+                    }
+                    & svg {
+                        @apply stroke-axa-blue-300;
+                    }
+                }
+            }
+        }
+        & .profile-timeline-history__desc {
+            @apply p-[15px_0px_0px_0px];
+            & strong {
+                @apply font-sourcesans font-semibold;
+            }
+            & .timeline-img {
+                @apply mt-4;
+            }
+        }
+    }
+}
+
+.tab-content > .tab-pane {
+    @apply hidden;
+}
+
+.tab-content > .active {
+    @apply block;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .timeline {
+        max-height: 400px;
+    }
+}

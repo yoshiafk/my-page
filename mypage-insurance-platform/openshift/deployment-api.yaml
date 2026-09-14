@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insurance-api
+  labels:
+    app: insurance-platform
+    component: api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: insurance-platform
+      component: api
+  template:
+    metadata:
+      labels:
+        app: insurance-platform
+        component: api
+    spec:
+      containers:
+      - name: api
+        image: artifactory.europe.axa-cloud.com/insurance-platform/api:latest
+        ports:
+        - containerPort: 3001
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        envFrom:
+        - configMapRef:
+            name: insurance-config
+        - secretRef:
+            name: insurance-secrets

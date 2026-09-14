@@ -1,0 +1,90 @@
+plugins {
+	id "java"
+	id "jacoco"
+}
+
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly group: "javax.ws.rs", name: "javax.ws.rs-api", version: "2.1.1"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations", version: "1.4.0"
+	compileOnly group: "org.osgi", name: "org.osgi.service.jaxrs", version: "1.0.0"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.1.0"
+	
+	compileOnly project(":modules:AgencyPortal:AgencyPortal-api")
+	compileOnly project(":modules:AgencyPortal:AgencyPortal-service")
+	compileOnly project(":modules:MypageUser:MypageUser-api")	
+	compileOnly project(":modules:MypageUser:MypageUser-service")
+	compileOnly project(":modules:MypageAdminProduct:MypageAdminProduct-api")
+	compileOnly project(":modules:MypageAdminProduct:MypageAdminProduct-service")
+	
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+	
+	implementation group: 'javax.mail', name: 'javax.mail-api', version: '1.6.2'
+	implementation group: 'org.thymeleaf', name: 'thymeleaf', version: '3.1.1.RELEASE'
+	implementation group: 'javax.annotation', name: 'javax.annotation-api', version: '1.3.2'
+	
+	// https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+	implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+	
+	compileInclude group: "com.google.code.gson", name: "gson", version: "2.8.6"
+	
+	compileInclude group: 'com.googlecode.owasp-java-html-sanitizer', name: 'owasp-java-html-sanitizer', version: '20220608.1'
+
+	// https://mvnrepository.com/artifact/com.itextpdf/html2pdf
+	implementation group: 'com.itextpdf', name: 'html2pdf', version: '5.0.2'
+
+	// https://mvnrepository.com/artifact/com.liferay/org.freemarker
+	implementation group: 'com.liferay', name: 'org.freemarker', version: '2.3.29.LIFERAY-PATCHED-5'
+	
+	
+	// JWT with GSON
+	compileOnly group: "io.jsonwebtoken", name: "jjwt-api", version: "0.11.2"
+    compileInclude group: "io.jsonwebtoken", name: "jjwt-impl", version: "0.11.2"
+    compileInclude group: "io.jsonwebtoken", name: "jjwt-gson", version: "0.11.2"
+		
+	implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+	
+	compileInclude group: 'commons-fileupload', name: 'commons-fileupload', version: '1.5'
+
+	testImplementation group: "com.liferay.portal", name: "release.dxp.api"
+	testImplementation project(":modules:AgencyPortal:AgencyPortal-api")
+	testImplementation project(":modules:AgencyPortal:AgencyPortal-service")
+	testImplementation project(":modules:MypageUser:MypageUser-api")
+	testImplementation project(":modules:MypageUser:MypageUser-service")
+	testImplementation project(":modules:MypageAdminProduct:MypageAdminProduct-api")
+	testImplementation project(":modules:MypageAdminProduct:MypageAdminProduct-service")
+
+	testImplementation group: "com.google.code.gson", name: "gson", version: "2.8.6"
+
+	testImplementation group: "org.junit.jupiter", name: "junit-jupiter-api", version: "5.13.4"
+	testRuntimeOnly group: "org.junit.jupiter", name: "junit-jupiter-engine", version: "5.13.4"
+	testRuntimeOnly group: "org.junit.platform", name: "junit-platform-launcher", version: "1.11.4"
+
+	testImplementation group: "org.mockito", name: "mockito-core", version: "4.11.0"
+	testImplementation group: "org.mockito", name: "mockito-inline", version: "4.11.0"
+
+	testImplementation group: "org.assertj", name: "assertj-core", version: "3.21.0"
+}
+
+jacoco {
+    toolVersion = "0.8.11"
+}
+
+def ignoreTestFailures = (findProperty("ignoreTestFailures") ?: "true").toString().toBoolean()
+
+test {
+    useJUnitPlatform()
+    ignoreFailures = ignoreTestFailures
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = true
+        csv.required = false
+        html.required = true
+    }
+}

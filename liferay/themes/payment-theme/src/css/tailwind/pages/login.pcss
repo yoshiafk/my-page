@@ -1,0 +1,109 @@
+.login {
+    @apply mt-[86px] lg:mt-0;
+}
+
+.login-wrapper {
+    @apply h-auto sm:h-auto md:h-auto lg:h-full;
+    & .alert,
+    & .alert-login {
+        @apply text-14px bg-axa-green-500 text-center p-[10px_12px] mb-4;
+        & span {
+            @apply text-white inline-block relative font-semibold last:ml-[3px];
+        }
+        &.failed {
+            @apply bg-axa-red-error;
+        }
+    } 
+
+    & .container-axa {
+        @apply h-full;
+    }
+
+    & .login-wrapper__container {
+        @apply md:flex md:justify-between h-full;
+    }
+
+    & .col-visible {
+        @apply w-full lg:w-auto;
+    }
+
+    & .login-wrapper__form {
+        @apply self-center;
+    }
+
+    & .login-wrapper__form { 
+        @apply bg-white w-full lg:w-[430px] shadow-[0_12px_16px_0px_rgba(0,0,0,0.2)];
+        & h3 {
+            @apply text-axa-grey-800 font-publico font-bold text-32px mb-6px;
+        }
+        & p {
+            @apply text-axa-grey-600 text-16px mb-10px;
+        }
+    }
+
+    & .login-wrapper__style-bg-img {
+        @apply bg-[url('../../../images/img_axapay_women_phone.jpg')] h-[100%] md:h-[885px] bg-no-repeat bg-cover bg-top sm:bg-top md:bg-top lg:bg-[center_0px] pt-[1rem] pb-[40px] lg:pt-0 lg:pb-0;
+    }
+}
+
+.login-form__body {
+    & .login-form__captcha {
+        & .lfr-portal-tooltip,
+        & .lfr-portal-tooltip a {
+            @apply select-none;
+
+            & .taglib-icon {
+                @apply no-underline focus:no-underline hover:no-underline;
+
+                & svg {
+                    @apply overflow-hidden;
+                }
+
+                & .taglib-text {
+                    @apply no-underline; 
+                }
+            }
+        }
+
+        & .form-group {
+            @apply relative mb-6;
+
+            & .reference-mark {
+                @apply inline-block text-[6px] relative align-super;
+            }
+
+            & .text-warning {
+                @apply text-axa-red-error;
+            }
+
+            & .field {
+                @apply p-[14px] w-full rounded-none text-axa-grey-800 outline-none placeholder:font-normal placeholder:text-[#bababa] placeholder:normal-case border border-axa-grey-400 bg-transparent;
+                &.error-input {
+                    @apply border border-axa-red-error;
+                }
+            }
+        }
+    }
+}
+
+.login-form__footer {
+    @apply block lg:flex lg:justify-between border-axa-grey-300 border-t px-[30px] py-[20px];
+    
+    & .btn {
+        @apply w-full lg:w-auto;
+    }
+    
+    & div {
+        @apply hidden lg:block;
+    }
+}
+
+.lexicon-icon {
+    @apply inline-block fill-current h-[1em] -mt-[3px] align-middle w-[1em];
+}
+
+.hide-accessible {
+    clip: rect(0 0 0 0) !important;
+    position: absolute !important;
+    transform: scale(0);
+}

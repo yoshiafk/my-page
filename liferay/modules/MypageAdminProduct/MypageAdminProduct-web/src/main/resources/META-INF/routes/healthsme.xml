@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+ <!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 7.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_7_0_0.dtd">
+
+ <routes>
+	<route>
+		<pattern>/configuration</pattern>
+		<implicit-parameter name="mvcPath">/product/health_sme/configuration.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/type</pattern>
+		<implicit-parameter name="mvcPath">/product/health_sme/type/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/type-edit</pattern>
+		<implicit-parameter name="mvcPath">/product/health_sme/type/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+	<route>
+		<pattern>/template</pattern>
+		<implicit-parameter name="mvcPath">/product/health_sme/template/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/template-edit</pattern>
+		<implicit-parameter name="mvcPath">/product/health_sme/template/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+	<route>
+		<pattern>/premi</pattern>
+		<implicit-parameter name="mvcPath">/product/health_sme/premi/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/premi-edit</pattern>
+		<implicit-parameter name="mvcPath">/product/health_sme/premi/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+	<route>
+		<pattern>/facility</pattern>
+		<implicit-parameter name="mvcPath">/product/health_sme/facility/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/facility-edit</pattern>
+		<implicit-parameter name="mvcPath">/product/health_sme/facility/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>			
+ </routes>

@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.mypage.agencyportal">
+    <author>Gositus Team</author>
+	<namespace>AP</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity name="AgentToken" local-service="true" trash-enabled="true">
+
+
+		<!-- PK fields -->
+
+		<column name="agentTokenId" primary="true" type="long"></column>
+        <column name="deptCode" type="String"></column>
+        <column name="token" type="String"></column>
+        <column name="isValid" type="int"></column>
+        <column name="apiRequestToken" type="String"></column>
+        <column name="apiRequestTokenExpired" type="Date"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <finder name="deptCode" return-type="Object">
+            <finder-column name="deptCode"></finder-column>
+        </finder>
+        <finder name="token" return-type="Object">
+            <finder-column name="token"></finder-column>
+        </finder>
+        <finder name="apiRequestToken" return-type="Object">
+            <finder-column name="apiRequestToken"></finder-column>
+        </finder>
+	</entity>
+	<entity name="AgentSalesTools" local-service="true" trash-enabled="true">
+
+
+		<!-- PK fields -->
+
+		<column name="agentSalesToolsId" primary="true" type="long"></column>
+        <column name="title" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="categoryId" type="long"></column>
+        <column name="category" type="String"></column>
+        <column name="fileUploadEntryId" type="long"></column>
+        <column name="fileUploadUrl" type="String"></column>
+        <column name="mypageUserRoleId" type="long"></column>
+        <column name="role" type="String"></column>
+        <column name="active" type="int"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <finder name="category" return-type="Collection">
+            <finder-column name="category"></finder-column>
+        </finder>
+        <finder name="mypageUserRoleId" return-type="Collection">
+            <finder-column name="mypageUserRoleId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="AgentCategorySalesTools" local-service="true" trash-enabled="true">
+
+
+		<!-- PK fields -->
+
+		<column name="agentCategorySalesToolsId" primary="true" type="long"></column>
+        <column name="category" type="String"></column>
+        <column name="active" type="int"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+	<entity name="AgentCalendar" local-service="true" trash-enabled="true">
+
+
+		<!-- PK fields -->
+
+		<column name="agentCalendarId" primary="true" type="long"></column>
+        <column name="title" type="String"></column>
+        <column name="location" type="String"></column>
+        <column name="address" type="String"></column>
+        <column name="startDate" type="Date"></column>
+        <column name="startTime" type="String"></column>
+        <column name="endDate" type="Date"></column>
+        <column name="endTime" type="String"></column>
+        <column name="mypageUserRoleId" type="long"></column>
+        <column name="role" type="String"></column>
+        <column name="mypageUserGroupId" type="long"></column>
+        <column name="group" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="link" type="String"></column>
+        <column name="category" type="String"></column>
+        <column name="fileUploadEntryId" type="long"></column>
+        <column name="fileUploadUrl" type="String"></column>
+        <column name="isAllDay" type="int"></column>
+        <column name="active" type="int"></column>
+        <column name="mypageUserId" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<finder name="title" return-type="Collection">
+            <finder-column name="title"></finder-column>
+        </finder>
+        <finder name="location" return-type="Collection">
+            <finder-column name="location"></finder-column>
+        </finder>
+        <finder name="mypageUserId" return-type="Collection">
+            <finder-column name="mypageUserId"></finder-column>
+        </finder>
+        <finder name="mypageUserRoleId" return-type="Collection">
+            <finder-column name="mypageUserRoleId"></finder-column>
+        </finder>
+        <finder name="mypageUserGroupId" return-type="Collection">
+            <finder-column name="mypageUserGroupId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="AgentMarkCalendar" local-service="true" trash-enabled="true">
+
+
+		<!-- PK fields -->
+
+		<column name="agentMarkCalendarId" primary="true" type="long"></column>
+        <column name="agentCalendarId" type="long"></column>
+        <column name="mypageUserId" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<finder name="mypageUserId" return-type="Collection">
+            <finder-column name="mypageUserId"></finder-column>
+        </finder>
+	</entity>
+	
+	<!-- FAQ entity -->
+    <entity name="AgentFAQ" local-service="true" remote-service="false" trash-enabled="true">
+
+		<!-- PK fields -->
+        <column name="agentFaqId" type="long" primary="true" />
+        <column name="title" type="String" />
+        <column name="description" type="String" />
+        <column name="categoryId" type="long" />
+        <column name="category" type="String"></column>
+        <column name="active" type="int"></column>
+        
+        
+        <!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<finder name="category" return-type="Collection">
+            <finder-column name="category"></finder-column>
+        </finder>
+        
+    </entity>
+	
+	
+	<!-- FAQCategory entity -->
+    <entity name="AgentFAQCategory" local-service="true" remote-service="false" trash-enabled="true">
+        <column name="agentFaqCategoryId" type="long" primary="true" />
+        <column name="category" type="String"></column>
+        <column name="active" type="int"></column>
+        
+        <!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        
+    </entity>
+	<entity name="AgentNotification" local-service="true" trash-enabled="true">
+
+
+		<!-- PK fields -->
+
+		<column name="agentNotificationId" primary="true" type="long"></column>
+        <column name="title" type="String"></column>
+        <column name="location" type="String"></column>
+        <column name="address" type="String"></column>
+        <column name="startDate" type="Date"></column>
+        <column name="startTime" type="String"></column>
+        <column name="endDate" type="Date"></column>
+        <column name="endTime" type="String"></column>
+        <column name="mypageUserRoleId" type="long"></column>
+        <column name="role" type="String"></column>
+        <column name="mypageUserGroupId" type="long"></column>
+        <column name="group" type="String"></column>
+        <column name="referenceId" type="long"></column>
+        <column name="description" type="String"></column>
+        <column name="link" type="String"></column>
+        <column name="category" type="String"></column>
+        <column name="fileUploadEntryId" type="long"></column>
+        <column name="fileUploadUrl" type="String"></column>
+        <column name="isAllDay" type="int"></column>
+        <column name="isRead" type="int"></column>
+        <column name="active" type="int"></column>
+        <column name="mypageUserId" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<finder name="title" return-type="Collection">
+            <finder-column name="title"></finder-column>
+        </finder>
+        <finder name="location" return-type="Collection">
+            <finder-column name="location"></finder-column>
+        </finder>
+        <finder name="mypageUserId" return-type="Collection">
+            <finder-column name="mypageUserId"></finder-column>
+        </finder>
+        <finder name="mypageUserRoleId" return-type="Collection">
+            <finder-column name="mypageUserRoleId"></finder-column>
+        </finder>
+        <finder name="mypageUserGroupId" return-type="Collection">
+            <finder-column name="mypageUserGroupId"></finder-column>
+        </finder>
+        <finder name="referenceId" return-type="Collection">
+            <finder-column name="referenceId"></finder-column>
+        </finder>
+	</entity>
+ 	<entity name="AgentEmailBucket" local-service="true" trash-enabled="true">
+        <column name="agentEmailBucketId" type="long" primary="true" />
+        <column name="activity" type="String"></column>
+        <column name="subject" type="String"></column>
+        <column name="sender" type="String"></column>
+        <column name="recipient" type="String"></column>
+        <column name="recipientCC" type="String"></column>
+        <column name="recipientBCC" type="String"></column>
+        <column name="template" type="String"></column>
+        <column name="params" type="String"></column>
+        <column name="bodyText" type="String"></column>
+        <column name="status_" type="String"></column>
+        <column name="counter" type="int"></column>
+        <column name="message" type="String"></column>
+        <column name="resendCount" type="int"></column>
+        <column name="delay" type="String"></column>
+        <column name="attachmentId" type="long"></column>
+        <column name="attachmentUrl" type="String"></column>
+        <column name="active" type="int"></column>
+        
+        <!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<finder name="status" return-type="Collection">
+            <finder-column name="status_"></finder-column>
+        </finder>
+    </entity>
+ 	<entity name="AgentTokenLimiter" local-service="true"
+ 		trash-enabled="true">
+
+ 		<!-- PK fields -->
+
+ 		<column name="agentTokenLimiterId" primary="true"
+ 			type="long">
+ 		</column>
+
+ 		<!-- Group instance -->
+
+ 		<column name="groupId" type="long"></column>
+
+ 		<!-- Audit fields -->
+
+ 		<column name="companyId" type="long"></column>
+ 		<column name="userId" type="long"></column>
+ 		<column name="userName" type="String"></column>
+ 		<column name="createDate" type="Date"></column>
+ 		<column name="modifiedDate" type="Date"></column>
+        <column name="deptCode" type="String"></column>
+        <column name="token" type="String"></column>
+        <column name="isValid" type="int"></column>
+        <column name="tokenType" type="String"></column>
+        <finder name="token" return-type="AgentTokenLimiter">
+            <finder-column name="token"></finder-column>
+        </finder>
+        <finder name="deptCodeAndTokenType" return-type="AgentTokenLimiter">
+            <finder-column name="deptCode"></finder-column>
+            <finder-column name="tokenType"></finder-column>
+        </finder>
+ 	</entity>
+
+</service-builder>

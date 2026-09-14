@@ -1,0 +1,118 @@
+@each $color, $value in $_buttons {
+  .btn-#{$color} {
+    $text-color: $_white;
+    @if map-has-key($_button-colors, $color) == true {
+      $text-color: map-get($_button-colors, $color);
+    }
+    
+    @include btn-variant($value, $text-color);
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+  &.bold {
+    font-size: $_font-size-17;
+  }
+
+  &.btn-md {
+    height: 45px;
+  }
+}
+
+.btn-yellow-box {
+  padding: 15px 28px;
+  border-radius: 0px;
+  background-color: $_yellow;
+  color: $_white;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.small {
+    padding: 10px 15px;
+  }
+
+  @include hover {
+    color: $_white;
+    background-color: #e9a302;
+  }
+
+  &[disabled] {
+    background-color: $_gray-600;
+  }
+}
+
+.btn-transparent {
+  padding: .100rem 2rem;
+  border: 1px solid $_white;
+  border-radius: 0px !important;
+  color: $white;
+
+  &:hover {
+    color: $_white;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-burger {
+  background: none !important;
+  border: none !important;
+}
+
+.btn-border {
+  padding: 8px 22px;
+  border: 1px solid $_gray-600;
+  color: $_blue-500;
+}
+
+a,
+button {
+  &[aria-expanded="true"] {
+    .burger-menu {
+      span {
+        &:nth-child(1) {
+          width: 9px;
+          @include transform(rotate(45deg) translate(3px,1px));
+        }
+        &:nth-child(2) {
+          @include transform(rotate(-45deg));
+        }
+        &:nth-child(3) {
+          width: 9px;
+          @include transform(rotate(45deg) translate(6.5px,-10px));
+        }
+      }
+    }
+  }
+  .burger-menu {
+    height: 20px;
+    
+    span {
+      width: 22px;
+      height: 2px;
+      margin-bottom: 6px;
+      border-radius: 6px;
+      background-color: $_blue-500;
+      display: block;
+      @include transition(all .2s ease-in-out)
+  
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

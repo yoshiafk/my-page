@@ -1,0 +1,26 @@
+@each $key, $value in $_margins {
+    .mt-#{$value} {
+        margin-top: #{$value}px;
+    }
+    .mb-#{$value} {
+        margin-bottom: #{$value}px;
+    }
+    .ml-#{$value} {
+        margin-left: #{$value}px;
+    }
+    .mr-#{$value} {
+        margin-right: #{$value}px;
+    }
+    .pt-#{$value} {
+        padding-top: #{$value}px;
+    }
+    .pb-#{$value} {
+        padding-bottom: #{$value}px;
+    }
+    .pl-#{$value} {
+        padding-left: #{$value}px;
+    }
+    .pr-#{$value} {
+        padding-right: #{$value}px;
+    }
+}

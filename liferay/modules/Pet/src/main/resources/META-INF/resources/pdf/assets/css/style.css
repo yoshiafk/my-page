@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "Myriad Pro Regular";
+  src: url("../fonts/MyriadProRegular.ttf");
+}
+
+/* PDF DOCUMENT SETTINGS */
+
+/* page settings */
+@page { 
+	size: a4 portrait;
+	margin-top: 11.5em;
+	margin-left: 2.5em;
+	margin-right: 2.5em;
+	@top-center { 
+		content: element(header);
+	}
+	@bottom-center { 
+		content: element(footer) 
+	}
+}
+section.page {
+	page-break-before: always;
+}
+
+
+/* set id of header & footer */
+#header {
+	margin-top: 3.5em;
+	display: block;
+	line-height: 1;
+	position: running(header);
+}
+#header .header_address {
+	display: block;
+	height: 300px;
+}
+#footer {
+	margin-bottom: 3em;
+	display: block;
+	position: running(footer);
+}
+
+/* get & set page number */
+#pagenumber:before {
+    content: counter(page);
+}
+
+#pagecount:before {
+    content: counter(pages);
+}
+
+/* END PDF DOCUMENT SETTINGS */
+
+* {
+	font-size: 12px;
+}
+
+.english,
+.table1 tr th i,
+.table1 tr td i {
+    font-size: 10px;
+    font-style: italic;
+}
+
+b.english {
+    font-size: 18px
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+}
+
+h1,
+h1 i {
+	font-size: 27px;
+	font-weight: bold;
+}
+
+h1.premium-note-title {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.mb-20 {
+    margin-bottom: 20px
+}
+
+.mt-100 {
+    margin-top: 100px
+}
+
+.vtop {
+    vertical-align: top
+}
+
+.vbottom {
+    vertical-align: bottom!important
+}
+
+.w300 {
+    width: 300px
+}
+
+.bgray {
+    background: #f2f2f2 !important;
+}
+
+#header .header-logo {
+    /*height: 45px*/
+    width: 200px;
+}
+
+#header .header_address,
+#header .header_address tr td {
+    font-size: 9px;
+    line-height: 1.1;
+}
+
+#header .header_address strong {
+    font-size: 10px
+}
+
+.title {
+    background: #bfbfbf !important;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+.title h3,
+.title h3 i {
+	font-size: 16px;
+}
+
+.title.no-slash {
+  height: 34px;
+}
+
+.title span {
+  vertical-align: text-bottom;
+  padding: 14px 0 6px 10px;
+}
+
+.title .slash {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  display: block;
+  border-bottom: 40px solid #fff !important;
+  border-left: 30px solid transparent !important;
+}
+
+label {
+    line-height: .8;
+    font-weight: 400
+}
+
+label.text-bold {
+    font-weight: 700
+}
+
+table.border-black {
+    border-collapse: collapse
+}
+
+table.border-black td,
+table.border-black th {
+    border: 1px solid #515151
+}
+
+.table1 {
+    width: 100%;
+    position: relative;
+}
+
+.table1 .border {
+    border: 1px solid #000
+}
+
+.table1 table.no-border td,
+.table1 table.no-border th {
+    border: none
+}
+
+.table1 .pad-5 {
+    padding: 5px 10px
+}
+
+.table1 tbody tr th {
+    padding: 3px 10px;
+    vertical-align: top
+}
+
+.table1 tbody tr th.v-middle {
+    vertical-align: middle
+}
+
+.table1 tbody tr td {
+    padding: 0 10px;
+    vertical-align: top
+}
+
+.table1 .border-nobottom {
+    border-bottom: none
+}
+
+.table1 .border-notop {
+    border-top: none
+}
+
+.table1 .border-color1 {
+    border: 1px solid #bfbfbf
+}
+
+.table1.type2 td:last-child.text-right {
+    text-align: right
+}
+
+.table1.type2 td:first-child.text-right,
+.table1.type2 th.text-right {
+    text-align: right
+}
+
+.table1.type2 tr td {
+    padding: 3px 10px
+}
+
+.table1.type2 tr th.border1 {
+    border: 1px solid #bfbfbf;
+    border-right: none
+}
+
+.table1.type2 tr th.border2 {
+    border: 1px solid #bfbfbf;
+    border-left: none
+}
+
+.table1.marker-style ol li::marker{
+    font-weight: normal !important;
+    font-style: normal !important;
+  }
+
+.table-odd tr:nth-child(odd) {
+    background-color: #f2f2f2 !important;
+}
+
+.table-child {
+    width: 100%
+}
+
+.table-child tr th {
+    padding: 3px 10px 3px 0px !important;
+}
+
+.table-child tr td {
+    padding: 3px 0px 3px 10px !important;
+}
+
+#covernote h1,
+#covernote h2,
+#covernote h3,
+#covernote p {
+    line-height: 1.5
+}
+
+#covernote .border-topdown {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 20px 0 10px 0;
+    margin: 20px 0
+}
+
+.border-bottom {
+    border-bottom: 1px solid #000
+}
+
+.signature label {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+
+.signature img {
+    margin: 30px 0;
+    height: 100px
+}
+
+.new-page {
+    page-break-before: always;
+    display: block;
+    clear: both
+}
+
+.spacer {
+    display: block;
+    padding-bottom: 15px;
+    clear: both
+}
+
+.darkgray {
+    background: #c7baba !important;
+}
+
+#BenefitGP {
+    padding: 15px 10px
+}
+
+#BenefitGP h2 {
+    font-size: 24px
+}
+
+#BenefitGP h3 {
+    font-size: 18px;
+    margin-bottom: 5px
+}
+
+#BenefitGP ol {
+    padding-left: 15px
+}
+
+#BenefitGP ol ol {
+    list-style-type: lower-alpha
+}
+
+.ul ul {
+    padding-left: 15px
+}
+
+.block {
+    display: block;
+}
+
+/* TABLE THINGS TO CONSIDERED SECTION */
+.tablettcs tbody tr td i {
+	font-size: 10px;
+	font-style:italic;
+}
+
+.tablettcs tbody tr td ol li ul.dashed {
+	list-style-type: none;
+	margin-left: -15px;
+}
+
+.tablettcs tbody tr td ol li ul li {
+	text-indent: -20px;
+}
+
+.tablettcs tbody tr td ol li ul.dashed li:before {
+	content: "-";
+	padding-right: 15px;
+}
+

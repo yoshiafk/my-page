@@ -1,0 +1,11 @@
+dependencies {
+	implementation project(":modules:MypageLeads:MypageLeads-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../MypageLeads-api/src/main/java"
+}
+
+group = "com.mypage.leads"

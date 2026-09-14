@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.aii.esppk.admin.model.SppkDebitur">
+		<field name="sppkDebiturId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="applicationNumber" type="String" />
+		<field name="fullName" type="String" />
+		<field name="birthPlace" type="String" />
+		<field name="birthDate" type="Date" />
+		<field name="idNumber" type="String" />
+		<field name="address" type="String" />
+		<field name="occupation" type="String" />
+		<field name="email" type="String" />
+		<field name="phoneNumber" type="String" />
+		<field name="gender" type="String" />
+		<field name="sumInsured" type="BigDecimal" />
+		<field name="product" type="String" />
+		<field name="esppkToken" type="String" />
+		<field name="esppkTokenExpiry" type="Date" />
+		<field name="esppkQ1" type="int" />
+		<field name="esppkQ2" type="int" />
+		<field name="esppkQ3" type="int" />
+		<field name="agreeRiplay" type="int" />
+		<field name="agreeStatement" type="int" />
+		<field name="needAssistance" type="int" />
+		<field name="submitEsppkDate" type="Date" />
+		<field name="submissionNumber" type="String" />
+	</model>
+	<model name="com.aii.esppk.admin.model.SppkUser">
+		<field name="sppkUserId" type="long" />
+		<field name="sppkLoginCode" type="String" />
+		<field name="password" type="String" />
+		<field name="fullName" type="String" />
+		<field name="roleCode" type="String" />
+		<field name="email" type="String" />
+		<field name="allAccess" type="int" />
+		<field name="accessData" type="int" />
+		<field name="accessMonitoring" type="int" />
+		<field name="active" type="int" />
+		<field name="expireDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="otpCode" type="String" />
+		<field name="otpExpired" type="Date" />
+	</model>
+</model-hints>

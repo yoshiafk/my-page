@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insurance-admin
+  labels:
+    app: insurance-platform
+    component: admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: insurance-platform
+      component: admin
+  template:
+    metadata:
+      labels:
+        app: insurance-platform
+        component: admin
+    spec:
+      containers:
+      - name: admin
+        image: artifactory.europe.axa-cloud.com/insurance-platform/admin:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"

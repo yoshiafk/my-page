@@ -1,0 +1,19 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.1.0"
+	
+	compileOnly project(":modules:aii-esppk-admin:aii-esppk-admin-api")
+	compileOnly project(":modules:aii-esppk-admin:aii-esppk-admin-service")
+
+    compileInclude group: 'org.jumpmind.symmetric', name: 'symmetric-csv', version: '3.5.19'
+	
+	// https://mvnrepository.com/artifact/at.favre.lib/bcrypt
+	implementation("at.favre.lib:bcrypt:0.10.2")
+}
+
+jar {
+    from {
+        configurations.runtimeClasspath.collect {it.isDirectory() ? it : zipTree(it)}
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

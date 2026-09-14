@@ -1,0 +1,272 @@
+.SmartTravelInternational-web {
+}
+
+.gohide {display: none !important;}
+
+.simulasi {
+	.select2-results__option--selectable {
+	text-transform: none;
+}
+}
+
+
+.btn-apply {
+	background-color: rgb(0 0 143 / 1);
+}
+
+.tooltip {
+    position: relative;
+    color: #0056b3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tooltip-content {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: rgb(0 0 143);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    width: 445px;
+    z-index: 10000;
+}
+
+.tooltip-content ul {
+    margin: 10px 30px;
+    padding: 0;
+    list-style: disc;
+}
+
+.tooltip-content ul li {
+    margin-bottom: 5px;
+}
+
+.tooltip:hover .tooltip-content {
+    display: block;
+}
+
+.plan-compare-additional-benefit-section {
+    font-weight: 600;
+    font-size: 26px;
+    color: rgb(39 65 104);
+    margin: 20px 0;
+}
+
+
+
+ .table_jaminan_terpilih,
+.table_jaminan_terpilih th,
+.table_jaminan_terpilih td {
+    border: 2px solid #0f766e;
+    border-collapse: collapse;
+}
+
+.table_jaminan_terpilih td {
+    padding: 5px;
+}
+
+.table_jaminan_terpilih th {
+    padding: 5px;
+}
+
+
+
+/*loading animation*/
+
+#btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.custom-spinner {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite; 
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+      /* SKELETON */
+      .skeleton {
+        -webkit-animation: skeleton-loading 1s linear infinite alternate;
+        animation: skeleton-loading 1s linear infinite alternate;
+      }
+
+      @-webkit-keyframes skeleton-loading {
+        0% {
+          background-color: #c2cfd6;
+        }
+        100% {
+          background-color: #f0f3f5;
+        }
+      }
+
+      @keyframes skeleton-loading {
+        0% {
+          background-color: #c2cfd6;
+        }
+        100% {
+          background-color: #f0f3f5;
+        }
+      }
+
+      .skeleton-text {
+        width: 100%;
+        height: 0.7rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.25rem;
+        display: inline-block;
+        margin: 0;
+      }
+
+      .skeleton-text-half {
+        width: 50%;
+        height: 0.7rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.25rem;
+        display: inline-block;
+        margin: 0;
+      }
+
+      .skeleton-text__body {
+        width: 75%;
+      }
+
+      .skeleton-footer {
+        width: 30%;
+      }
+      
+      /*Mypage Loading Spinner*/
+      
+  .mypage-loading-spinner-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 143, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+
+
+.lds-ripple,
+.lds-ripple div {
+  box-sizing: border-box;
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+.thumbnail-wrapper {
+    position: relative;
+}
+
+.loading-icon {
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+    transform: none;
+    font-size: 15px;
+    font-weight: normal;
+    color: #eeeeee;
+    display: none;
+    padding: 5px;
+    background-color: #282828;
+}
+
+
+.telepondiv_child {
+	margin-top: 488px;
+}
+
+.telepondiv_adult {
+	margin-top: 250px;
+}
+
+
+@media (max-width: 768px) {
+    .loading-icon {
+        font-size: 11px;
+    }
+    
+    .telepondiv_child {
+    margin-top: 0;
+  }
+  
+  .telepondiv_adult {
+	margin-top: 0;
+}
+}
+
+
+.loading-icon.display-visible {
+    display: block;
+}

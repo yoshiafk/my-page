@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.mypage.user.model.CreditType">
+		<field name="creditTypeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="mypageUserId" type="long" />
+		<field name="name" type="String" />
+		<field name="agentType" type="String" />
+		<field name="limit" type="double" />
+		<field name="overrideGracePeriod" type="int" />
+		<field name="nettPremiAllowed" type="int" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.user.model.CreditWallet">
+		<field name="creditWalletId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="creditTypeId" type="long" />
+		<field name="dateIssued" type="Date" />
+		<field name="dateExpired" type="Date" />
+		<field name="amount" type="double" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.user.model.CreditWalletHistory">
+		<field name="creditWalletHistoryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="mypageUserId" type="long" />
+		<field name="creditWalletId" type="long" />
+		<field name="leadsId" type="long" />
+		<field name="operation" type="String" />
+		<field name="amount" type="double" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.user.model.MypageGroupUser">
+		<field name="mypageGroupUserId" type="long" />
+		<field name="mypageGroupId" type="long" />
+		<field name="mypageUserId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.user.model.MypageUser">
+		<field name="mypageUserId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="liferayUserId" type="long" />
+		<field name="userPassword" type="String" />
+		<field name="agentFlag" type="String" />
+		<field name="userParent" type="long" />
+		<field name="userBranch" type="long" />
+		<field name="mypageUserRoleId" type="long" />
+		<field name="status" type="String" />
+		<field name="creditStatus" type="String" />
+		<field name="creditWalletId" type="long" />
+		<field name="cashPayment" type="int" />
+		<field name="paymentMethod" type="String" />
+		<field name="loginCounter" type="int" />
+		<field name="lastSubmitLoginDate" type="Date" />
+		<field name="TempCode" type="String" />
+		<field name="TempCodeExpiryDate" type="Date" />
+		<field name="phone" type="String" />
+		<field name="mobilePhone" type="String" />
+		<field name="email" type="String" />
+		<field name="birthPlace" type="String" />
+		<field name="dob" type="Date" />
+		<field name="idNumber" type="String" />
+		<field name="address" type="String" />
+		<field name="zip" type="String" />
+		<field name="gender" type="String" />
+		<field name="country" type="long" />
+		<field name="province" type="long" />
+		<field name="city" type="long" />
+		<field name="latitude" type="String" />
+		<field name="longitude" type="String" />
+		<field name="positionZoom" type="int" />
+		<field name="code" type="String" />
+		<field name="branch" type="long" />
+		<field name="promoCode" type="String" />
+		<field name="agsPromoCode" type="String" />
+		<field name="deptoreCode" type="String" />
+		<field name="club" type="String" />
+		<field name="leader" type="long" />
+		<field name="statusAgent" type="String" />
+		<field name="licenseNumber" type="String" />
+		<field name="joinDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="prettyUrl" type="String" />
+		<field name="prettyUrlChange" type="int" />
+		<field name="taxRate" type="double" />
+		<field name="visitedCount" type="int" />
+		<field name="isPartnership" type="int" />
+		<field name="partnershipName" type="String" />
+		<field name="defCommPartnerMV" type="double" />
+		<field name="defCommPartnerEH" type="double" />
+		<field name="defCommPartnerDT" type="double" />
+		<field name="defCommPartnerIT" type="double" />
+		<field name="defCommPartnerSME" type="double" />
+		<field name="defCommPartnerProperty" type="double" />
+		<field name="defCommPartnerPet" type="double" />
+		<field name="defCommPartnerPA" type="double" />
+		<field name="defCommPartnerGP" type="double" />
+		<field name="bannerImageURL" type="String" />
+		<field name="bannerImageFileEntryId" type="Long" />
+		<field name="profileImageURL" type="String" />
+		<field name="profileImageFileEntryId" type="Long" />
+		<field name="myTitle" type="String" />
+		<field name="myVideo" type="String" />
+		<field name="aboutMe" type="String" />
+		<field name="facebook" type="String" />
+		<field name="tiktok" type="String" />
+		<field name="instagram" type="String" />
+		<field name="twitter" type="String" />
+		<field name="linkedIn" type="String" />
+		<field name="blog" type="String" />
+		<field name="whatsapp" type="String" />
+		<field name="skype" type="String" />
+		<field name="is24Hours" type="int" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.user.model.MypageUserGracePeriod">
+		<field name="mypageUserGracePeriodId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="mypageUserId" type="long" />
+		<field name="code" type="String" />
+		<field name="value" type="int" />
+	</model>
+	<model name="com.mypage.user.model.MypageUserGroup">
+		<field name="mypageUserGroupId" type="long" />
+		<field name="name" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.user.model.MypageUserLicenses">
+		<field name="mypageUserLicensesId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="mypageUserId" type="long" />
+		<field name="productId" type="long" />
+	</model>
+	<model name="com.mypage.user.model.MypageUserRole">
+		<field name="mypageUserRoleId" type="long" />
+		<field name="name" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.user.model.MypageUserTimeline">
+		<field name="mypageUserTimelineId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="mypageUserId" type="long" />
+		<field name="imgUploadTimelineEntryId" type="long" />
+		<field name="imgUploadTimelineUrl" type="String" />
+		<field name="videoUploadTimelineUrl" type="String" />
+		<field name="text" type="String" />
+	</model>
+	<model name="com.mypage.user.model.MypageUserWorkingHour">
+		<field name="mypageUserWorkingHourId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="mypageUserId" type="long" />
+		<field name="day" type="String" />
+		<field name="startTime" type="String" />
+		<field name="endTime" type="String" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.mypage.user.model.UserOneTimeCode">
+		<field name="userOneTimeCodeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="sharedSecret" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="expiryDate" type="Date" />
+		<field name="TimestampExpiryDate" type="long" />
+		<field name="isUsed" type="int" />
+	</model>
+	<model name="com.mypage.user.model.UserRegistration">
+		<field name="userRegistrationId" type="long" />
+		<field name="name" type="String" />
+		<field name="idNumber" type="String" />
+		<field name="licenseNumber" type="String" />
+		<field name="address" type="String" />
+		<field name="postalAddress" type="String" />
+		<field name="province" type="String" />
+		<field name="city" type="String" />
+		<field name="zip" type="String" />
+		<field name="phone" type="String" />
+		<field name="mobilePhone" type="String" />
+		<field name="email" type="String" />
+		<field name="birthPlace" type="String" />
+		<field name="dob" type="Date" />
+		<field name="gender" type="String" />
+		<field name="maritalStatus" type="String" />
+		<field name="residenceStatus" type="String" />
+		<field name="stayPeriod" type="int" />
+		<field name="knowAXAFrom" type="int" />
+		<field name="knowAXAFromOther" type="String" />
+		<field name="joinReason" type="String" />
+		<field name="bankName" type="String" />
+		<field name="bankAccountName" type="String" />
+		<field name="bankAccountNo" type="String" />
+		<field name="npwp" type="String" />
+		<field name="npwpName" type="String" />
+		<field name="portfolioFire" type="int" />
+		<field name="portfolioMotor" type="int" />
+		<field name="portfolioMarine" type="int" />
+		<field name="portfolioHealth" type="int" />
+		<field name="portfolioOther" type="int" />
+		<field name="targetFire" type="int" />
+		<field name="targetMotor" type="int" />
+		<field name="targetMarine" type="int" />
+		<field name="targetHealth" type="int" />
+		<field name="targetOther" type="int" />
+		<field name="annualPremiIncome" type="long" />
+		<field name="targetCase" type="int" />
+		<field name="targetPremi" type="long" />
+		<field name="prospectSource" type="String" />
+		<field name="otherInsuranceJob" type="int" />
+		<field name="tnc" type="int" />
+		<field name="agentAFI" type="int" />
+		<field name="sentToMAS" type="int" />
+		<field name="approved" type="int" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.user.model.UserRegistrationEducation">
+		<field name="userRegistrationEducationId" type="long" />
+		<field name="name" type="String" />
+		<field name="year" type="int" />
+		<field name="graduate" type="int" />
+		<field name="courseType" type="String" />
+		<field name="title" type="String" />
+		<field name="eduType" type="String" />
+		<field name="userRegistrationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.user.model.UserRegistrationJobExp">
+		<field name="userRegistrationJobExpId" type="long" />
+		<field name="name" type="String" />
+		<field name="year" type="int" />
+		<field name="jobHead" type="String" />
+		<field name="jobPosition" type="String" />
+		<field name="jobIncome" type="String" />
+		<field name="otherInsuranceCompany" type="int" />
+		<field name="userRegistrationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.user.model.UserRegistrationLiability">
+		<field name="userRegistrationLiabilityId" type="long" />
+		<field name="name" type="String" />
+		<field name="relationship" type="String" />
+		<field name="age" type="int" />
+		<field name="userRegistrationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.user.model.UserRegistrationReference">
+		<field name="userRegistrationReferenceId" type="long" />
+		<field name="name" type="String" />
+		<field name="relation" type="String" />
+		<field name="age" type="int" />
+		<field name="address" type="String" />
+		<field name="phone" type="String" />
+		<field name="job" type="String" />
+		<field name="year" type="int" />
+		<field name="userRegistrationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

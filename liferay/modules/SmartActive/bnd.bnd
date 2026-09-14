@@ -1,0 +1,4 @@
+Bundle-Name: SmartActive
+Bundle-SymbolicName: com.mypage.product.sa
+Bundle-Version: 1.0.0
+Export-Package: com.mypage.product.sa.constants

@@ -1,0 +1,1050 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.mypage.admin.product.model.Benefit">
+		<field name="benefitId" type="long" />
+		<field name="nameId" type="String" />
+		<field name="nameEn" type="String" />
+		<field name="sort" type="int" />
+		<field name="benefitTypeId" type="long" />
+		<field name="active" type="int" />
+		<field name="planName" type="String" />
+		<field name="benefitValue" type="String" />
+		<field name="externalCode" type="String" />
+		<field name="benefitDescription" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.BenefitType">
+		<field name="benefitTypeId" type="long" />
+		<field name="nameId" type="String" />
+		<field name="nameEn" type="String" />
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.BenefitValueMapping">
+		<field name="benefitValueMappingId" type="long" />
+		<field name="benefitTypeId" type="long" />
+		<field name="benefitId" type="long" />
+		<field name="planId" type="long" />
+		<field name="benefitValue" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="benefitValueUSD" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.BlacklistCustomer">
+		<field name="blacklistCustomerId" type="long" />
+		<field name="fullName" type="String" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="ktp" type="String" />
+		<field name="kitas" type="String" />
+		<field name="email" type="String" />
+		<field name="dateOfBirth" type="Date" />
+		<field name="active" type="Integer" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.CompanyType">
+		<field name="companyTypeId" type="long" />
+		<field name="name" type="String" />
+		<field name="label" type="String" />
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.HealthIndividuPlan">
+		<field name="healthIndividuPlanId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="limitYear" type="long" />
+		<field name="limitDisability" type="long" />
+		<field name="inpatient" type="long" />
+		<field name="outpatient" type="long" />
+		<field name="ambulanceService" type="long" />
+		<field name="personalAccident" type="long" />
+		<field name="detail" type="String" />
+		<field name="benefit" type="String" />
+		<field name="benefitIcon" type="String" />
+		<field name="recommended" type="int" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.HealthIndividuPremi">
+		<field name="healthIndividuPremiId" type="long" />
+		<field name="planId" type="long" />
+		<field name="age" type="int" />
+		<field name="premi" type="long" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.HealthSmeFacility">
+		<field name="healthSmeFacilityId" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="healthSmeTypeId" type="long" />
+		<field name="defaultMinimum" type="int" />
+		<field name="minimum" type="double" />
+		<field name="defaultNormal" type="int" />
+		<field name="normal" type="double" />
+		<field name="defaultMaximum" type="int" />
+		<field name="maximum" type="double" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.HealthSmePremi">
+		<field name="healthSmePremiId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="premiType" type="String" />
+		<field name="amount" type="long" />
+		<field name="healthSmeTemplateId" type="long" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.HealthSmeTemplate">
+		<field name="healthSmeTemplateId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="code" type="String" />
+		<field name="description" type="String" />
+		<field name="amount" type="long" />
+		<field name="annualLimit" type="long" />
+		<field name="healthSmeTypeId" type="long" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.HealthSmeType">
+		<field name="healthSmeTypeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="typeName" type="String" />
+		<field name="typeCode" type="String" />
+		<field name="typeDescription" type="String" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.Industry">
+		<field name="industryId" type="long" />
+		<field name="name" type="String" />
+		<field name="industryCategoryId" type="long" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.IndustryCategory">
+		<field name="industryCategoryId" type="long" />
+		<field name="name" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.IntTravelStandardNewPremi">
+		<field name="intTravelStandardNewPremiId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="travelType" type="String" />
+		<field name="packageType" type="String" />
+		<field name="peopleType" type="String" />
+		<field name="mainInsured" type="int" />
+		<field name="spouse" type="int" />
+		<field name="child" type="int" />
+		<field name="currency" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="additionalPrice" type="BigDecimal" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.JobPosition">
+		<field name="jobPositionId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterBank">
+		<field name="masterBankId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="bankCode" type="String" />
+		<field name="bankDesc" type="String" />
+		<field name="name" type="String" />
+		<field name="detail" type="String" />
+		<field name="imageURL" type="String" />
+		<field name="imageFileEntryId" type="Long" />
+		<field name="order" type="Integer" />
+		<field name="active" type="Integer" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterBranch">
+		<field name="masterBranchId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="agiCode" type="String" />
+		<field name="magiCode" type="String" />
+		<field name="active" type="Integer" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterCity">
+		<field name="masterCityId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="provinceId" type="long" />
+		<field name="status" type="String" />
+		<field name="parEarthquakeZone" type="Integer" />
+		<field name="active" type="Integer" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterCountry">
+		<field name="countryId" type="long" />
+		<field name="name" type="String" />
+		<field name="isPlatinum" type="Integer" />
+		<field name="isGold" type="Integer" />
+		<field name="isSpecialAsia" type="Integer" />
+		<field name="isSchengen" type="Integer" />
+		<field name="isSanctionCountry" type="Integer" />
+		<field name="active" type="Integer" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterCurrency">
+		<field name="currencyId" type="long" />
+		<field name="name" type="String" />
+		<field name="amount" type="double" />
+		<field name="isDefault" type="Integer" />
+		<field name="active" type="Integer" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterGlobalVariable">
+		<field name="masterGlobalVariableId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="group" type="String" />
+		<field name="name" type="String" />
+		<field name="value" type="String" />
+		<field name="imageFileEntryId" type="Long" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterOccupation">
+		<field name="masterOccupationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="masterOccupationCategoryId" type="long" />
+		<field name="active" type="Integer" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterOccupationCategory">
+		<field name="masterOccupationCategoryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="active" type="Integer" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterPromoCode">
+		<field name="promoCodeId" type="long" />
+		<field name="isDefault" type="int" />
+		<field name="productCode" type="String" />
+		<field name="productName" type="String" />
+		<field name="promoType" type="String" />
+		<field name="promoCode" type="String" />
+		<field name="discount" type="double" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="activeDay" type="String" />
+		<field name="limit" type="String" />
+		<field name="network" type="String" />
+		<field name="channel" type="String" />
+		<field name="isB2C" type="int" />
+		<field name="isB2B2C" type="int" />
+		<field name="isB2B" type="int" />
+		<field name="payment" type="String" />
+		<field name="birthdayMonth" type="String" />
+		<field name="remarks" type="String" />
+		<field name="mypageUserId" type="long" />
+		<field name="agentName" type="String" />
+		<field name="deptoreCode" type="String" />
+		<field name="commission" type="String" />
+		<field name="plan_" type="String" />
+		<field name="promoCodeTerms" type="String" />
+		<field name="travellerType" type="String" />
+		<field name="utmId" type="String" />
+		<field name="paymentChannelId" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.MasterProvince">
+		<field name="masterProvinceId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="countryId" type="Integer" />
+		<field name="active" type="Integer" />
+	</model>
+	<model name="com.mypage.admin.product.model.PaymentChannel">
+		<field name="paymentChannelId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="code" type="String" />
+		<field name="name" type="String" />
+		<field name="minPayment" type="Double" />
+		<field name="maxPayment" type="Double" />
+		<field name="description" type="String" />
+		<field name="masterBankId" type="long" />
+		<field name="mdrAxa" type="String" />
+		<field name="mdrUser" type="String" />
+		<field name="pgFeePct" type="String" />
+		<field name="pgFeeAmt" type="String" />
+		<field name="imageFileEntryId" type="long" />
+		<field name="imageURL" type="String" />
+		<field name="utmOnly" type="Integer" />
+		<field name="mallId" type="String" />
+		<field name="sharedKey" type="String" />
+		<field name="active" type="Integer" />
+	</model>
+	<model name="com.mypage.admin.product.model.PaymentChannelTenor">
+		<field name="paymentChannelTenorId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="paymentChannelId" type="long" />
+		<field name="promoid" type="String" />
+		<field name="tenor" type="String" />
+		<field name="tenorid" type="String" />
+		<field name="acquirer" type="String" />
+		<field name="active" type="Integer" />
+	</model>
+	<model name="com.mypage.admin.product.model.PersonalAccidentPremi">
+		<field name="personalAccidentPremiId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="premiType" type="String" />
+		<field name="amount" type="double" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.PetAnimalType">
+		<field name="petAnimalTypeId" type="long" />
+		<field name="name" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.PetDetail">
+		<field name="petDetailId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="remarksAValue" type="String" />
+		<field name="remarksBValue" type="String" />
+		<field name="remarksCValue" type="String" />
+		<field name="remarksDValue" type="String" />
+		<field name="petName" type="String" />
+		<field name="petType" type="int" />
+		<field name="petGender" type="int" />
+		<field name="petDob" type="Date" />
+		<field name="petIdNumber" type="String" />
+		<field name="petIdNumberIssuing" type="String" />
+		<field name="petIdNumberFile" type="String" />
+		<field name="petPhoto" type="String" />
+		<field name="petLocation" type="String" />
+		<field name="petVaccine" type="int" />
+		<field name="petAuthorizedCertificate" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.PetPlan">
+		<field name="uuid" type="String" />
+		<field name="petPlanId" type="long" />
+		<field name="name" type="String" />
+		<field name="limitDisability" type="long" />
+		<field name="limitMedical" type="long" />
+		<field name="limitThirdParty" type="long" />
+		<field name="limitCustody" type="long" />
+		<field name="recommended" type="int" />
+		<field name="customPlan" type="int" />
+		<field name="benefit" type="String" />
+		<field name="pimcorePlanId" type="long" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.PetRate">
+		<field name="petRateId" type="long" />
+		<field name="petPlan" type="long" />
+		<field name="petRemarks" type="long" />
+		<field name="rate" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.PetRemarks">
+		<field name="petRemarksId" type="long" />
+		<field name="name" type="String" />
+		<field name="code" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.Premi">
+		<field name="premiId" type="long" />
+		<field name="travellerType" type="String" />
+		<field name="currency" type="String" />
+		<field name="basic" type="BigDecimal" />
+		<field name="additional" type="BigDecimal" />
+		<field name="annual" type="BigDecimal" />
+		<field name="active" type="int" />
+		<field name="benefitId" type="long" />
+		<field name="planId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.ProductConfiguration">
+		<field name="productId" type="long" />
+		<field name="productCode" type="String" />
+		<field name="productName" type="String" />
+		<field name="ojkName" type="String" />
+		<field name="stampdutyIDR" type="Double" />
+		<field name="stampdutyUSD" type="Double" />
+		<field name="policyCostIDR" type="Double" />
+		<field name="policyCostUSD" type="Double" />
+		<field name="aclStatus" type="int" />
+		<field name="aclGracePeriod" type="int" />
+		<field name="commission" type="Double" />
+		<field name="webContentFolderId" type="int" />
+		<field name="link" type="String" />
+		<field name="isB2C" type="int" />
+		<field name="isB2B" type="int" />
+		<field name="isB2B2C" type="int" />
+		<field name="iconFileEntryId" type="Long" />
+		<field name="imageFileEntryId" type="Long" />
+		<field name="pepEnable" type="int" />
+		<field name="policyWordingEntryId" type="Long" />
+		<field name="metaTitle" type="String" />
+		<field name="metaDescription" type="String" />
+		<field name="metaKeywords" type="String" />
+	</model>
+	<model name="com.mypage.admin.product.model.Promocodes">
+		<field name="uuid" type="String" />
+		<field name="promocodeId" type="long" />
+		<field name="products" type="String" />
+		<field name="promocode" type="String" />
+		<field name="commission" type="double" />
+		<field name="discount" type="double" />
+		<field name="isB2C" type="int" />
+		<field name="isB2B2C" type="int" />
+		<field name="isB2B" type="int" />
+		<field name="user" type="String" />
+		<field name="mypageUserId" type="long" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="promoType" type="String" />
+		<field name="birthdayMonth" type="Date" />
+		<field name="limit" type="int" />
+		<field name="terms" type="String" />
+		<field name="plan" type="String" />
+		<field name="paymentChannel" type="String" />
+		<field name="utmCampaignId" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.ReferenceNumber">
+		<field name="referenceNumberId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userRole" type="String" />
+		<field name="channel" type="String" />
+		<field name="type" type="String" />
+		<field name="productCode" type="String" />
+		<field name="businessType" type="String" />
+		<field name="currency" type="String" />
+		<field name="prefix" type="String" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveBenefit">
+		<field name="smartActiveBenefitId" type="long" />
+		<field name="nameId" type="String" />
+		<field name="nameEn" type="String" />
+		<field name="sort" type="int" />
+		<field name="smartActiveBenefitTypeId" type="long" />
+		<field name="active" type="int" />
+		<field name="description" type="String" />
+		<field name="limit_" type="String" />
+		<field name="externalCode" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveBenefitType">
+		<field name="smartActiveBenefitTypeId" type="long" />
+		<field name="nameId" type="String" />
+		<field name="nameEn" type="String" />
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveBenefitValue">
+		<field name="smartActiveBenefitValueId" type="long" />
+		<field name="value" type="long" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveBenefitValueMapping">
+		<field name="smartActiveBenefitValueMappingId" type="long" />
+		<field name="smartActiveBenefitTypeId" type="long" />
+		<field name="smartActiveBenefitId" type="long" />
+		<field name="smartActiveBenefitValueId" type="long" />
+		<field name="value" type="String" />
+		<field name="limitValue" type="BigDecimal" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveClassRate">
+		<field name="smartActiveClassRateId" type="long" />
+		<field name="nameId" type="String" />
+		<field name="nameEn" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveFeature">
+		<field name="smartActiveFeatureId" type="long" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="fileUploadEntryId" type="long" />
+		<field name="fileUploadUrl" type="String" />
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveLink">
+		<field name="smartActiveLinkId" type="long" />
+		<field name="category" type="String" />
+		<field name="title" type="String" />
+		<field name="fileUploadEntryId" type="long" />
+		<field name="fileUploadUrl" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveOccupation">
+		<field name="smartActiveOccupationId" type="long" />
+		<field name="code" type="String" />
+		<field name="nameId" type="String" />
+		<field name="nameEn" type="String" />
+		<field name="active" type="int" />
+		<field name="smartActiveClassRateId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActivePremi">
+		<field name="smartActivePremiId" type="long" />
+		<field name="rate" type="double" />
+		<field name="active" type="int" />
+		<field name="smartActiveClassRateId" type="long" />
+		<field name="smartActiveBenefitId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveTopro">
+		<field name="smartActiveToproId" type="long" />
+		<field name="topro" type="String" />
+		<field name="description" type="String" />
+		<field name="annotations" type="String" />
+		<field name="smartActiveBenefitValueId" type="long" />
+		<field name="toc" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartActiveToproBenefitMapping">
+		<field name="smartActiveToproBenefitMappingId" type="long" />
+		<field name="smartActiveToproId" type="long" />
+		<field name="ListBenefitId" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartHealthBenefit">
+		<field name="smartHealthBenefitId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="benefitTitle" type="String" />
+		<field name="benefitContent" type="String" />
+		<field name="smartHealthBenefitGroupId" type="long" />
+		<field name="smartHealthPlanId" type="long" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartHealthBenefitGroup">
+		<field name="smartHealthBenefitGroupId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="groupName" type="String" />
+		<field name="groupDescription" type="String" />
+		<field name="groupCode" type="String" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartHealthPlan">
+		<field name="smartHealthPlanId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="planName" type="String" />
+		<field name="planGroup" type="String" />
+		<field name="isRecommended" type="Integer" />
+		<field name="active" type="Integer" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartHealthPremi">
+		<field name="smartHealthPremiId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="age" type="int" />
+		<field name="gender" type="String" />
+		<field name="currency" type="String" />
+		<field name="amount" type="double" />
+		<field name="planId" type="long" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartTravelIntLink">
+		<field name="smartTravelIntLinkId" type="long" />
+		<field name="linkType" type="String" />
+		<field name="linkTitle" type="String" />
+		<field name="linkHref" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.SmartTravelIntPlan">
+		<field name="smartTravelIntPlanId" type="long" />
+		<field name="nameId" type="String" />
+		<field name="nameEn" type="String" />
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.StiBenefit">
+		<field name="benefitId" type="long" />
+		<field name="nameId" type="String" />
+		<field name="nameEn" type="String" />
+		<field name="sort" type="int" />
+		<field name="benefitTypeId" type="long" />
+		<field name="active" type="int" />
+		<field name="planName" type="String" />
+		<field name="benefitValue" type="String" />
+		<field name="externalCode" type="String" />
+		<field name="benefitDescription" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.StiBenefitValueMapping">
+		<field name="benefitValueMappingId" type="long" />
+		<field name="benefitTypeId" type="long" />
+		<field name="benefitId" type="long" />
+		<field name="planId" type="long" />
+		<field name="benefitValue" type="String" />
+		<field name="benefitValueUSD" type="String" />
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.StiPremi">
+		<field name="premiId" type="long" />
+		<field name="travellerType" type="String" />
+		<field name="currency" type="String" />
+		<field name="basic" type="BigDecimal" />
+		<field name="additional" type="BigDecimal" />
+		<field name="annual" type="BigDecimal" />
+		<field name="active" type="int" />
+		<field name="benefitId" type="long" />
+		<field name="planId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelDomesticBenefit">
+		<field name="travelDomesticBenefitId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="plan" type="String" />
+		<field name="amount" type="String" />
+		<field name="benefit" type="String" />
+		<field name="benefitValue" type="Long" />
+		<field name="group" type="String" />
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelDomesticBenefitGroup">
+		<field name="travelDomesticBenefitGroupId" type="long" />
+		<field name="code" type="String" />
+		<field name="name" type="String" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelDomesticDuration">
+		<field name="travelDomesticDurationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="code" type="String" />
+		<field name="dayFrom" type="int" />
+		<field name="dayTo" type="int" />
+		<field name="label" type="String" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelDomesticInsuredType">
+		<field name="travelDomesticInsuredTypeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="code" type="String" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelDomesticPlan">
+		<field name="travelDomesticPlanId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="code" type="String" />
+		<field name="toproTsi" type="int" />
+		<field name="toproAtsi" type="int" />
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelDomesticPremi">
+		<field name="travelDomesticPremiId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="duration" type="int" />
+		<field name="plan" type="String" />
+		<field name="insuredType" type="String" />
+		<field name="currency" type="String" />
+		<field name="amount" type="Long" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelDomesticRelationship">
+		<field name="travelDomesticRelationshipId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="sort" type="int" />
+		<field name="active" type="int" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelDomesticTravellerType">
+		<field name="travellerTypeId" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelIntBenefit">
+		<field name="travelIntBenefitId" type="long" />
+		<field name="benefitName" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelIntBenefitValue">
+		<field name="travelIntBenefitValueId" type="long" />
+		<field name="travelIntBenefitId" type="long" />
+		<field name="currencyName" type="String" />
+		<field name="packageType" type="String" />
+		<field name="benefitValue" type="String" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.mypage.admin.product.model.TravelInternationalPremi">
+		<field name="premiId" type="long" />
+		<field name="packageType" type="String" />
+		<field name="peopleType" type="String" />
+		<field name="adultCount" type="int" />
+		<field name="childrenCount" type="int" />
+		<field name="currency" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="minDuration" type="int" />
+		<field name="maxDuration" type="int" />
+		<field name="active" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+</model-hints>

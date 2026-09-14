@@ -1,0 +1,88 @@
+<div class="sticky-plan">
+	<div class="sticky-plan__inner position-relative">
+		<div class="code-promo">
+			<a class="trigger-collapse-promo" href="javascript:void(0)">
+				<div class="container-axa">
+					<div class="code-promo__inner">
+						<span>gunakan kode promo</span> <i
+							class="fas fa-chevron-right fa-fw"></i>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="detail-summary">
+			<a class="trigger-collapse-summary-detail" href="javascript:void(0)">
+				<div class="container-axa">
+					<div class="detail-summary__inner">
+						<span>Detail</span> <i class="far fa-times fa-fw"></i>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="sticky-collapse-promo" id="collapseCodepromo">
+			<div class="container-axa">
+<!-- 				<form action="#" method="POST"> -->
+					<div class="sticky-collapse-promo__grid">
+						<div class="col">
+							<label for="kode-promo">Kode Promo</label>
+							<div class="input-group-axa input-group-axa--border">
+								<input class="input-control-axa promo-code" placeholder="Isi Kode Promo" type="text" name="PromoCode" maxlength="30" id="kode-promo">
+								<button type="button" class="btnClear" id="clear-promo-code-btn">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path
+											d="M3.17766 14.9999C4.43741 18.8326 8.04535 21.5999 12.2996 21.5999C17.6015 21.5999 21.8996 17.3018 21.8996 11.9999C21.8996 6.69797 17.6015 2.3999 12.2996 2.3999C8.74625 2.3999 5.6438 4.33046 3.98392 7.1999M6.89961 8.3999H2.09961V3.5999"
+											stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+                                        </svg>
+								</button>
+							</div>
+						</div>
+						<div class="col">
+							<button class="btn btn__agency btn--dark-blue" id="promo-code-btn" type="button">
+								<span class="position-relative order-10">Pakai Kode Promo
+									<i class="fas fa-arrow-right"></i>
+								</span>
+							</button>
+						</div>
+					</div>
+<!-- 				</form> -->
+			</div>
+		</div>
+		<div class="sticky-plan__summary">
+			<div class="container-axa">
+				<div class="sticky-plan__summary-grid">
+					<div class="col">
+						<div class="price">
+							<div class="price-left">
+								<p>Harga <span id="sticky-plan-name"></span></p>
+								<strong id="sticky-price-wrapper-original" style="text-decoration-line: line-through;font-size: 16px;"></strong>
+								<strong id="sticky-price-wrapper"><div class="skeleton skeleton-text"></div></strong>
+							</div>
+							<div class="price-right">
+								<a class="trigger-collapse-plan-detail"
+									href="javascript:void(0)"><span>Lihat Detail <i
+										class="far fa-search"></i></span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<a class="btn btn__agency btn--dark-blue next-step-btn" id="next-step-btn-a" href="javascript:void(0)"><span class="position-relative">Lanjutkan <i class="fas fa-arrow-right"></i></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sticky-plan-collapse-summary" id="collapsePlandetail">
+			<div class="container-axa">
+			<div class="sticky-plan-collapse-summary__grid">
+			<%@ include file="sticky_summary.jsp"%>
+			
+					<div class="col">
+						<a class="btn btn__agency btn--dark-blue next-step-btn" id="next-step-btn-b" href="javascript:void(0)"><span class="position-relative">Lanjutkan <i class="fas fa-arrow-right"></i></span></a>
+					</div>
+			</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

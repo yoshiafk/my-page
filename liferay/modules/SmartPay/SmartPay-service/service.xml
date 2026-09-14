@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.axa.payment">
+	<author>Gositus Team</author>
+	<namespace>XP</namespace>
+	<entity name="PaymentTransaction" local-service="true" trash-enabled="true">
+
+
+		<!-- PK fields -->
+
+		<column name="paymentTransactionId" primary="true" type="long"></column>
+        <column name="policyNumber" type="String"></column>
+        <column name="profileId" type="String"></column>
+        <column name="invoiceNumber" type="String"></column>
+        <column name="referenceNumber" type="String"></column>
+        <column name="requestId" type="String"></column>
+        <column name="policyDueDate" type="String"></column>
+        <column name="paymentMethod" type="String"></column>
+        <column name="paymentChannel" type="String"></column>
+        <column name="amount" type="double"></column>
+        <column name="status_" type="String"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="createBy" type="String"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="modifiedBy" type="String"></column>
+		<column name="checkCounter" type="int"></column>
+		<finder name="policyProfile" return-type="Collection">
+            <finder-column name="policyNumber"></finder-column>
+            <finder-column name="profileId"></finder-column>
+        </finder>
+        <finder name="invoiceNumber" return-type="Collection">
+            <finder-column name="invoiceNumber"></finder-column>
+        </finder>
+	</entity>
+</service-builder>

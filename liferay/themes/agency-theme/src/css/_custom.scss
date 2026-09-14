@@ -1,0 +1,17 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+a:hover {
+    color: #fff;
+    text-decoration-line: none;
+}
+
+ol,
+ul,
+dl {
+    margin-bottom: 0;
+}

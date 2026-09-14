@@ -1,0 +1,11 @@
+dependencies {
+	implementation project(":modules:SmartPay:SmartPay-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../SmartPay-api/src/main/java"
+}
+
+group = "com.axa.payment"

@@ -1,0 +1,2 @@
+create index IX_9E6BCFA1 on XP_PaymentTransaction (invoiceNumber[$COLUMN_LENGTH:75$]);
+create index IX_91948F80 on XP_PaymentTransaction (policyNumber[$COLUMN_LENGTH:75$], profileId[$COLUMN_LENGTH:75$]);

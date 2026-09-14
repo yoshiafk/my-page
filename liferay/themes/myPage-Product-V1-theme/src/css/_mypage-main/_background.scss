@@ -1,0 +1,9 @@
+@each $color, $value in $_colors {
+    .bg-#{$color} {
+        @include background-variant($value);
+    }
+}
+
+.bg-none {
+    background: none;
+}

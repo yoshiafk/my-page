@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+ <!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 7.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_7_0_0.dtd">
+ 
+<routes>
+	<route>
+		<pattern>/configuration</pattern>
+		<implicit-parameter name="mvcPath">/product/pet/configuration.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/plan</pattern>
+		<implicit-parameter name="mvcPath">/product/pet/plan/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/plan/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/pet/plan/edit.jsp
+		</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized
+		</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/remarks</pattern>
+		<implicit-parameter name="mvcPath">/product/pet/remarks/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+		<route>
+		<pattern>/remarks/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/pet/remarks/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/rate</pattern>
+		<implicit-parameter name="mvcPath">/product/pet/rate/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/rate/edit</pattern>
+		<implicit-parameter name="mvcPath">/product/pet/rate/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/email-template</pattern>
+		<implicit-parameter name="mvcPath">/product/pet/email_template.jsp
+		</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized
+		</implicit-parameter>
+	</route>
+</routes>

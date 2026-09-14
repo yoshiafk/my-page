@@ -1,0 +1,24 @@
+// CORE
+@import '_fontawesome/fontawesome';
+@import '_fontawesome/solid'; 
+@import '_fontawesome/regular';
+@import '_fontawesome/brands';
+@import '_fontawesome/duotone';
+@import '_fontawesome/light';
+
+/*!
+ * myPage
+ */
+@import 'bootstrap';
+@import '_mypage-main/variables';
+@import '_mypage-main/mixins';
+@import '_mypage-main/fonts';
+@import '_mypage-main/general';
+@import '_mypage-main/animation';
+@import '_mypage-main/margin';
+@import '_mypage-main/background';
+@import '_mypage-main/color';
+@import '_mypage-main/product';
+@import '_mypage-main/popover';
+@import '_mypage-main/home';
+@import '_mypage-main/buttons';

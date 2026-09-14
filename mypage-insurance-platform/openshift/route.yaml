@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: insurance-api-route
+spec:
+  host: api-insurance.axa-cloud.com
+  to:
+    kind: Service
+    name: insurance-api-svc
+  tls:
+    termination: edge
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: insurance-admin-route
+spec:
+  host: admin-insurance.axa-cloud.com
+  to:
+    kind: Service
+    name: insurance-admin-svc
+  tls:
+    termination: edge

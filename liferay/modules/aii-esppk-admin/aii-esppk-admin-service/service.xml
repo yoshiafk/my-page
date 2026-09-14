@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds"
+	package-path="com.aii.esppk.admin">
+	<author>Gositus</author>
+	<namespace>MSPPK</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" 
+		remote-service="false" session-factory="sampleSessionFactory" table="foo" 
+		tx-manager="sampleTransactionManager uuid="true""> -->
+	<entity name="SppkUser" local-service="true"
+		trash-enabled="true">
+
+
+		<!-- PK fields -->
+
+		<column name="sppkUserId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+		<column name="sppkLoginCode" type="String"></column>
+		<column name="password" type="String"></column>
+		<column name="fullName" type="String"></column>
+		<column name="roleCode" type="String"></column>
+        <column name="email" type="String"></column>
+		<column name="allAccess" type="int"></column>
+        <column name="accessData" type="int"></column>
+        <column name="accessMonitoring" type="int"></column>
+		<column name="active" type="int"></column>
+		<column name="expireDate" type="Date"></column>
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="otpCode" type="String"></column>
+        <column name="otpExpired" type="Date"></column>
+		<finder name="sppkLoginCode" return-type="SppkUser" unique="true">
+            <finder-column name="sppkLoginCode"></finder-column>
+		</finder>
+		<finder name="sppkLoginCodeAndPassword" return-type="SppkUser">
+            <finder-column name="sppkLoginCode"></finder-column>
+			<finder-column name="password"></finder-column>
+		</finder>
+		<finder name="fullName" return-type="Collection">
+			<finder-column name="fullName" comparator="LIKE"></finder-column>
+		</finder>
+        <finder name="emailAndOtpCode" return-type="SppkUser">
+            <finder-column name="email"></finder-column>
+            <finder-column name="otpCode"></finder-column>
+        </finder>
+	</entity>
+	<entity name="SppkDebitur" local-service="true"
+		trash-enabled="true">
+
+		<!-- PK fields -->
+
+		<column name="sppkDebiturId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="applicationNumber" type="String"></column>
+        <column name="fullName" type="String"></column>
+        <column name="birthPlace" type="String"></column>
+        <column name="birthDate" type="Date"></column>
+        <column name="idNumber" type="String"></column>
+        <column name="address" type="String"></column>
+        <column name="occupation" type="String"></column>
+        <column name="email" type="String"></column>
+        <column name="phoneNumber" type="String"></column>
+        <column name="gender" type="String"></column>
+        <column name="sumInsured" type="BigDecimal"></column>
+        <column name="product" type="String"></column>
+        <column name="esppkToken" type="String"></column>
+        <column name="esppkTokenExpiry" type="Date"></column>
+        <column name="esppkQ1" type="int"></column>
+        <column name="esppkQ2" type="int"></column>
+        <column name="esppkQ3" type="int"></column>
+        <column name="agreeRiplay" type="int"></column>
+        <column name="agreeStatement" type="int"></column>
+        <column name="needAssistance" type="int"></column>
+        <column name="submitEsppkDate" type="Date"></column>
+        <column name="submissionNumber" type="String"></column>
+	</entity>
+</service-builder>

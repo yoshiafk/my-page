@@ -1,0 +1,44 @@
+.px-10level {
+  @apply px-10;
+}
+
+/* Existing styles */
+.panel-white-payment {
+  @apply flex justify-between items-center border border-gray-300 w-full h-[50px] bg-transparent mb-5 px-[1.5rem] py-[2.5rem] cursor-pointer;
+}
+
+.panel-white-payment.highlight {
+  @apply border-2 border-axa-blue-400;
+}
+
+.panel-white-payment .methode {
+  @apply flex items-center justify-start;
+}
+
+.panel-white-payment img {
+  @apply h-[50px] w-[85px] object-contain;
+}
+
+.panel-white-payment .methode label {
+  @apply cursor-pointer mt-3;
+}
+
+.radio-custom {
+  appearance: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .panel-white-payment img {
+    @apply h-[25px] w-[40px];
+  }
+
+  .radio-custom-label2 span {
+    font-size: 0.55rem; /* Even smaller font size */
+  }
+}
+
+.btn--dark-grey {
+  @apply bg-axa-grey-400 relative overflow-hidden transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:bg-axa-blue-400 before:duration-300 before:ease-out hover:before:h-40 hover:before:w-full hover:before:opacity-80;
+}
+/* update */

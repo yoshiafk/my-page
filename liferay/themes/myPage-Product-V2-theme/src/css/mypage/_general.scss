@@ -1,0 +1,456 @@
+html,
+body {
+    font-family: "#{$_font-family}",
+    sans-serif;
+    font-size: $_font-size;
+    font-weight: normal;
+    font-style: normal;
+    color: $_black;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+::selection {
+    background: $_orange;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+hr {
+    border-color: $_gray-400;
+}
+
+.h1 {
+    margin: 0px;
+    padding: 0px;
+
+    h1 {
+        margin: 0px;
+        font-size: 0;
+    }
+}
+
+@each $size,
+$value in $_font-sizes {
+    .fz-#{$size} {
+        font-size: $value;
+    }
+}
+
+[data-toggle="popover"] {
+    cursor: pointer;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.blank-space {
+    margin-top: 120px;
+}
+
+.sticky-menu {
+    position: fixed;
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    z-index: 1030;
+    box-shadow: 0px .5px 5px rgba(0, 0, 0, .1);
+    animation: stickyMenu 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.card {
+    border-radius: 0px;
+}
+
+.alert {
+    border-radius: 0px;
+}
+
+.has-validated {
+    &.has-error {
+
+        input,
+        textarea {
+            border-color: $_red !important;
+        }
+
+        .selectize-input {
+            border-color: $_red !important;
+        }
+    }
+}
+
+.error-msg {
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: $_font-size-11;
+    color: $_red;
+    line-height: 2;
+}
+
+label {
+    margin-bottom: .7rem;
+}
+
+.text-collapse {
+    cursor: pointer;
+
+    &[aria-expanded="true"] {
+        &::after {
+            content: "\f106";
+        }
+    }
+
+    &::after {
+        content: "\f107";
+        margin-left: 8px;
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 900;
+    }
+}
+
+.box-line {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 2px;
+        height: 0%;
+        margin-left: .6rem;
+        @include transition(height .4s ease-in-out);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 4px;
+        width: 11px;
+        height: 2px;
+        @include transition(top .4s ease-in-out);
+    }
+
+    &.last {
+        &::after {
+            top: 100%;
+        }
+    }
+
+    &.blue {
+        &::before {
+            height: 100%;
+            background-color: $_blue-500;
+        }
+
+        &::after {
+            background-color: $_blue-500;
+        }
+    }
+
+    &.yellow {
+        &::before {
+            height: 100%;
+            background-color: $_yellow;
+            margin-left: .45rem;
+        }
+
+        &::after {
+            left: 2px;
+            background-color: $_yellow;
+        }
+
+        .box {
+            margin-left: .1rem;
+        }
+    }
+}
+
+.box {
+    width: 100%;
+    padding: 20px 20px 14px 20px;
+    display: inline-block;
+}
+
+.child-append {
+    .item {
+        position: relative;
+        border-top: 1px dashed $_gray-600;
+
+        &:hover {
+            .remove-child {
+                opacity: 1;
+            }
+        }
+
+        .remove-child {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            background-color: $_red;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: $_white;
+            opacity: 0;
+            cursor: pointer;
+            @include transition(opacity .3s ease-in-out);
+        }
+    }
+}
+
+#livechat {
+    position: fixed;
+    bottom: 20%;
+    right: 0;
+    width: 60px;
+    background-color: $_yellow;
+    z-index: 1000;
+    cursor: pointer;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+    }
+
+    &.hide-sosmed {
+        .sosmed {
+            max-height: 0;
+        }
+
+        >.icon {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .sosmed {
+        position: absolute;
+        right: 0px;
+        bottom: 100%;
+        width: 100%;
+        text-align: center;
+        transition: all .3s ease-in-out;
+        overflow: hidden;
+        max-height: 300px;
+
+        ul {
+            margin: 0px;
+            padding: 0px;
+
+            li {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                margin-bottom: 5px;
+
+                a {
+                    display: block;
+                    color: #fff;
+                    padding: 5px;
+
+                    &.skype {
+                        background-color: #01b6ef;
+
+                        &:hover {
+                            background-color: #0092c0;
+                        }
+                    }
+
+                    &.phone {
+                        background-color: #0086d7;
+
+                        &:hover {
+                            background-color: #0070b3;
+                        }
+                    }
+
+                    &.whatsapp {
+                        background-color: #359732;
+
+                        &:hover {
+                            background-color: #226920;
+                        }
+                    }
+
+                    .icon {
+                        font-size: 14px;
+                    }
+
+                    .text {
+                        padding: 0px;
+                        font-size: 10px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    >.icon {
+        @include media-breakpoint-down(sm) {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        &::before {
+            content: '\f2d3';
+            font-family: 'Font Awesome 5 Pro';
+            font-weight: 300;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $_yellow;
+            font-size: 25px;
+        }
+    }
+
+    img {
+        width: 33px;
+        margin-top: 8px;
+
+        @include media-breakpoint-down(sm) {
+            width: 25px;
+        }
+    }
+
+    .offline-chat {
+        @include media-breakpoint-down(sm) {
+            .text {
+                display: none;
+            }
+        }
+
+        .offline {
+            position: absolute;
+            bottom: 100%;
+            left: 0px;
+            width: 100%;
+            color: #fff;
+            background-color: rgba(205, 3, 3, 0.5);
+            text-align: center;
+            font-size: 10px;
+
+            @include media-breakpoint-down(sm) {
+                position: relative;
+                display: block;
+                background-color: transparent;
+                color: #515c58;
+            }
+        }
+    }
+
+    .text {
+        padding-bottom: 5px;
+        display: block;
+        font-size: 9px;
+        color: $_blue-100;
+        font-family: 'SourceSansPro', sans-serif;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 7px;
+        }
+    }
+}
+
+.modal-backdrop {
+    background-color: #323a45;
+
+    &.show {
+        opacity: .5;
+    }
+}
+
+label,
+.span-label {
+    &.mandatory {
+        &::after {
+            content: " *";
+            position: relative;
+            color: $_red;
+        }
+    }
+}
+
+.span-label {
+    display: inline-block;
+    margin-bottom: .7rem;
+}
+
+.img-uploaded {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+
+    img {
+        margin: 0 auto;
+    }
+}
+
+
+.modal-body {
+    em {
+        font-style: italic;
+    }
+
+    a {
+        &:hover {
+            color: $_yellow;
+        }
+    }
+
+    li {
+        a {
+            color: $white;
+        }
+    }
+}

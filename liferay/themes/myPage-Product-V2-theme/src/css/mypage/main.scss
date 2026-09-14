@@ -1,0 +1,30 @@
+// CORE
+// bootstrap tidak usah diimport, karena liferay sudah load bootstrap by default, tapi coba dulu diimport karena takutnya ada dependencies ke isi bootstrap ini
+@import 'bootstrap/bootstrap';
+
+@import 'plugins/selectize.bootstrap3';
+@import 'plugins/jquery-ui.min';
+@import 'plugins/animate.min';
+
+/*!
+ * myPage
+ */
+@import 'variables';
+@import 'mixins';
+@import 'general';
+@import 'animation';
+@import 'margin';
+@import 'input';
+@import 'buttons';
+@import 'background';
+@import 'color';
+@import 'home';
+@import 'product';
+@import 'our-solution';
+@import 'list-group';
+@import 'popover';
+@import 'modal';
+@import 'payment';
+@import 'onepage';
+@import 'smartbusiness';
+@import 'smarthealth';

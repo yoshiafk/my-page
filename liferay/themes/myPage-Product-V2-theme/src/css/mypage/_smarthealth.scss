@@ -1,0 +1,36 @@
+.smarthealth-domestic{
+    .sidebar-total {
+        &::before {
+            border-bottom: none;
+        }
+	}
+
+	.recomended-plan .plan-box .plan-section{
+		&:after{
+			width: unset;
+		}
+
+		.prices{
+			max-width: unset;
+		}
+	}
+	.bg-none{
+		background:none !important;
+	}
+	
+}
+
+.shimmer {
+	background: linear-gradient(-90deg, transparent 25%, white 50%, transparent 75%);
+	background-size: 150% 50%; /* Adjust the background-size here */
+	animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: 150% 0;
+	}
+	100% {
+		background-position: -150% 0;
+	}
+}

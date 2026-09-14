@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+<sql id="com.mypage.admin.product.service.persistence.PetRateFinder.getAllPetRateCombinedWithPlanAndRemarks">
+<![CDATA[
+SELECT rate.*, plan.*, remarks.* FROM petrate rate JOIN (petplan plan, petremarks remarks) ON rate.petPlan = plan.petPlanId AND rate.petRemarks = remarks.petRemarksId  
+]]>
+</sql>
+</custom-sql>

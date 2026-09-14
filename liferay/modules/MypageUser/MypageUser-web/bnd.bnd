@@ -1,0 +1,4 @@
+Bundle-Name: MypageUser-web
+Bundle-SymbolicName: com.mypage.user
+Bundle-Version: 1.0.0
+Export-Package: com.mypage.user.constants

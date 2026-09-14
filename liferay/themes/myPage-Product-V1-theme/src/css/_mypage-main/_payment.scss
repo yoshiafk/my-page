@@ -1,0 +1,45 @@
+.payment-channel {
+    .channel-item {
+        margin-bottom: 10px;
+        border-bottom: 1px solid $_gray-400;
+
+        &.active {
+            > .content {
+                background-color: $_blue-400;
+
+                .radio-btn {
+                    label {
+                        color: $_blue-200;
+                    }
+                }
+            }
+        }
+
+        > .content {
+            padding: 15px 20px;
+            margin-bottom: 10px;
+
+            .radio-btn {
+                label {
+                    &::before {
+                        font-size: 1em;
+                    }
+                }
+            }
+            
+            .description {
+                p {
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+
+            img {
+                padding: 5px;
+                max-width: 80px;
+                max-height: 40px;
+            }
+        }
+    }
+}

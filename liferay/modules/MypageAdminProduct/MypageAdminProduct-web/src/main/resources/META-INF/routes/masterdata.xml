@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+ <!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 7.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_7_0_0.dtd">
+<routes>
+	<route>
+		<pattern>/country</pattern>
+		<implicit-parameter name="mvcPath">/master/country/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/country/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/country/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/currency</pattern>
+		<implicit-parameter name="mvcPath">/master/currency/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/currency/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/currency/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/blacklist-customer</pattern>
+		<implicit-parameter name="mvcPath">/master/blacklist_customer/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/blacklist-customer/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/blacklist_customer/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+	<route>
+		<pattern>/province</pattern>
+		<implicit-parameter name="mvcPath">/master/province/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/province/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/province/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/city</pattern>
+		<implicit-parameter name="mvcPath">/master/city/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/city/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/city/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/promocode</pattern>
+		<implicit-parameter name="mvcPath">/master/promocode/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/promocode/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/promocode/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/industry-category</pattern>
+		<implicit-parameter name="mvcPath">/master/industry_category/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/industry-category/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/industry_category/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/industry</pattern>
+		<implicit-parameter name="mvcPath">/master/industry/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/industry/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/industry/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/job-position</pattern>
+		<implicit-parameter name="mvcPath">/master/job_position/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/job-position/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/job_position/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/bank</pattern>
+		<implicit-parameter name="mvcPath">/master/bank/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/bank/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/bank/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/paymentchannel</pattern>
+		<implicit-parameter name="mvcPath">/master/paymentchannel/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/paymentchannel/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/paymentchannel/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/reference-number</pattern>
+		<implicit-parameter name="mvcPath">/master/reference_number/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/reference-number/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/reference_number/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/occupation</pattern>
+		<implicit-parameter name="mvcPath">/master/occupation/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/occupation/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/occupation/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/occupation-category</pattern>
+		<implicit-parameter name="mvcPath">/master/occupation_category/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/occupation-category/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/occupation_category/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/company-type</pattern>
+		<implicit-parameter name="mvcPath">/master/company_type/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/company-type/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/company_type/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/branch</pattern>
+		<implicit-parameter name="mvcPath">/master/branch/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/branch/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/branch/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+	<route>
+		<pattern>/global-variable</pattern>
+		<implicit-parameter name="mvcPath">/master/global_variable/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/global-variable/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/global_variable/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	
+	<route>
+		<pattern>/benefit-type</pattern>
+		<implicit-parameter name="mvcPath">/master/benefit_type/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/benefit-type/edit</pattern>
+		<implicit-parameter name="mvcPath">/master/benefit_type/edit.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>		
+</routes>

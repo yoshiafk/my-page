@@ -1,0 +1,305 @@
+.summary-pay,
+.checkout-page,
+.transaction-instructions {
+    @apply mt-[120px] lg:mt-0;
+    & .bg-white-border {
+        @apply bg-white border border-[#EEEEEE];
+    }
+    & .summary-pay__grid,
+    & .checkout-page__grid,
+    & .transaction-instructions__grid {
+        @apply grid grid-cols-1 lg:grid-cols-[2.2fr_1.2fr] gap-[20px] mt-14 mb-12 md:mb-24;
+    }
+
+    & .summary-pay__heading {
+        @apply md:flex md:justify-between;
+        & h1 {
+            @apply text-axa-grey-800 mb-4 md:mb-0;
+        }
+        & .col-heading {
+            @apply bg-transparent border-none p-0;
+            &:last-child {
+                & p {
+                    @apply font-semibold text-[18px] text-axa-grey-600 mb-2;
+                }
+                & span {
+                    @apply text-[#111B1D80] uppercase block mb-4 lg:mb-0;
+                }
+            }
+        }
+    }
+
+    & .summary-pay__product-name {
+        @apply mt-0;
+        & p {
+            @apply font-semibold;
+        }
+        & span {
+            @apply text-axa-blue-400 font-bold text-[18px] md:text-[24px] font-publico; 
+        }
+    }
+
+    & .summary-pay__product-desc {
+        @apply flex justify-between mt-4 md:mt-8 text-axa-grey-600;
+        & p {
+            @apply font-semibold mb-2;
+        }
+        & .col-product-desc {
+            @apply mb-4 lg:mb-0;
+            &:last-child {
+                @apply mb-0;
+                & span {
+                    @apply font-bold text-axa-grey-800;
+                }
+            }
+        }
+    }
+
+    & .summary-pay__table {
+        @apply mt-8 mb-5;
+        & .table-wrapper {
+            @apply md:max-h-[240px] overflow-x-scroll overflow-y-hidden md:overflow-x-hidden md:overflow-y-scroll;
+        }
+        & table {
+            @apply table-auto whitespace-nowrap border-r border-[#EEEEEEEE];
+            & thead {
+                @apply bg-axa-grey-500;
+                & th {
+                    @apply text-[14px] text-center uppercase font-semibold p-[15px] first:sticky first:left-0 first:bg-axa-grey-500;
+                }
+            }
+            & tbody {
+                & td {
+                    @apply text-center p-[12px] border-l border-[#EEEEEEEE] first:sticky first:left-0 first:bg-white first:before:absolute first:before:bg-[#EEEEEEEE] first:before:top-0 first:before:-left-[1px] first:before:w-[1px] first:before:h-full;
+                }
+                & span {
+                    @apply uppercase;
+                }
+                & tr {
+                    @apply even:bg-[#F6F6FA];
+                    &:nth-child(even) {
+                        & td {
+                            @apply bg-[#F6F6FA];
+                        }
+                    }
+                }
+                & td {
+                    &.paid-off,
+                    &.waiting-payment {
+                        @apply text-white;
+                    }
+                    &.paid-off {
+                        @apply !bg-[#00A860];
+                    }
+                    &.waiting-payment {
+                        @apply !bg-[#990E14];
+                    }
+                }
+            }
+        }
+    }
+
+    & .summary-pay__policy {
+        & ul {
+            @apply mt-4 mb-4 md:flex md:justify-between;
+            & li {
+                @apply text-axa-grey-600 mb-4 lg:mb-0 last:mb-0;
+                & p {
+                    @apply font-semibold mb-2;
+                }
+            }
+        }
+    }
+}
+
+.summary__payment {
+    & .summary_payment-heading {
+        @apply p-[20px_18px] md:p-[20px_35px];
+        & .total-details {
+            @apply flex justify-between mt-2;
+                & li {
+                @apply self-center mb-0 pb-0 first:text-axa-blue-300 first:uppercase first:font-semibold first:text-[14px];
+                & strong {
+                    @apply font-sourcesans font-bold text-[24px] text-axa-grey-800;
+                }
+                }
+        }
+    }
+
+    & .summary_payment-body { 
+        @apply p-[20px_18px] md:p-[20px_35px];
+    }
+
+    & .summary-footer {
+        @apply p-[0px_18px] md:p-[0px_35px];
+    }
+
+    & .border-bottom {
+        @apply border-b border-[#EEEEEEEE];
+    }
+
+    & ul {
+        & li {
+            @apply flex justify-between py-[6px];
+        }
+    }
+
+    & .summary_payment-body {
+        & .summary-pay__policy {
+            @apply grid grid-cols-2 gap-4 mb-0;
+            & li {
+                @apply block;
+                & p {
+                    @apply font-semibold text-axa-grey-600;
+                }
+            }
+        }
+    }
+
+    & .payment-list,
+    & .total {
+        & li {
+            & span {
+                @apply last:text-axa-blue-100;
+            }
+        }
+    }
+
+    & .summary-footer__total {
+        @apply border-t border-b border-[#EEEEEEEE] p-[10px_18px] md:p-[10px_35px];
+        & .total {
+            & span {
+                @apply font-bold text-axa-grey-600;
+            }
+        }
+    }
+
+    & .summary-footer {
+        @apply relative before:absolute before:bg-[#FF1721] before:left-0 before:bottom-0 before:w-full before:h-2;
+        & .installment-desc {
+            @apply p-[15px_0px_20px_0px];
+            & li {
+                & span {
+                    @apply first:text-axa-grey-600 font-semibold last:text-axa-ocean-100;
+                }
+                & strong {
+                    @apply font-sourcesans text-axa-grey-800;
+                }
+                &:last-child {
+                    & span {
+                        @apply last:font-normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.checkout-page {
+    & .type-payment {
+        & span.visa {
+            @apply bg-[url('../../../images/visa.svg')] w-[50px] h-[60px] bg-contain bg-no-repeat bg-center block;
+        }
+        & span.mastercard {
+            @apply bg-[url('../../../images/mastercard.svg')] w-[50px] h-[60px] bg-contain bg-no-repeat bg-center block;
+        }
+        & span.bca-bank {
+            @apply bg-[url('../../../images/bca.svg')] w-[80px] h-[60px]  bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.mandiri-bank {
+            @apply bg-[url('../../../images/mandiri.svg')] w-[80px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.bsi-bank {
+            @apply bg-[url('../../../images/bsi.svg')] w-[80px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.bri-bank {
+            @apply bg-[url('../../../images/bri.svg')] w-[80px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.bni-bank {
+            @apply bg-[url('../../../images/bni.svg')] w-[80px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.doku-bank {
+            @apply bg-[url('../../../images/doku.svg')] w-[80px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.permata-bank {
+            @apply bg-[url('../../../images/permata.svg')] w-[80px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.cimb-bank {
+            @apply bg-[url('../../../images/cimb.svg')] w-[80px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.danamon-bank {
+            @apply bg-[url('../../../images/danamon.svg')] w-[80px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.all-bank {
+            @apply bg-[url('../../../images/account_balance.svg')] w-[40px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.dana {
+            @apply bg-[url('../../../images/dana.svg')] w-[50px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+        & span.qris {
+            @apply bg-[url('../../../images/qris.svg')] w-[60px] h-[60px] bg-contain bg-no-repeat bg-center self-center block;
+        }
+    }
+    & .payment-method__list {
+        @apply mt-8 overflow-y-scroll max-h-[580px];
+        & ul {
+            @apply mb-4 border border-axa-grey-300;
+            & li {
+                @apply px-4 md:px-6 py-2;
+                & .radio-custom-label {
+                    @apply font-normal;
+                }
+            }
+        }
+    }
+
+    & .summary-button {
+        @apply pb-[20px] px-[18px] md:px-[35px] mt-4;
+    }
+}
+
+.information-transfer {
+    & .information-transfer__desc {
+        @apply mt-4 md:grid md:grid-cols-2 md:gap-4;
+        & li {
+            @apply mb-4 md:mb-0 md:last:mt-3;
+            &:last-child {
+                & p {
+                    @apply mb-1;
+                }
+            }
+        }
+    }
+
+    & .information-transfer__desc {
+        & p {
+            @apply font-semibold mb-2 uppercase text-axa-grey-600;
+        }
+
+        & strong {
+            @apply text-[24px] font-sourcesans text-axa-grey-800; 
+        }
+    }
+
+    
+    & .copy-link-wrapper {
+        @apply flex gap-2;
+        & svg {
+            @apply fill-axa-blue-400;
+        }
+    }
+
+}
+
+& .status-payment-label {
+    @apply mt-8 mb-2;
+    & p {
+        @apply mb-2 font-semibold text-axa-grey-600;
+    }
+    & .label-status {
+        @apply text-center block text-[16px] rounded-[10px] p-[10px_15px] text-white uppercase font-semibold;
+        &.pending {
+            @apply bg-[#C63131];
+        }
+    }
+}

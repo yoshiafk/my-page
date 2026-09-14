@@ -1,0 +1,58 @@
+.wrapper__performance {
+    @apply mb-[30px];
+}
+
+.wrapper-mobile__performance {
+    @apply text-center sm:mt-8 sm:mb-0 mt-5 mb-4 lg:hidden xl:hidden;
+}
+
+.btn-performance-wrapper {
+    @apply hidden lg:block text-center mt-5 lg:mt-0 hover:text-white hover:no-underline;
+}
+
+.btn-mobile-performance-wrapper {
+    @apply text-center block hover:text-white hover:no-underline;
+}
+
+.span-performance-name {
+    @apply text-axa-blue-400 uppercase font-semibold tracking-[1px];
+}
+
+.grid-cols-1-performance {
+    @apply grid grid-cols-1 lg:grid-cols-2;
+}
+
+.grid-cols-2-performance {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-[15px];
+}
+
+.list-group-performance {
+	@apply border-b border-axa-grey-300 pb-6 pt-8 pl-0 mb-0;
+
+	& li {
+		@apply grid uppercase mb-[10px] grid-cols-[1fr_1fr] lg:grid-cols-[1fr_2fr];
+
+		& span {
+			@apply text-[14px] text-axa-grey-600 font-semibold last:text-axa-grey-800 tracking-[1px];
+		}
+		& .ytd-amount span, & .ytd-amount .ytd-miles, & .ytd-amount. ytd-amount-rupiah {
+		    @apply text-[14px] text-axa-grey-800 font-semibold tracking-[1px];
+		}
+
+		& .ytd-miles{
+		    @apply leading-[2];
+		}
+	}
+}
+
+.filter-performance-wrapper {
+    @apply mt-4 lg:mt-[28px];
+}
+
+.data-per {
+    @apply text-[12px] text-axa-grey-600 uppercase tracking-[1px];
+}
+
+.data-grid-none {
+    @apply !grid-cols-none;
+}

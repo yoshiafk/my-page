@@ -1,0 +1,4 @@
+Bundle-Name: MypageAdminProduct-web
+Bundle-SymbolicName: com.mypage.admin.product
+Bundle-Version: 1.0.0
+Export-Package: com.mypage.admin.product.constants

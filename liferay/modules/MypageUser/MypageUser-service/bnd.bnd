@@ -1,0 +1,7 @@
+Bundle-Name: MypageUser-service
+Bundle-SymbolicName: com.mypage.user.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
+Export-Package: com.mypage.user.service.permission

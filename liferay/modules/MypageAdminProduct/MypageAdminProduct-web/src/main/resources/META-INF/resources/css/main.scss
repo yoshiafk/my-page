@@ -1,0 +1,37 @@
+.MypageAdminProduct-web {
+}
+
+// aui:input type toggle-switch move label to left
+.leftToggleTitle {
+  .toggle-switch-label {
+    float: left;
+    margin-right: 15px;
+  }
+
+  label {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .toggle-switch-bar {
+    min-width: 100px;
+  }
+}
+
+// inactive status on list
+.table-list {
+  tbody {
+    .status-inactive {
+      font-style: italic;
+      color: #ccc;
+      text-decoration: line-through;
+
+      a {
+        font-style: italic;
+        color: #ccc;
+        text-decoration: line-through;
+      }
+    }
+  }
+}

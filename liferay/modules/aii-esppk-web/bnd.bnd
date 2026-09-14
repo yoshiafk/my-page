@@ -1,0 +1,7 @@
+Bundle-Name: aii-esppk-web
+Bundle-SymbolicName: com.mypage.esppk
+Bundle-Version: 1.0.0
+Export-Package: com.mypage.esppk.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

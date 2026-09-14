@@ -1,0 +1,209 @@
+{
+  "products": [
+    {
+      "id": "23fd578b-a266-45f6-a73d-42893b2b08cc",
+      "code": "LIFERAY-undefined",
+      "source": "liferay",
+      "status": "active",
+      "createdAt": "2026-09-10T06:48:12.853Z"
+    },
+    {
+      "name": "Propety",
+      "code": "P",
+      "id": "5c621cd8-67d3-4571-aaf4-c381516a8b1f",
+      "status": "draft",
+      "source": "platform",
+      "createdAt": "2026-09-12T04:35:33.718Z"
+    },
+    {
+      "name": "SmartTravel International",
+      "code": "SMARTTRAVEL_INTL",
+      "id": "231eb0cc-7978-4911-ae7d-98c6bd72f547",
+      "status": "draft",
+      "source": "platform",
+      "createdAt": "2026-09-12T04:41:12.155Z"
+    },
+    {
+      "name": "SmartTravel International",
+      "code": "SMARTTRAVEL_INTL",
+      "id": "9b96809d-aed0-40c9-a3c6-faf8ffd4781b",
+      "status": "draft",
+      "source": "platform",
+      "createdAt": "2026-09-12T06:32:34.589Z"
+    }
+  ],
+  "configs": [
+    {
+      "id": "678bf892-d8d2-4531-ab0b-8c05c93ef77b",
+      "productId": "5c621cd8-67d3-4571-aaf4-c381516a8b1f",
+      "rateTable": {
+        "variables": [],
+        "matrix": []
+      }
+    },
+    {
+      "id": "284a0266-7734-44d8-8828-a895060f2912",
+      "productId": "231eb0cc-7978-4911-ae7d-98c6bd72f547",
+      "rateTable": {
+        "variables": [
+          {
+            "name": "Region",
+            "options": [
+              "Asia",
+              "Worldwide"
+            ]
+          },
+          {
+            "name": "Trip Duration (Days)",
+            "options": [
+              "1-4",
+              "5-8",
+              "9-31"
+            ]
+          }
+        ],
+        "matrix": []
+      }
+    },
+    {
+      "id": "0db435ed-5a8b-4501-a22a-1717bdf2037f",
+      "productId": "9b96809d-aed0-40c9-a3c6-faf8ffd4781b",
+      "rateTable": {
+        "variables": [
+          {
+            "name": "Region",
+            "options": [
+              "Asia",
+              "Worldwide"
+            ]
+          },
+          {
+            "name": "Trip Duration (Days)",
+            "options": [
+              "1-4",
+              "5-8",
+              "9-31"
+            ]
+          }
+        ],
+        "matrix": [
+          {
+            "combo": {
+              "Region": "Asia",
+              "Trip Duration (Days)": "1-4"
+            },
+            "rate": 0
+          },
+          {
+            "combo": {
+              "Region": "Asia",
+              "Trip Duration (Days)": "5-8"
+            },
+            "rate": 0
+          },
+          {
+            "combo": {
+              "Region": "Asia",
+              "Trip Duration (Days)": "9-31"
+            },
+            "rate": 0
+          },
+          {
+            "combo": {
+              "Region": "Worldwide",
+              "Trip Duration (Days)": "1-4"
+            },
+            "rate": 0
+          },
+          {
+            "combo": {
+              "Region": "Worldwide",
+              "Trip Duration (Days)": "5-8"
+            },
+            "rate": 0
+          },
+          {
+            "combo": {
+              "Region": "Worldwide",
+              "Trip Duration (Days)": "9-31"
+            },
+            "rate": 0
+          }
+        ]
+      }
+    }
+  ],
+  "plans": [
+    {
+      "id": "7a9df1bb-e0d6-4504-bbd6-1fdf53b5feff",
+      "productId": "231eb0cc-7978-4911-ae7d-98c6bd72f547",
+      "name": "Worldwide",
+      "tier": "Gold",
+      "description": "Global coverage excluding USA/Canada",
+      "benefits": [
+        {
+          "name": "Medical Expenses",
+          "value": "5000000",
+          "unit": "IDR",
+          "highlight": true
+        }
+      ]
+    },
+    {
+      "id": "e5558c89-e1f5-4c2e-9ae3-2876127bd78e",
+      "productId": "9b96809d-aed0-40c9-a3c6-faf8ffd4781b",
+      "name": "Asia",
+      "tier": "Basic",
+      "description": "Coverage for Asian countries only",
+      "benefits": [
+        {
+          "name": "Medical Expenses",
+          "value": "1000000",
+          "unit": "IDR",
+          "highlight": true
+        }
+      ]
+    },
+    {
+      "id": "6b049c2e-0268-44e1-9deb-73350ed2f37e",
+      "productId": "9b96809d-aed0-40c9-a3c6-faf8ffd4781b",
+      "name": "Worldwide",
+      "tier": "Gold",
+      "description": "Global coverage excluding USA/Canada",
+      "benefits": [
+        {
+          "name": "Medical Expenses",
+          "value": "5000000",
+          "unit": "IDR",
+          "highlight": true
+        }
+      ]
+    }
+  ],
+  "benefits": [
+    {
+      "id": "3e023732-00bb-4f2d-8056-87d8184d5625",
+      "planId": "7a9df1bb-e0d6-4504-bbd6-1fdf53b5feff",
+      "name": "Medical Expenses",
+      "value": "5000000",
+      "unit": "IDR",
+      "highlight": true
+    },
+    {
+      "id": "f0d822ee-aed3-47ef-b5de-b23d164190aa",
+      "planId": "e5558c89-e1f5-4c2e-9ae3-2876127bd78e",
+      "name": "Medical Expenses",
+      "value": "1000000",
+      "unit": "IDR",
+      "highlight": true
+    },
+    {
+      "id": "8d61fca3-e975-4155-a426-b8fdf2e1fd5c",
+      "planId": "6b049c2e-0268-44e1-9deb-73350ed2f37e",
+      "name": "Medical Expenses",
+      "value": "5000000",
+      "unit": "IDR",
+      "highlight": true
+    }
+  ]
+}

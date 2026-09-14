@@ -1,0 +1,10 @@
+Bundle-Name: AgencyPortal-api
+Bundle-SymbolicName: com.mypage.agencyportal.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.mypage.agencyportal.exception,\
+	com.mypage.agencyportal.model,\
+	com.mypage.agencyportal.service,\
+	com.mypage.agencyportal.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../AgencyPortal-service/service.xml

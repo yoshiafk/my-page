@@ -1,0 +1,10 @@
+Bundle-Name: SmartTravelInternational2
+Bundle-SymbolicName: com.mypage.product.it2
+Bundle-Version: 1.0.0
+Export-Package: com.mypage.product.it2.constants
+
+Import-Package: \
+ com.fasterxml.jackson.core;version="[2.10,3)",\
+ com.fasterxml.jackson.databind;version="[2.10,3)",\
+ com.fasterxml.jackson.annotation;version="[2.10,3)",\
+ *

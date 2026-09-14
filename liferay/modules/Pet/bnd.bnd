@@ -1,0 +1,14 @@
+Bundle-Name: Pet
+Bundle-SymbolicName: com.mypage.product.pet
+Bundle-Version: 1.0.0
+Export-Package: com.mypage.product.pet.constants, com.mypage.leads.helper, freemarker.*
+Import-Package: \
+	!*meta*,\
+	!*junit*,\
+	!*bouncycastle*,\
+	!*lowagie*,\
+	!*apache*,\
+	!*mozilla*,\
+	!*python*,\
+	!*zeroturnaround*,\
+	*

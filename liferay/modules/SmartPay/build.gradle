@@ -1,0 +1,19 @@
+apply plugin: 'org.sonarqube'
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "aii.mypage-liferay.smartpay"
+        property "sonar.projectName", "AXA MyPage Liferay - Smart Pay"
+        property "sonar.projectVersion", "1.0.0"
+        property "sonar.sourceEncoding", "UTF-8"
+        // Java analysis excluded to avoid binary compilation requirements
+    }
+}
+
+tasks.withType(JavaCompile) {
+
+	// Generated classes using Jodd library are unable to be read when compiled against JDK 11
+
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}

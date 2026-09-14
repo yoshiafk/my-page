@@ -1,0 +1,121 @@
+// @include fonts-variant('SourceSansPro-Regular', 'Source-Sans-Pro/SourceSansPro-Regular', 'ttf', 'normal', 'normal');
+// @include fonts-variant('SourceSansPro-Bold', 'Source-Sans-Pro/SourceSansPro-Bold', 'ttf', 'normal', 'normal');
+// @include fonts-variant('SourceSansPro-Semibold', 'Source-Sans-Pro/SourceSansPro-Semibold', 'ttf', 'normal', 'normal');
+// @include fonts-variant('SourceSansPro-Light', 'Source-Sans-Pro/SourceSansPro-Light', 'ttf', 'normal', 'normal');
+// @include fonts-variant('SourceSansPro-Black', 'Source-Sans-Pro/SourceSansPro-Black', 'ttf', 'normal', 'normal');
+// @include fonts-variant('Publico-Black', 'Publico/Publico-Black', 'otf', 'normal', 'normal');
+
+/*
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('webfont.eot'); // IE9 Compat Modes
+    src: url('webfont.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+         url('webfont.woff2') format('woff2'), // Super Modern Browsers
+         url('webfont.woff') format('woff'), // Pretty Modern Browsers
+         url('webfont.ttf')  format('truetype'), // Safari, Android, iOS
+         url('webfont.svg#svgFontName') format('svg'); // Legacy iOS
+}
+*/
+
+/*! 
+ * Source Sans Pro
+ */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-ExtraLight.eot'); /* IE9 Compat Modes */
+    src: local('Helvetica'),
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-ExtraLight.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-ExtraLight.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Light.eot'); /* IE9 Compat Modes */
+    src: local('Helvetica'),
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Light.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Regular.eot'); /* IE9 Compat Modes */
+    src: local('Helvetica'),
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Semibold.eot'); /* IE9 Compat Modes */
+    src: local('Helvetica'),
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Semibold.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Semibold.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Bold.eot'); /* IE9 Compat Modes */
+    src: local('Helvetica'),
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Black.eot'); /* IE9 Compat Modes */
+    src: local('Helvetica'),
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Black.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../css/mypage/fonts/Source-Sans-Pro/SourceSansPro-Black.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-display: swap;
+}
+
+/*! 
+ * Publico
+ */
+@font-face {
+    font-family: 'Publico';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../css/mypage/fonts/Publico/publico-Black.eot'); /* IE9 Compat Modes */
+    src: local('Helvetica'),
+         url('../css/mypage/fonts/Publico/publico-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../css/mypage/fonts/Publico/publico-Black.woff2') format('woff2'), // Super Modern Browsers
+         url('../css/mypage/fonts/Publico/publico-Black.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../css/mypage/fonts/Publico/publico-Black.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-display: swap;
+}
+
+.bold {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700 !important;
+}
+
+.semi-bold {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600 !important;
+}
+
+.light {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300 !important;
+}

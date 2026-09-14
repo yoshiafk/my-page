@@ -1,0 +1,134 @@
+.AgencyPortal-web {
+}
+      /* ERROR MODAL */
+      .error-modal__wrapper {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(223, 223, 223, 0.8);
+        width: 100%;
+        height: 100%;
+        font-family: SourceSans;
+      }
+
+      .error-modal__inner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 700px;
+        height: auto;
+        background-color: #ffffff;
+        padding: 30px 50px;
+        border-radius: 15px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+
+      .error-modal__body h3 {
+        font-size: 31px;
+        margin: 25px 0 40px 0;
+      }
+
+      .error-modal__button-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .error-modal__button-wrapper button {
+        padding: 12px 15px 10px 18px;
+        background-color: rgb(0 0 143);
+        border: none;
+        color: #ffffff;
+        border-radius: 3px;
+        margin: 0 15px;
+        letter-spacing: 1px;
+      }
+
+      /* SKELETON */
+      .skeleton {
+        -webkit-animation: skeleton-loading 1s linear infinite alternate;
+        animation: skeleton-loading 1s linear infinite alternate;
+      }
+
+      @-webkit-keyframes skeleton-loading {
+        0% {
+          background-color: #c2cfd6;
+        }
+        100% {
+          background-color: #f0f3f5;
+        }
+      }
+
+      @keyframes skeleton-loading {
+        0% {
+          background-color: #c2cfd6;
+        }
+        100% {
+          background-color: #f0f3f5;
+        }
+      }
+
+      .skeleton-text {
+        width: 100%;
+        height: 0.7rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.25rem;
+        display: inline-block;
+        margin: 0;
+      }
+
+      .skeleton-text-half {
+        width: 50%;
+        height: 0.7rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.25rem;
+        display: inline-block;
+        margin: 0;
+      }
+
+      .skeleton-text__body {
+        width: 75%;
+      }
+
+      .skeleton-footer {
+        width: 30%;
+      }
+
+      // aui:input type toggle-switch move label to left
+.leftToggleTitle {
+  .toggle-switch-label {
+    float: left;
+    margin-right: 15px;
+  }
+
+  label {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .toggle-switch-bar {
+    min-width: 100px;
+  }
+}
+
+// inactive status on list
+.table-list {
+  tbody {
+    .status-inactive {
+      font-style: italic;
+      color: #ccc;
+      text-decoration: line-through;
+
+      a {
+        font-style: italic;
+        color: #ccc;
+        text-decoration: line-through;
+      }
+    }
+  }
+}

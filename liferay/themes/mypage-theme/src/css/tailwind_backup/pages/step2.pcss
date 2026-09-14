@@ -1,0 +1,700 @@
+/* step 2 */
+
+.px-16level {
+  @apply px-[64px];
+}
+
+.px-8level {
+  @apply px-[32px];
+}
+
+.px-10level {
+  @apply px-[40px];
+}
+
+.pt-10level {
+  @apply pt-[40px];
+}
+
+.mt-5level {
+  @apply mt-[20px];
+}
+
+.my-3level {
+  @apply my-[12px];
+}
+
+.py-3level {
+  @apply py-[12px];
+}
+
+.py-5level {
+  @apply py-[20px];
+}
+
+.agency__text-lg {
+  @apply text-lg;
+}
+
+.agency__space-x-3 {
+  @apply space-x-3;
+}
+
+.agency__space-x-6 {
+  @apply space-x-6;
+}
+
+.agency__font-bold {
+  @apply font-bold;
+}
+
+.agency__text22px {
+  @apply text-[22px];
+}
+
+.agency__w-1per3 {
+  @apply w-1/3;
+}
+
+.mb-1level {
+  @apply mb-[4px];
+}
+
+.tab-content__step2 {
+  @apply block xl:flex xl:flex-row xl:gap-5 xl:justify-center;
+
+  & .col-tabstep2 {
+    @apply w-full xl:w-[60%] xl:last:w-[30%];
+  }
+}
+
+.panel-cover {
+  @apply bg-white border border-[#EEEEEE] px-6;
+}
+
+.text_discount {
+  @apply text-[32px] text-[#3A5E94] font-semibold;
+}
+
+.text_nondiscount {
+  @apply text-[16px] text-axa-blue-500 font-normal;
+}
+
+.text_promostrike {
+  @apply text-[16px] text-[#3A5E94] font-semibold;
+  text-decoration: line-through;
+}
+
+/*.banner__step2 {
+  @apply bg-axa-blue-500 px-28 py-6 text-white;
+}*/
+
+.input-group-step2 {
+  & button {
+    @apply p-[12px];
+    & svg {
+      @apply stroke-axa-blue-400;
+      transition: 0.4s all;
+    }
+    &:hover {
+      & svg {
+        @apply stroke-axa-sienna-400;
+      }
+    }
+  }
+}
+
+.sticky-collapse-promo-step2 {
+  & label {
+    @apply text-[#757575] block mb-2;
+  }
+}
+
+/* step bar */
+.stepper-wrapper {
+  @apply flex justify-between mb-5;
+  font-family: Arial;
+  width: 80%;
+  margin: 100px auto 0;
+}
+
+.stepper-item {
+  @apply relative flex flex-col items-center flex-1 before:absolute before:content-[""] before:w-full before:z-[2] before:border-b-2 before:border-b-[#ccc] before:border-solid before:-left-2/4 before:top-4 after:absolute after:content-[""] after:w-full after:z-[2] after:border-b-2 after:border-b-[#ccc] after:border-solid after:left-2/4 after:top-5 first:before:content-none last:after:content-none;
+}
+
+.stepper-item .step-counter {
+  @apply relative z-[5] flex justify-center items-center w-8 h-8 mb-1.5 rounded-[50%] text-white font-bold;
+  background: #4976ba; /* Blue background */
+}
+
+.stepper-item.active {
+  @apply font-bold text-axa-sienna-300; /* Menjadikan teks tebal dan merah gelap */
+}
+
+.stepper-item.completed {
+  @apply font-bold text-axa-bluesky-900; /* Menjadikan teks tebal dan warna axa blue sky */
+}
+
+.stepper-item:not(.active):not(.completed) {
+  @apply font-semibold text-gray-500; /* Semibold and gray */
+}
+
+.step-name {
+  @apply text-sm;
+}
+
+.stepper-item.completed .step-counter {
+  @apply text-axa-blue-500;
+  background: #4976ba; /* Tetap biru untuk bulatan completed */
+}
+
+.stepper-item::after {
+  @apply absolute content-[""] w-full z-[3] border-b-4 border-b-[#4976ba] border-solid left-2/4 top-4;
+}
+
+.step-counter {
+  @apply relative z-[5] flex justify-center items-center w-8 h-8 mb-1.5 rounded-full;
+  background: #4976ba; /* Blue background */
+}
+
+.step-counter::before {
+  @apply content-[""] -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4;
+  @apply absolute w-6 h-6 rounded-full;
+  background: #ffffff; /* White circle */
+}
+
+/* Mengubah bulatan putih menjadi merah untuk item yang aktif */
+.stepper-item.active .step-counter::before {
+  @apply bg-axa-sienna-300 border-2 border-white;
+}
+
+.stepper-item.completed .step-counter::before {
+  @apply bg-axa-blue-500 border-2 border-white;
+}
+
+@media (max-width: 640px) {
+  /* Mobile devices */
+  .step-name {
+    @apply text-[7px]; /* Make the text smaller on mobile devices */
+  }
+}
+
+@media (max-width: 400px) {
+  /* Mobile devices */
+  .step-name {
+    @apply text-[5px]; /* Make the text smaller on mobile devices */
+  }
+}
+
+/* end step bar */
+
+
+.hide__checkbox__step2 input[type="checkbox"] {
+  @apply h-0 w-0 invisible;
+}
+
+.hide__checkbox__step2 a {
+  @apply text-sm text-axa-sienna-300 underline cursor-pointer tracking-wide hover:text-axa-blue-400;
+}
+
+.tab-content__sm {
+  @apply mt-6 xl:mt-12;
+  & .tab-content__inner {
+    @apply block xl:flex xl:flex-row xl:gap-20;
+    & .col-tab {
+      @apply w-full xl:w-[20%] xl:last:w-[80%];
+    }
+  }
+  & .sticky-tab-pane {
+    @apply sticky top-8 xl:block;
+  }
+  & #select-anchor-wrapper {
+    @apply mb-6 xl:hidden;
+    & .select2-results__option--selectable {
+      @apply normal-case;
+    }
+    &
+      .select2-container--default
+      .select2-selection--single
+      .select2-selection__rendered {
+      @apply font-bold text-axa-blue-400;
+    }
+  }
+  & h1 {
+    @apply text-[30px] xl:text-[32px] text-center xl:text-left leading-none mb-8 xl:mb-10;
+  }
+  & h2 {
+    @apply text-[20px] xl:text-[22px] text-center xl:text-left leading-none mb-4 xl:mb-6;
+  }
+  & h3 {
+    @apply text-[15px] xl:text-[18px] text-center xl:text-left leading-none mb-4 xl:mb-6;
+  }
+  & .sitemap-tabs {
+    @apply pl-4 pb-3 border-b border-b-axa-blue-400 hidden xl:block;
+    & li {
+      @apply pl-4 mb-3 relative before:w-[16px] before:h-[16px] before:bg-[#D9D9D9] before:absolute before:left-[-16px] before:top-[5px];
+      &:before {
+        transition: 0.4s all;
+      }
+      & a {
+        @apply text-[18px] block font-semibold;
+      }
+      & span {
+        & a {
+          @apply font-normal pt-3 pl-8 pb-2;
+        }
+      }
+    }
+  }
+  & .tab-link-pane {
+    &.is-active,
+    &:hover {
+      @apply before:bg-axa-sienna-400;
+      & a {
+        @apply text-axa-sienna-400;
+      }
+    }
+  }
+  & .download-tab {
+    @apply mt-6 mb-10 xl:mb-0 xl:block;
+    & li {
+      @apply mb-4;
+    }
+    & a {
+      @apply relative text-[18px] text-axa-blue-400 font-semibold hover:text-axa-sienna-400 pl-8;
+      transition: 0.4s all;
+      &:before,
+      &:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 0px;
+        transition: 0.4s all;
+      }
+      &:before {
+        @apply bg-[url('../images/icon_download.svg')] bg-no-repeat bg-contain;
+      }
+      &:after {
+        @apply bg-[url('../images/icon_download_hover.svg')] bg-no-repeat bg-contain opacity-0 invisible;
+      }
+      & span {
+        @apply relative;
+        &:first-child {
+          @apply w-[20px];
+        }
+        &:last-child {
+          @apply w-[200px];
+        }
+      }
+
+      &:hover {
+        &:before {
+          @apply invisible opacity-0;
+        }
+        &:after {
+          @apply visible opacity-100;
+        }
+      }
+    }
+  }
+  & .smart-mediacare-inter__product {
+    @apply mb-10;
+    & .display-flex-responsive {
+      @apply block xl:flex;
+    }
+    & strong {
+      @apply text-[22px] mb-2 block;
+    }
+    & img {
+      @apply w-[200px] xl:w-[450px] m-[0px_auto_30px_auto] xl:m-[0px_auto_0px_auto];
+    }
+  }
+  & .smart-mediacare-inter__benefit {
+    @apply mb-14;
+    & .icon {
+      @apply w-[85px] h-[85px] inline-block;
+      &.guard-24 {
+        @apply bg-[url('../images/icon_sun-cream.svg')] bg-no-repeat bg-contain;
+      }
+    }
+    & .card-benefit-wrapper {
+      @apply max-w-[884px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5;
+      & .card-benefit {
+        @apply bg-white py-9 px-10;
+        & img {
+          @apply w-[100px] h-[100px] mx-auto block;
+        }
+        & h3 {
+          @apply text-[20px] text-[#1F1F9C] font-semibold mt-6 mb-2;
+        }
+        & p {
+          @apply text-[14px] text-[#757575];
+        }
+      }
+    }
+  }
+  & .smart-mediacare-inter__table {
+    @apply mb-14;
+    & .panel-table {
+      @apply bg-white border border-[#EEEEEE] mb-4;
+      & .panel-table-header {
+        @apply border-b border-[#EEEEEE] py-5 px-5;
+        & h4 {
+          @apply text-[26px] text-[#274168] font-semibold;
+        }
+      }
+      & .panel-table-body {
+        @apply p-5;
+      }
+    }
+    & table {
+      @apply w-full table table-auto lg:table-auto xl:table-fixed;
+      & thead {
+        & tr {
+          & td {
+            @apply font-bold uppercase text-axa-blue-400 tracking-[1px] p-4;
+            &:nth-child(1) {
+              @apply bg-white sticky left-0;
+            }
+          }
+        }
+      }
+      & tbody {
+        & tr {
+          & td {
+            @apply text-[#343C3D] py-2 px-4 tracking-[1.2px] first:tracking-normal uppercase;
+            &:nth-child(1) {
+              @apply bg-white sticky left-0 whitespace-normal normal-case;
+            }
+          }
+        }
+      }
+    }
+  }
+  & .smart-mediacare-inter__faq {
+    @apply mb-8;
+    & h1 {
+      @apply mb-8;
+    }
+    & p,
+    & ul {
+      @apply text-[#343C3D];
+    }
+    & ul {
+      @apply list-disc pl-4;
+      & li {
+        @apply pl-0;
+      }
+    }
+  }
+  & .smart-mediacare-inter__download {
+    & h1 {
+      @apply mb-6;
+    }
+    & .icon {
+      @apply w-[40px] h-[40px] inline-block;
+      &.file-pdf {
+        @apply bg-[url('../images/icon_pdf.png')] bg-no-repeat bg-contain bg-center;
+      }
+    }
+    & table {
+      @apply bg-white w-full table-auto xl:table-fixed;
+      & tbody {
+        & tr {
+          @apply border-y border-y-[#CCCCCC];
+          &:last-child {
+            @apply border-y border-y-transparent;
+          }
+        }
+        & td {
+          @apply text-black px-6 py-4;
+          & .btn {
+            @apply w-[125px] m-[0_0_0_auto];
+          }
+          &:nth-child(1) {
+            @apply w-[90px];
+          }
+          &:nth-child(3) {
+            @apply text-[#757575] text-right;
+          }
+        }
+      }
+    }
+  }
+
+  /* use in step3 html */
+  & .ispep {
+    @apply my-4 xl:my-8;
+    & .ispepYes {
+      @apply text-axa-sienna-400 text-[12px];
+    }
+    & .btn--white__step3 {
+      @apply relative inline-block text-axa-blue-500 uppercase font-semibold hover:bg-axa-blue-500 hover:text-white;
+      border-bottom: 2px solid #4976ba; /* Thicker underline */
+      padding-bottom: 1px; /* Space between text and underline */
+      font-size: 12px; /* Smaller text size */
+      letter-spacing: 1px;
+    }
+  }
+  & .form-column {
+    & label {
+      @apply text-[#757575] block mb-2;
+    }
+  }
+}
+
+
+.agency__max-w-60level {
+  @apply max-w-[240px];
+}
+
+.agency__w-1per2 {
+  @apply w-1/2;
+}
+
+/* ----------------------------------------- */
+
+/* end step2 */
+
+
+/* update */
+
+.banner__step2 {
+  @apply bg-axa-blue-500 px-6 md:px-28 py-4 md:py-6 text-white;
+}
+
+.download__icon a {
+  @apply relative text-[14px] md:text-[16px] text-white font-thin hover:text-axa-bluesky-900 pl-6 underline;
+  transition: 0.4s all;
+  margin-right: 0; /* Removed margin-right and adjusted via space-x-6 in the HTML */
+
+  &:before,
+  &:after {
+    content: "";
+    width: 14px; /* Adjust the width for smaller screens */
+    height: 14px; /* Adjust the height for smaller screens */
+    position: absolute;
+    left: 0;
+    top: 4px; /* Move the icon down slightly */
+    transition: 0.4s all;
+    filter: brightness(0) invert(1);
+  }
+
+  &:before {
+    @apply bg-[url('../../../images/icon_download.svg')] bg-no-repeat bg-contain;
+  }
+
+  &:after {
+    @apply bg-[url('../../../images/icon_download_hover.svg')] bg-no-repeat bg-contain opacity-0 invisible;
+  }
+
+  &:hover {
+    @apply font-bold;
+  }
+}
+
+
+.banner__panel {
+  /* Perbaiki nama kelas */
+  @apply flex flex-col md:flex-row justify-between space-y-4 md:space-y-0;
+}
+
+.banner__panel-inner {
+  @apply text-[22px] text-center md:text-left;
+}
+
+.banner__panel-item {
+  @apply flex justify-center md:justify-start space-x-6;
+}
+
+
+.ml-3level {
+ @apply ml-3;	
+}
+
+.cost-total-premi2 {
+@apply text-[#3A5E94] font-semibold text-[1rem] xl:text-[2rem];
+}
+
+
+
+/* toggle switch */
+
+.label_toggle {
+  @apply cursor-pointer indent-[-9999px] w-[32px] h-[16px] block relative rounded-full after:content-[''] after:absolute after:w-[14px] after:h-[14px] after:transition-[0.3s] after:rounded-full after:left-[1px] after:top-[1px] active:after:w-[24px];
+  background: grey;
+  top: 4px;
+}
+
+.label_toggle:after {
+  background: #fff;
+}
+
+input:checked + .label_toggle {
+  background: #00008f;
+}
+
+input:checked + .label_toggle:after {
+  @apply left-[calc(100%_-_1px)] -translate-x-full;
+}
+
+.toogle__row {
+  @apply flex flex-col md:flex-row justify-between my-3;
+}
+
+.toogle__row .display-flex {
+  @apply flex items-center flex-shrink-0;
+}
+
+.toogle__row-span-item {
+  @apply flex-1 ml-3 max-w-full md:max-w-[200px] text-sm md:text-base;
+}
+
+.toogle__row-span_cost {
+  @apply w-full md:w-[55%] flex justify-between mt-2 md:mt-0 text-axa-blue-500 text-sm md:text-base;
+}
+
+.cost-text {
+  @apply w-[70%] ml-[45px];
+}
+
+.penjelasan-link,
+.penjelasan-link-mobile {
+  @apply text-right;
+}
+
+.penjelasan-link-mobile {
+  @apply md:hidden;
+}
+
+.penjelasan-link {
+  @apply hidden md:block;
+}
+
+/* end toggle */
+
+
+/* additional */
+
+.simulasi__inner__step2 {
+  @apply bg-white;
+  & label {
+    @apply text-[#757575];
+  }
+  & .input-control-axa {
+    @apply text-axa-blue-300;
+  }
+  & .grid-radio {
+    @apply grid grid-cols-3 lg:grid-cols-[20%_20%];
+  }
+  & .calendar-wrapper {
+    @apply grid grid-cols-2;
+    & .daterangepicker {
+      @apply w-[260px];
+    }
+    & .drp-calendar {
+      &.left {
+        @apply mr-0 p-[5px]; /* Padding-left lebih kecil */
+      }
+    }
+    & #Fromtravel-wrapper {
+      & input {
+        @apply p-[14px_25px_14px_55px];
+        border-right: none;
+      }
+      & .label-text {
+        @apply left-[14px] translate-x-[2px] translate-y-[-50%];
+      }
+    }
+    & #Totravel-wrapper {
+      & .daterangepicker {
+        @apply !left-[10%] lg:!left-0 -translate-x-1/2 lg:-translate-x-0;
+      }
+      & input {
+        @apply p-[14px_25px_14px_50px];
+        border-left: none;
+      }
+      & .label-text {
+        @apply left-[14px] translate-x-[10px] translate-y-[-50%];
+      }
+    }
+    & .label-text {
+      @apply text-[#111B1D80] absolute;
+      top: 50%;
+    }
+    & .separated-arrow {
+      @apply absolute left-1/2 top-1/2 -translate-x-[188%] -translate-y-1/2 z-10;
+    }
+  }
+  & .form-radio-wrapper {
+    @apply grid grid-cols-2 lg:grid-cols-[130px_130px_130px] gap-3;
+  }
+  & .simulasi__inner--right {
+    & .select2-container--default {
+      & .select2-selection--single {
+        border: none;
+      }
+    }
+    & .input-grid {
+      @apply grid grid-cols-1 lg:grid-cols-2 gap-4;
+    }
+    & .select-input-wrapper {
+      @apply max-w-[530px];
+    }
+    & #select-adult-wrapper,
+    & #select-kid-wrapper {
+      @apply w-[178px];
+    }
+    & .grid-bottom {
+      @apply grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8;
+      & .btn {
+        & i {
+          @apply ml-2;
+        }
+      }
+    }
+    & p {
+      @apply text-[#757575] text-[14px];
+    }
+  }
+}
+
+.simulasi__inner--left-step2 {
+  @apply w-[70%];
+}
+
+.w-400px {
+	@apply w-[400px];
+}
+
+.w-90px {
+	@apply w-[90px];
+}
+
+.agency__text-axa-blue-500{
+	@apply text-axa-blue-500;
+}
+
+.mb-10level {
+	@apply mb-10;
+}
+
+.mr-8rem {
+	@apply mr-[8rem];
+}
+.mb-4level {
+	@apply mb-4;
+}
+
+.panel-main-benefit {
+	@apply p-[1.25rem];
+}
+
+.main-benefit-inner {
+  @apply grid grid-cols-2 gap-4 my-4 px-4;
+}
+
+.agency__col-span-1 {
+  @apply col-span-1;
+}

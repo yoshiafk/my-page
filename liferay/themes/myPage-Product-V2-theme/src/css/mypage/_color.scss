@@ -1,0 +1,13 @@
+@each $color,
+$value in $_colors {
+    .c-#{$color} {
+        @include color-variant($value);
+    }
+}
+
+@each $color,
+$value in $_colors {
+    .axa-#{$color} {
+        @include color-variant($value);
+    }
+}

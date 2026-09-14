@@ -1,0 +1,10 @@
+Bundle-Name: MypageUser-api
+Bundle-SymbolicName: com.mypage.user.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.mypage.user.exception,\
+	com.mypage.user.model,\
+	com.mypage.user.service,\
+	com.mypage.user.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../MypageUser-service/service.xml

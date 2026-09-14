@@ -1,0 +1,139 @@
+$_white: #ffffff;
+$_gray: #ededed;
+$_gray-100: #989898;
+$_gray-200: #333333;
+$_gray-300: #271010;
+$_gray-400: #cccccc;
+$_gray-500: #f5f5f5;
+$_gray-600: #d8d8d8;
+$_gray-700: #fafafa;
+$_gray-800: #999999;
+$_gray-900: #d4d4d4;
+$_gray-10: #eaeaea;
+$_gray-11: #f8f8f8;
+$_gray-12: rgba(204, 204, 204, 0.5);
+
+$_blue: #c8dcf4;
+$_blue-100: #183d6f;
+$_blue-200: #00008e;
+$_blue-300: #00005b;
+$_blue-400: #e9f1fb;
+$_blue-500: #00008f;
+$_blue-600: #0065ff;
+$_blue-700: #6c6cb3;
+$_blue-800: #00529b;
+$_blue-900: #688cc5;
+$_blue-1000: #4976ba;
+$_blue-1100: #4160bc;
+$_blue-1200: #4976BA;
+
+$_orange: #f07662;
+$_orange-100: #C05E4E;
+
+$_yellow: #fdb714;
+$_yellow-100: #ffd166;
+
+$_black: #333333;
+$_black-0: #000000;
+$_black-100: #404040;
+
+$_red: #eb4e4e;
+$_red-100: #ff0000;
+
+$_green: #00c432;
+$_green-100: #71c341;
+
+$_colors: () !default;
+$_colors: map-merge(("blue": $_blue,
+    "blue-100": $_blue-100,
+    "blue-200": $_blue-200,
+    "blue-300": $_blue-300,
+    "blue-400": $_blue-400,
+    'blue-500': $_blue-500,
+    'blue-600': $_blue-600,
+    'gray-100': $_gray-100,
+    'gray-200': $_gray-200,
+    'gray-300': $_gray-300,
+    'gray-400': $_gray-400,
+    'gray-500': $_gray-500,
+    'gray-700': $_gray-700,
+    'gray-800': $_gray-800,
+    'yellow': $_yellow,
+    'blue-1200': $_blue-1200,
+    'black-0': $_black-0,
+    'red': $_red,
+    'red-100': $_red-100,
+    'green': $_green,
+    'green-100': $_green-100,
+    'white': $_white,
+    '_orange': $_orange,
+  ),
+  $_colors);
+
+$_buttons: () !default;
+$_buttons: map-merge(('yellow': $_yellow,
+    'gray': $_gray-600,
+    'blue': $_blue-500,
+    'blue-600': $_blue-600,
+    'blue-1100': $_blue-1100,
+  ),
+  $_buttons);
+
+$_button-colors: () !default;
+$_button-colors: map-merge(('yellow': $_blue-100,
+    'blue': $_white,
+  ),
+  $_button-colors);
+
+$_font-family: 'Source Sans Pro';
+
+$_font-size: 14px;
+$_font-size-11: 11px;
+$_font-size-12: 12px;
+$_font-size-13: 13px;
+$_font-size-14: 14px;
+$_font-size-15: 15px;
+$_font-size-16: 16px;
+$_font-size-17: 17px;
+$_font-size-18: 18px;
+$_font-size-20: 20px;
+$_font-size-25: 25px;
+$_font-size-28: 28px;
+$_font-size-30: 30px;
+$_font-size-38: 38px;
+$_font-size-50: 50px;
+
+$_font-sizes: (11: $_font-size-11,
+  12: $_font-size-12,
+  13: $_font-size-13,
+  14: $_font-size-14,
+  15: $_font-size-15,
+  16: $_font-size-16,
+  17: $_font-size-17,
+  18: $_font-size-18,
+  20: $_font-size-20,
+  25: $_font-size-25,
+  28: $_font-size-28,
+  30: $_font-size-30,
+  38: $_font-size-38,
+  50: $_font-size-50,
+) !default;
+
+$_grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px) !default;
+
+$_margins: () !default;
+$_margins: map-merge((1: 10,
+    2: 15,
+    3: 20,
+    4: 25,
+    5: 30,
+    6: 40,
+    7: 50,
+    8: 60,
+    9: 70,
+  ),
+  $_margins);

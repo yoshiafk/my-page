@@ -1,0 +1,11 @@
+dependencies {
+	implementation project(":modules:MypageAdminProduct:MypageAdminProduct-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../MypageAdminProduct-api/src/main/java"
+}
+
+group = "com.mypage.admin.product"

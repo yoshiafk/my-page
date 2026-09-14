@@ -1,0 +1,27 @@
+@mixin btn-variant($background, $color, $hover-background: darken($background, 10%), $hover-border: darken($background, 10%), $hover-color: darken($color, 10%)) {
+  padding: 8px 26px;
+  border-radius: 3px;
+  background-color: $background;
+  color: $color;
+  border-color: $background;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  &.no-background {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: $background;
+    color: $background;
+  }
+
+  @include hover {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+  }
+
+  a {
+    color: $color;
+  }
+}

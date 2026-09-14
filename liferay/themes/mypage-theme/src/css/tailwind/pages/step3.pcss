@@ -1,0 +1,502 @@
+.ml-5level {
+  @apply ml-5;
+}
+
+.radio-group {
+  @apply mt-4;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Optional: Adjust gap between items */
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Optional: Adjust space between radio button and label */
+}
+
+.agency__flex-1 > div {
+  @apply mb-8;
+}
+
+
+.telepondiv {
+  @apply mt-[179px];
+}
+
+
+.alamatdiv {
+  @apply w-full mb-8;
+}
+
+.alamatdiv {
+  @apply mb-8;
+  & textarea {
+    @apply w-full h-24 p-3;
+  }
+}
+
+.passpordiv {
+  @apply mt-[203px];
+}
+
+.upload-container {
+}
+.thumbnail-wrapper {
+  @apply flex items-start;
+}
+.thumbnail-wrapper img {
+  @apply sm:mr-[50px] mr-[20px];
+}
+.thumbnail-wrapper button {
+  @apply h-[40px] w-[100px] bg-axa-grey-400 text-axa-grey-800 uppercase cursor-pointer flex items-center text-xs font-semibold justify-center p-[5px] border-[1px] border-solid border-black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.thumbnail-wrapper button {
+  @apply mt-[5px] hover:bg-axa-blue-300 hover:text-white;
+}
+
+/* .thumbnail {
+  @apply min-w-[220px] h-[130px] w-[220px] mb-[10px] rounded-lg sm:min-w-[160px] sm:h-[90px];
+}
+*/
+.thumbnail {
+  @apply min-w-[160px] h-[90px] w-[160px] mb-[10px] rounded-lg sm:min-w-[220px] sm:h-[130px];
+}
+
+
+
+/* .download__icon {
+  & a {
+    @apply relative text-[16px] text-white font-thin hover:text-axa-bluesky-900 pl-6 underline;
+    transition: 0.4s all;
+    margin-right: 10px; 
+
+    &:before,
+    &:after {
+      content: "";
+      width: 16px; 
+      height: 16px;
+      position: absolute;
+      left: 0;
+      top: 5px; 
+      transition: 0.4s all;
+      filter: brightness(0) invert(1); 
+    }
+
+    &:before {
+      @apply bg-[url('../images/icon_download.svg')] bg-no-repeat bg-contain;
+    }
+
+    &:after {
+      @apply bg-[url('../images/icon_download_hover.svg')] bg-no-repeat bg-contain opacity-0 invisible;
+    }
+
+    &:hover {
+      @apply font-bold; 
+    }
+  }
+} */
+
+
+.checkBoxSpanDataSamePolis {
+  @apply font-bold text-[14px] uppercase pl-3 text-[#757575];
+}
+
+.step3 .accordion-collapse {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.step3 .accordion-collapse.show {
+  height: auto;
+  opacity: 1;
+  display: block;
+}
+
+#custom-checkbox:checked + label div {
+  background-color: #4976ba;
+  border-color: #4976ba;
+}
+
+#custom-checkbox:checked + label div svg {
+  display: block;
+}
+
+/* additional */
+
+.agency__text-axa-sienna-400 {
+  @apply text-axa-sienna-400;
+}
+
+.agency__underline {
+  @apply underline;
+}
+
+.agency__italic {
+  @apply italic;
+}
+
+.agency__flex-wrap {
+  @apply flex-wrap;
+}
+
+.gap-4level {
+  @apply gap-4;
+}
+
+.agency__flex-1 {
+  @apply flex-1;
+}
+
+.agency__min-w-300px {
+  @apply min-w-[300px];
+}
+
+.agency__text-xs {
+  @apply text-xs;
+}
+
+.agency__space-x-4 {
+  @apply space-x-4;
+}
+
+.mt-10level {
+  @apply mt-10;
+}
+
+.agency__text-xl {
+  @apply text-xl;
+}
+
+.flex-justify-center {
+  @apply flex justify-center;
+}
+
+.agency__w-10__h-10 {
+  @apply w-10 h-10;
+}
+
+.agency__bg-axa-blue-400 {
+  @apply bg-axa-blue-400;
+}
+
+.pt-6level {
+  @apply pt-6;
+}
+
+.pb-4level {
+  @apply pb-4;
+}
+
+.agency__cursor-pointer {
+  @apply cursor-pointer;
+}
+
+.w-4level {
+  @apply w-4;
+}
+
+.h-4level {
+  @apply h-4;
+}
+
+.agency__border-border-gray-300 {
+  @apply border border-gray-300;
+}
+
+.agency__rounded-sm {
+  @apply rounded-sm;
+}
+
+.agency__justify-center {
+  @apply justify-center;
+}
+
+.mr-2level {
+  @apply mr-2;
+}
+
+.agency__text-axa-bluesky-900 {
+  @apply text-axa-bluesky-900;
+}
+
+.mt-2level {
+  @apply mt-2;
+}
+.mb-5level {
+  @apply mb-5;
+}
+
+.agency__min-w-140px {
+  @apply min-w-[140px];
+}
+
+.px-6level {
+  @apply px-6;
+}
+
+
+/* update */
+.ml-2level {
+  @apply ml-2;
+}
+
+.input-control-axa-tahun {
+  @apply border p-2;
+  padding-right: 40px;
+}
+
+.checkbox-container {
+  background-color: white;
+  cursor: pointer;
+}
+
+.checkbox-container.checked {
+  background-color: #003865; /* AXA Blue 900 */
+}
+
+.checkbox-container.checked svg {
+  display: block;
+}
+
+.input-group-axa__custome {
+  position: relative;
+}
+
+.font_tahun {
+  @apply text-[#757575] font-semibold pr-[12px] absolute right-2 flex items-center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.pb-2level {
+  @apply pb-2;
+}
+
+.mt-150px {
+	@apply mt-[150px];
+}
+
+.mt-152px {
+	@apply mt-[152px];
+}
+
+.agency__pointer {
+  @apply cursor-pointer;
+}
+
+.agency__min-w-220px {
+  @apply min-w-[220px];
+}
+
+.agency__rounded-4px{
+  @apply rounded-[4px];
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.divbutton-submit {
+    cursor: pointer;
+}
+
+.divbutton-submit:hover .btn__submit {
+    cursor: pointer;
+}
+
+
+
+/* FOR MODAL */
+
+.modal_penawaran-modal {
+  @apply hidden fixed z-[999] w-full h-full overflow-auto bg-[rgba(0,0,0,0.5)] pt-[60px] left-0 top-0;
+}
+
+.modal_penawaran-modal-content {
+  @apply bg-axa-blue-300 w-4/5 max-w-[500px] mx-auto my-[5%] p-5 border-solid font-light;
+}
+
+.modal_penawaran-close-btn {
+  @apply text-[#aaa] float-right text-[28px] font-[bold];
+}
+
+.modal_penawaran-close-btn:hover,
+.modal_penawaran-close-btn:focus {
+  @apply text-[black] no-underline cursor-pointer;
+}
+
+.modal_penawaran-form-group {
+  @apply mb-[15px];
+}
+
+.modal_penawaran-form-group label {
+  @apply block mb-[5px] text-white font-light;
+}
+
+.modal_penawaran-form-group input {
+  @apply w-full border border-solid bg-gray-200 p-3;
+}
+
+.modal_penawaran-items-center {
+  @apply flex justify-center mt-8;
+}
+
+.modal_penawaran-submit-btn {
+  @apply bg-axa-blue-300 text-[white] border cursor-pointer px-5 py-2.5 border-[none] hover:bg-axa-blue-100;
+}
+
+.modal_penawaran-open-btn {
+  @apply bg-[#008CBA] text-[white] rounded cursor-pointer px-5 py-2.5 border-[none] hover:bg-[#007bb5];
+}
+
+.modal_penawaran-text_header {
+  @apply text-white text-center mt-[40px] font-light;
+  font-family: 'Source Sans', sans-serif;
+  font-size: 22px;
+}
+
+
+.modal_penawaran-form-group label .modal_penawaran-text-red-500 {
+  @apply text-red-600;
+}
+
+.modal_penawaran-agency__text-red-500 {
+  @apply text-red-500;
+}
+
+.modal_penawaran-agency__text-amber-300 {
+  @apply text-amber-300;
+}
+
+
+/* untuk btn apply calendar bentrok warna denganstyle lain*/
+
+.btn-apply-ignore {
+    @apply bg-axa-blue-400 text-white;
+    background-color: rgb(0 0 143) !important; /* Gunakan `!important` untuk memastikan */
+    color: white !important;
+}
+
+
+
+/*MODAL BACA SELENGKAPNYA*/
+.modal_baca, .modal_alert {
+  @apply flex justify-center items-center fixed w-full h-full bg-[rgba(0,0,0,0.5)] z-[1000] left-0 top-0;
+}
+
+.agency__hidden {
+  @apply hidden;
+}
+
+.modal_baca-content, .modal_alert-content {
+  @apply relative w-[90%] max-h-[90vh] bg-[white] shadow-[0_4px_8px_rgba(0,0,0,0.2)] p-5;
+}
+
+.modal_baca-close-button, .modal_alert-close-button {
+  @apply absolute cursor-pointer right-6 top-2.5 text-axa-blue-400;
+  font-size: 2rem;
+  background: none;
+}
+
+
+.modal_baca-title h2, .modal_alert-title h2 {
+  @apply text-xl m-0;
+}
+
+.modal_baca-divider, .modal_alert-divider {
+  @apply mx-0 my-[15px] border-t-[#ddd] border-[none] border-t border-solid;
+}
+
+.modal_baca-body, .modal_alert-body {
+  @apply text-base max-h-[60vh] overflow-y-auto;
+}
+
+.modal_baca-list {
+  @apply list-disc mt-2.5 pl-5;
+}
+
+.modal_baca-list-item {
+  @apply mb-2;
+}
+
+
+/*MODAL ISPEP*/
+.ispep_modal {
+  @apply fixed flex justify-center items-center z-[1000] invisible opacity-0 inset-0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.ispep_modal.is-open {
+  @apply visible opacity-100;
+}
+.ispep_modal__inner {
+  @apply w-[400px] text-center;
+  background: white;
+}
+.ispep_modal__inner-header {
+  @apply mb-5 py-4 bg-axa-blue-500;
+}
+.ispep_modal__inner-header-inner i {
+  @apply text-white;
+  /* Color for the icon */
+}
+.ispep_modal__inner-content h1 {
+  @apply text-2xl mb-2.5;
+}
+.ispep_modal__inner-content p {
+  @apply text-base text-[#333] text-justify p-5;
+}
+.ispep_modal__inner-footer {
+  @apply my-5;
+}
+.ispep_modal__inner-footer-btn {
+  @apply bg-axa-sienna-300 text-[white] cursor-pointer text-base px-5 py-2.5 rounded-[5px] border-[none] hover:bg-axa-blue-300;
+  /* Button color */
+}
+.ispep_modal__inner-footer-btn:hover {
+  /* Darker shade on hover */
+}
+
+
+
+/*STYLE HANDLE RESPONSIVE MOBILE*/
+
+.mt-desktop-only__mt-321px {
+  margin-top: 321px;
+}
+
+.mt-desktop-only__mt-150px {
+  margin-top: 150px;
+}
+
+.cost-total-premiclamp {
+    font-size: clamp(14px, 2vw, 24px);
+    padding-left: 40px;
+}
+
+@media (max-width: 768px) {
+  
+  .mt-desktop-only__mt-321px {
+    margin-top: 0;
+  }
+  
+  .mt-desktop-only__mt-150px {
+    margin-top: 0;
+  }
+  
+  .telepondiv {
+    margin-top: 0;
+  }
+  
+  .cost-total-premiclamp {
+      font-size: 20px;
+      padding-left: 85px;
+    }
+  
+}

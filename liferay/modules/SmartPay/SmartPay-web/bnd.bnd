@@ -1,0 +1,4 @@
+Bundle-Name: SmartPay-web
+Bundle-SymbolicName: com.axa.payment
+Bundle-Version: 1.0.0
+Export-Package: com.axa.payment.constants

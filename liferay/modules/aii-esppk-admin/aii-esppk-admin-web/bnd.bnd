@@ -1,0 +1,4 @@
+Bundle-Name: aii-esppk-admin-web
+Bundle-SymbolicName: com.aii.esppk.admin
+Bundle-Version: 1.0.0
+Export-Package: com.aii.esppk.admin.constants

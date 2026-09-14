@@ -1,0 +1,14 @@
+Bundle-Name: MypageLeads-web
+Bundle-SymbolicName: com.mypage.leads
+Bundle-Version: 1.0.0
+Export-Package: com.mypage.leads.constants, com.mypage.leads.helper
+Import-Package: \
+	!*meta*,\
+	!*junit*,\
+	!*bouncycastle*,\
+	!*lowagie*,\
+	!*apache*,\
+	!*mozilla*,\
+	!*python*,\
+	!*zeroturnaround*,\
+	*

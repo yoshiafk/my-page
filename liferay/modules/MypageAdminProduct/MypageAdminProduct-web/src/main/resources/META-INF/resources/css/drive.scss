@@ -1,0 +1,10 @@
+table {
+&.table-list {
+td {
+&.status-inactive {
+	font-style: italic;
+	color: #ccc;
+	text-decoration: line-through;}
+}
+}
+}

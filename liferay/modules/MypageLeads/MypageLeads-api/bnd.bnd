@@ -1,0 +1,10 @@
+Bundle-Name: MypageLeads-api
+Bundle-SymbolicName: com.mypage.leads.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.mypage.leads.exception,\
+	com.mypage.leads.model,\
+	com.mypage.leads.service,\
+	com.mypage.leads.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../MypageLeads-service/service.xml

@@ -1,0 +1,15 @@
+Bundle-Name: SmartTravelInternational-web
+Bundle-SymbolicName: com.mypage.product.it
+Bundle-Version: 1.0.0
+Export-Package: com.mypage.product.it.constants, freemarker.*
+Import-Package: \
+	!*meta*,\
+	!*junit*,\
+	!*bouncycastle*,\
+	!*lowagie*,\
+	!*apache*,\
+	!*mozilla*,\
+	!*python*,\
+	!*zeroturnaround*,\
+	*
+

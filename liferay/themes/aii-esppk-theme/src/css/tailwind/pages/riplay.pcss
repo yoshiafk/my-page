@@ -1,0 +1,332 @@
+.esppk-agreement__left {
+  & .panel {
+    @apply mb-6;
+  }
+}
+
+.esppk-agreement {
+  @apply mt-0 mb-14 lg:mt-10;
+  & .agreement-grid {
+    @apply block lg:grid grid-cols-[1fr] lg:gap-5;
+  }
+  & .panel {
+    @apply bg-white lg:py-[40px] px-3 lg:px-8 xl:px-10 border border-[#EEEEEE];
+  }
+  & .panel .panel__heading h1 {
+    @apply text-[30px] mb-4;
+  }
+  & .panel .panel__body {
+    @apply leading-[28px] text-axa-grey-800;
+  }
+  & .panel .panel__body p > a {
+    @apply inline-block text-axa-blue-400 transition-all hover:text-axa-sienna-400 text-sm tracking-[1px] px-2 ml-1 uppercase before:w-full before:h-[2px] before:bg-axa-blue-400 before:absolute before:-bottom-2 before:left-0 before:right-0 hover:before:opacity-0 before:transition-all;      
+  }
+  & .panel .panel__body p > a > i {
+    @apply ml-2;
+  }
+}
+
+.esppk-agreement__left {
+  & .riplay {
+    @apply mt-6 mb-10;
+  }
+  & .riplay li {
+    @apply grid grid-cols-[1.5fr_2.3fr] xl:grid-cols-[1fr_2.8fr] gap-2 mb-1 last:mb-0;
+  }
+  & .riplay li span {
+    @apply first:font-semibold;
+  }
+  & #accordionRiplay {
+    & .accordion-item {
+      @apply last:border-b last:border-b-[#CCCCCC] border-y-0;
+    }
+    & .accordion-header {
+      @apply border-t border-t-[#CCCCCC];
+    }
+    & .esppk-accordion-button {
+      @apply bg-white text-axa-grey-800;
+    }
+    & .esppk-accordion-button[aria-expanded="false"] {
+      @apply border-b border-transparent;
+    }
+    & .esppk-accordion-button[aria-expanded="true"] {
+      @apply border-b border-b-[#CCCCCC];
+    }
+    & .esppk-accordion-button[aria-expanded="true"] .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+    & .esppk-accordion-body {
+      @apply bg-white;
+    }
+    & .esppk-accordion-body ul > li {
+      @apply border-t-0;
+    }
+    & .esppk-accordion-body .radio-wrapper {
+      @apply grid grid-cols-[100px_100px] gap-0 mt-6 mb-2;
+    }
+    & .esppk-accordion-body .radio-wrapper .esppk-radio-custom-wrapper {
+      @apply mt-0 mb-0;
+    }
+  }
+  & #accordionAgreement {
+    & .accordion-header {
+      @apply border-b border-b-[#CCCCCC];
+    }
+    & .esppk-checkbox-custom-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translate(80%, -58%);
+      z-index: 1;
+    }
+    & .btn-text {
+      @apply pl-8;
+    }
+    & .accordion-header {
+      @apply relative;
+    }
+    & .accordion-item {
+      @apply border-y-0;
+    }
+    & .esppk-accordion-button {
+      @apply bg-white text-axa-grey-800 flex gap-x-4 justify-between;
+    }
+    & .esppk-accordion-button .fa-chevron-down {
+      @apply mt-0 self-center text-right;
+    }
+    & .esppk-accordion-button[aria-expanded="true"] {
+      @apply bg-[#3A5E94] text-white;
+    }
+    & .esppk-accordion-button[aria-expanded="true"] .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+    & .esppk-accordion-body {
+      @apply border-b border-b-axa-sienna-400 text-[#343C3D] bg-[#EAF0FA] p-[25px_25px];
+    }
+    & .esppk-accordion-body p {
+      @apply text-[15px];
+    }
+    & .esppk-accordion-body ul {
+      @apply pl-4 list-disc;
+    }
+    & .esppk-accordion-body ul > li {
+      @apply border-t border-axa-grey-300;
+    }
+    & .esppk-accordion-body ol {
+      @apply pl-4 list-decimal;
+    }
+    & .esppk-accordion-body ol > li {
+      @apply mb-3;
+    }
+  }
+}
+
+.esppk-label {
+  @apply text-axa-grey-600 font-semibold;
+}
+
+.esppk-radio-custom-label,
+.esppk-checkbox-custom-label {
+  @apply text-[15px] cursor-pointer flex gap-x-2 self-center;
+}
+
+.esppk-checkbox-custom-wrapper input,
+.esppk-radio-custom-wrapper input {
+  @apply p-0 w-[initial] h-[initial] mb-0 opacity-0 cursor-pointer absolute;
+}
+
+.esppk-radio-custom-label,
+.esppk-checkbox-custom-label {
+  @apply text-[15px] cursor-pointer flex gap-x-2 self-center;
+}
+
+.esppk-checkbox-custom-wrapper span,
+.esppk-radio-custom-wrapper span {
+  @apply cursor-pointer leading-[25px];
+}
+
+.esppk-radio-custom-wrapper small {
+  @apply text-[#FF1721] text-[12px] leading-relaxed mt-1;
+}
+
+.esppk-checkbox-custom-wrapper label,
+.esppk-radio-custom-wrapper label {
+  @apply font-normal relative cursor-pointer;
+}
+
+.esppk-checkbox-custom-wrapper label span.checkbox-cloak:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.4s all;
+}
+
+.esppk-checkbox-custom-wrapper input:checked + label span.checkbox-cloak:before {
+  background-color: #00008f;
+  border: 1px solid #00008f;
+}
+
+.esppk-checkbox-custom-wrapper input:checked + label span.checkbox-cloak:after {
+  @apply top-[7px] lg:top-[6px];
+  content: "";
+  display: block;
+  position: absolute;
+  left: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.esppk-radio-custom-wrapper {
+  position: relative;
+}
+
+.esppk-radio-custom-wrapper label span.radio-cloak:before {
+  @apply top-0 lg:top-[3px] lg:mr-[5px] absolute lg:relative;
+  content: "";
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.4s all;
+  position: relative;
+}
+
+.esppk-radio-custom-wrapper input:checked + label span.radio-cloak:before {
+  background-color: #fff;
+  border: 1px solid #00008f;
+}
+
+.esppk-radio-custom-wrapper input + label span.radio-cloak:after {
+  content: "";
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s all;
+}
+
+.esppk-radio-custom-wrapper input:checked + label span.radio-cloak:after {
+  @apply top-[3px] lg:top-[6px];
+  content: "";
+  display: block;
+  background-color: #00008f;
+  position: absolute;
+  border-radius: 50%;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+}
+
+.esppk-checkbox-custom-wrapper span {
+  @apply ml-1;
+}
+
+.esppk-checkbox-custom-wrapper label {
+  @apply relative cursor-pointer;
+}
+
+.esppk-checkbox-custom-wrapper label span.checkbox-cloak:before {
+  content: "";
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  padding: 8px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.4s all;
+}
+
+.esppk-checkbox-custom-wrapper input:checked + label span.checkbox-cloak:before {
+  background-color: #00008f;
+  border: 1px solid #00008f;
+}
+
+.esppk-checkbox-custom-wrapper input:checked + label span.checkbox-cloak:after {
+  @apply top-[7px];
+  content: "";
+  display: block;
+  position: absolute;
+  left: 10px;
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.esppk-question-body {
+    & .radio-wrapper {
+        @apply grid grid-cols-[100px_100px] gap-0 !mt-6 !mb-6;
+        & .esppk-radio-custom-wrapper {
+            @apply mt-0 mb-0;
+        }
+    }
+}
+
+.esppk-accordion-body {
+  @apply text-[#343C3D] bg-[#EAF0FA] p-[25px_25px];
+}
+
+.esppk-accordion-body p {
+  @apply text-[15px];
+}
+
+.esppk-accordion-body ul {
+  @apply pl-4 list-disc;
+}
+
+.esppk-accordion-body ul > li {
+  @apply border-t border-axa-grey-300;
+}
+
+.esppk-accordion-body ol {
+  @apply pl-4 list-decimal;
+}
+
+.esppk-accordion-body ol > li {
+  @apply mb-3;
+}
+
+.esppk-accordion-button {
+  @apply bg-[#3A5E94] text-[13px] tracking-[1px] leading-relaxed text-white w-full text-left px-6 py-6 relative uppercase font-bold;
+  transition: 0.4s all;
+  overflow-anchor: none;
+  cursor: pointer;
+}
+
+.esppk-accordion-button .fa-chevron-down {
+    @apply right-8 text-[13px];
+    transition: transform 0.4s ease-in-out;
+    backface-visibility: hidden;
+    transform: rotate(0deg);
+    margin-top: 5px;
+}
+
+.esppk-accordion-button[aria-expanded="false"] {
+    @apply border-b border-b-white;
+}
+
+.esppk-accordion-button[aria-expanded="true"] {
+    @apply border-b border-b-axa-sienna-400;
+}
+
+.esppk-accordion-button[aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+}

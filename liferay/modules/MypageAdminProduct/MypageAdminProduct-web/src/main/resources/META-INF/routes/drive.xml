@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+ <!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 7.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_7_0_0.dtd">
+
+<routes>
+	<route>
+		<pattern>/configuration</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/configuration.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/bodyType</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/body_type/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/clause</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/clause/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/interest</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/interest/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/deductible</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/deductible/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/risk</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/risk/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/coverage</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/coverage/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/coverageRate</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/coverage_rate/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/coverageRateLiability</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/coverage_rate_liability/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/vehicle</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/vehicle/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/seat</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/seat/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/cubic</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/cubic/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/ageRate</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/age_rate/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/loadingCoverageType</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/loading_coverage_type/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/manufactureRate</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/manufacture_rate/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/motor</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/motor/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/rate</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/rate/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/model</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/model/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/ratePriority</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/rate_priority/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/region</pattern>
+		<implicit-parameter name="mvcPath">/product/drive/region/list.jsp</implicit-parameter>
+		<implicit-parameter name="p_p_state">maximized</implicit-parameter>
+	</route>	
+</routes>

@@ -1,0 +1,22 @@
+@mixin fonts-variant($fontName, $source, $format, $weight, $style) {
+    $_format: '';
+    @if $format == 'ttf' {
+        $_format: 'truetype';
+    } 
+    @else if $format == 'otf' {
+        $_format: 'OpenType';
+    }
+    @else if $format == 'woff' {
+        $_format: 'woff';
+    }
+    @else {
+        $_format: 'truetype';
+    }
+
+    @font-face {
+        font-family: $fontName;
+        src: url("/dist/fonts/#{$source}.#{$format}") format("#{$_format}");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}

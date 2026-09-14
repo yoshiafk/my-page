@@ -1,0 +1,76 @@
+#wrapper {
+   .main-content-card {
+    min-height: unset !important;
+  }
+}
+
+// inactive status on list
+.table-list {
+  tbody {
+    .status-inactive {
+      font-style: italic;
+      color: #ccc;
+      text-decoration: line-through;
+      
+      a {
+        font-style: italic;
+        color: #ccc;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+.lfr-input-date + .input-checkbox-wrapper{
+  display:none;
+}
+
+// aui:input type toggle-switch move label to left
+.leftToggleTitle {
+  .toggle-switch-label {
+    float: left;
+    margin-right: 15px;
+  }
+
+  label {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .toggle-switch-bar {
+    min-width: 100px;
+  }
+}
+
+// inactive status on list
+.table-list {
+  tbody {
+    .Inactive {
+      font-style: italic;
+      color: #ccc;
+      text-decoration: line-through;
+
+      a {
+        font-style: italic;
+        color: #ccc;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  .inline-scroller {
+    max-height: 500px;
+  }
+}
+
+.product-admin-editor-wrapper {
+  margin-bottom: 25px;
+  .alloy-editor-container {
+    .alloy-editor-wrapper {
+      padding: 15px 0;
+    }
+  }
+}

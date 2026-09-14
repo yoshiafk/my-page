@@ -1,0 +1,616 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.mypage.user" auto-namespace-tables="false">
+	<namespace>MPU</namespace>
+
+	<entity name="MypageUser" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="mypageUserId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        
+        <column name="liferayUserId" type="long"></column>
+        <column name="userPassword" type="String"></column>	
+        
+        <column name="agentFlag" type="String"></column>	
+        <column name="userParent" type="long"></column>	
+        <column name="userBranch" type="long"></column>
+        <column name="mypageUserRoleId" type="long"></column>	
+        <column name="status" type="String"></column>	
+        <column name="creditStatus" type="String"></column>	
+        <column name="creditWalletId" type="long"></column>
+        <column name="cashPayment" type="int"></column>
+        <column name="paymentMethod" type="String"></column>
+        
+        <column name="loginCounter" type="int"></column>
+        <column name="lastSubmitLoginDate" type="Date"></column>
+        <column name="TempCode" type="String"></column>
+        <column name="TempCodeExpiryDate" type="Date"></column>
+        
+        <column name="phone" type="String"></column>
+        <column name="mobilePhone" type="String"></column>
+        <column name="email" type="String"></column>
+        <column name="birthPlace" type="String"></column>
+        <column name="dob" type="Date"></column>
+        <column name="idNumber" type="String"></column>
+        <column name="address" type="String"></column>
+        <column name="zip" type="String"></column>
+        <column name="gender" type="String"></column>
+        <column name="country" type="long"></column>
+        <column name="province" type="long"></column>
+        <column name="city" type="long"></column>
+        <column name="latitude" type="String"></column>
+        <column name="longitude" type="String"></column>
+        <column name="positionZoom" type="int"></column>
+        
+        <column name="code" type="String"></column>
+        <column name="branch" type="long"></column>
+        <column name="promoCode" type="String"></column>
+        <column name="agsPromoCode" type="String"></column>
+        <column name="deptoreCode" type="String"></column>
+        <column name="club" type="String"></column>
+        <column name="leader" type="long"></column>
+        <column name="statusAgent" type="String"></column>
+        <column name="licenseNumber" type="String"></column>
+        <column name="joinDate" type="Date"></column>
+        <column name="endDate" type="Date"></column>
+        <column name="prettyUrl" type="String"></column>
+        <column name="prettyUrlChange" type="int"></column>
+        <column name="taxRate" type="double"></column>
+        <column name="visitedCount" type="int"></column>
+        <column name="isPartnership" type="int"></column>
+        <column name="partnershipName" type="String"></column>
+        <column name="defCommPartnerMV" type="double"></column>
+        <column name="defCommPartnerEH" type="double"></column>
+        <column name="defCommPartnerDT" type="double"></column>
+        <column name="defCommPartnerIT" type="double"></column>
+        <column name="defCommPartnerSME" type="double"></column>
+        <column name="defCommPartnerProperty" type="double"></column>
+        <column name="defCommPartnerPet" type="double"></column>
+        <column name="defCommPartnerPA" type="double"></column>
+        <column name="defCommPartnerGP" type="double"></column>
+        
+        <column name="bannerImageURL" type="String"></column>
+        <column name="bannerImageFileEntryId" type="Long"></column>
+        <column name="profileImageURL" type="String"></column>
+        <column name="profileImageFileEntryId" type="Long"></column>
+        
+        <column name="myTitle" type="String"></column>
+        <column name="myVideo" type="String"></column>
+        <column name="aboutMe" type="String"></column>
+        
+        <column name="facebook" type="String"></column>
+        <column name="tiktok" type="String"></column>
+        <column name="instagram" type="String"></column>
+        <column name="twitter" type="String"></column>
+        <column name="linkedIn" type="String"></column>
+        <column name="blog" type="String"></column>
+        
+        <column name="whatsapp" type="String"></column>
+        <column name="skype" type="String"></column>
+        
+        <column name="is24Hours" type="int"></column>
+        
+        <column name="active" type="int"></column>
+		
+		<finder name="getByLiferayUserId" return-type="MypageUser">
+            <finder-column name="liferayUserId" />
+        </finder>
+        
+        <finder name="creditWalletId" return-type="MypageUser" unique="true">
+			<finder-column name="creditWalletId" />
+		</finder>
+        <finder name="PrettyUrl" return-type="MypageUser">
+            <finder-column name="prettyUrl"></finder-column>
+        </finder>
+        <finder name="AgentCode" return-type="MypageUser">
+            <finder-column name="code"></finder-column>
+        </finder>
+        <finder name="EmailAddress" return-type="MypageUser">
+            <finder-column name="email"></finder-column>
+        </finder>
+        <finder name="DeptoreCode" return-type="MypageUser">
+            <finder-column name="deptoreCode"></finder-column>
+        </finder>
+        <finder name="RoleId" return-type="MypageUser">
+            <finder-column name="mypageUserRoleId"></finder-column>
+        </finder>
+	</entity>
+	
+	<entity name="MypageUserLicenses" local-service="true">
+		<column name="mypageUserLicensesId" primary="true"
+			type="long">
+		</column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<column name="mypageUserId" type="long"></column>
+		<column name="productId" type="long"></column>
+		
+		<finder name="getByMypageUserId" return-type="Collection">
+            <finder-column name="mypageUserId" />
+        </finder>
+	</entity>
+	
+	<entity name="MypageUserWorkingHour" local-service="true">
+		<!-- PK fields -->
+
+		<column name="mypageUserWorkingHourId" primary="true"
+			type="long">
+		</column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<column name="mypageUserId" type="long"></column>
+		<column name="day" type="String"></column>
+		<column name="startTime" type="String"></column>
+		<column name="endTime" type="String"></column>
+		<column name="status" type="int"></column>
+		
+		<finder name="getByMypageUserId" return-type="Collection">
+            <finder-column name="mypageUserId" />
+        </finder>
+	</entity>
+
+	
+	<entity name="MypageUserTimeline" local-service="true">
+		<!-- PK fields -->
+
+		<column name="mypageUserTimelineId" primary="true"
+			type="long">
+		</column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<column name="mypageUserId" type="long"></column>
+		<column name="imgUploadTimelineEntryId" type="long"></column>
+        <column name="imgUploadTimelineUrl" type="String"></column>
+        <column name="videoUploadTimelineUrl" type="String"></column>
+        
+		<column name="text" type="String"></column>
+     	<order>
+            <order-column name="createDate" order-by="desc"></order-column>
+        </order>
+		
+		<finder name="getByMypageUserId" return-type="Collection">
+            <finder-column name="mypageUserId" />
+        </finder> 
+        
+	</entity>
+		
+	<entity name="MypageUserGracePeriod" local-service="true">
+		<!-- PK fields -->
+
+		<column name="mypageUserGracePeriodId" primary="true"
+			type="long">
+		</column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<column name="mypageUserId" type="long"></column>
+		<column name="code" type="String"></column>
+		<column name="value" type="int"></column>
+		
+		<finder name="getByMypageUserId" return-type="Collection">
+            <finder-column name="mypageUserId" />
+        </finder>
+	</entity>
+	<entity name="CreditType" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="creditTypeId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<column name="mypageUserId" type="long"></column>
+		<column name="name" type="String"></column>
+		<column name="agentType" type="String"></column>
+		<column name="limit" type="double"></column>
+		<column name="overrideGracePeriod" type="int"></column>
+		<column name="nettPremiAllowed" type="int"></column>
+		<column name="active" type="int"></column>
+		
+		<finder name="getByMypageUserId" return-type="CreditType">
+            <finder-column name="mypageUserId" />
+        </finder>
+	</entity>
+	<entity name="CreditWallet" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="creditWalletId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<column name="creditTypeId" type="long"></column>
+		<column name="dateIssued" type="Date"></column>
+		<column name="dateExpired" type="Date"></column>
+		<column name="amount" type="double"></column>
+		<column name="active" type="int"></column>
+	</entity>
+	
+	<entity name="CreditWalletHistory" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="creditWalletHistoryId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<column name="mypageUserId" type="long"></column>
+		<column name="creditWalletId" type="long"></column>
+		<column name="leadsId" type="long"></column>
+		<column name="operation" type="String"></column>
+		<column name="amount" type="double"></column>
+		<column name="active" type="int"></column>
+		
+		<finder name="getCreditWalletId" return-type="Collection">
+            <finder-column name="creditWalletId" />
+        </finder>
+	</entity>
+
+    <entity name="UserRegistration" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="userRegistrationId" primary="true" type="long"></column>
+		<!-- Group instance -->
+
+		<!-- Audit fields -->
+		<column name="name" type="String"></column>
+		<column name="idNumber" type="String"></column>
+		<column name="licenseNumber" type="String"></column>
+		<column name="address" type="String"></column>
+		<column name="postalAddress" type="String"></column>
+		<column name="province" type="String"></column>
+		<column name="city" type="String"></column>
+		<column name="zip" type="String"></column>
+		<column name="phone" type="String"></column>
+		<column name="mobilePhone" type="String"></column>
+		<column name="email" type="String"></column>
+		<column name="birthPlace" type="String"></column>
+		<column name="dob" type="Date"></column>
+		<column name="gender" type="String"></column>
+		<column name="maritalStatus" type="String"></column>
+		<column name="residenceStatus" type="String"></column>
+		<column name="stayPeriod" type="int"></column>
+		<column name="knowAXAFrom" type="int"></column>
+		<column name="knowAXAFromOther" type="String"></column>
+		<column name="joinReason" type="String"></column>
+		<column name="bankName" type="String"></column>
+		<column name="bankAccountName" type="String"></column>
+		<column name="bankAccountNo" type="String"></column>
+		<column name="npwp" type="String"></column>
+		<column name="npwpName" type="String"></column>
+		<column name="portfolioFire" type="int"></column>
+		<column name="portfolioMotor" type="int"></column>
+		<column name="portfolioMarine" type="int"></column>
+		<column name="portfolioHealth" type="int"></column>
+		<column name="portfolioOther" type="int"></column>
+		<column name="targetFire" type="int"></column>
+		<column name="targetMotor" type="int"></column>
+		<column name="targetMarine" type="int"></column>
+		<column name="targetHealth" type="int"></column>
+		<column name="targetOther" type="int"></column>
+		<column name="annualPremiIncome" type="long"></column>
+		<column name="targetCase" type="int"></column>
+		<column name="targetPremi" type="long"></column>
+		<column name="prospectSource" type="String"></column>
+        <column name="otherInsuranceJob" type="int"></column>
+		<column name="tnc" type="int"></column>
+		<column name="agentAFI" type="int"></column>
+		<column name="sentToMAS" type="int"></column>
+		<column name="approved" type="int"></column>
+
+
+		<!-- Group instance -->
+        <column name="active" type="int"></column>
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+	<entity name="UserRegistrationLiability" local-service="true">
+
+		<column name="userRegistrationLiabilityId" primary="true" type="long">
+		</column>
+		<column name="name" type="String"></column>
+		<column name="relationship" type="String"></column>
+		<column name="age" type="int"></column>
+
+
+		<!-- PK fields -->
+
+		<!-- Group instance -->
+        <column name="userRegistrationId" type="long"></column>
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <finder name="UserRegistrationId" return-type="Collection">
+            <finder-column name="userRegistrationId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="UserRegistrationEducation" local-service="true">
+
+		<column name="userRegistrationEducationId" primary="true" type="long">
+		</column>
+		<column name="name" type="String"></column>
+		<column name="year" type="int"></column>
+		<column name="graduate" type="int"></column>
+		<column name="courseType" type="String"></column>
+		<column name="title" type="String"></column>
+        <column name="eduType" type="String"></column>
+
+
+		<!-- PK fields -->
+
+		<!-- Group instance -->
+        <column name="userRegistrationId" type="long"></column>
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <finder name="UserRegistrationId" return-type="Collection">
+            <finder-column name="userRegistrationId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="UserRegistrationJobExp" local-service="true">
+
+		<column name="userRegistrationJobExpId" primary="true" type="long">
+		</column>
+		<column name="name" type="String"></column>
+		<column name="year" type="int"></column>
+		<column name="jobHead" type="String"></column>
+		<column name="jobPosition" type="String"></column>
+		<column name="jobIncome" type="String"></column>
+		<column name="otherInsuranceCompany" type="int"></column>
+
+
+		<!-- PK fields -->
+
+		<!-- Group instance -->
+        <column name="userRegistrationId" type="long"></column>
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <finder name="UserRegistrationId" return-type="Collection">
+            <finder-column name="userRegistrationId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="UserRegistrationReference" local-service="true">
+
+		<column name="userRegistrationReferenceId" primary="true" type="long">
+		</column>
+		<column name="name" type="String"></column>
+		<column name="relation" type="String"></column>
+		<column name="age" type="int"></column>
+		<column name="address" type="String"></column>
+		<column name="phone" type="String"></column>
+		<column name="job" type="String"></column>
+		<column name="year" type="int"></column>
+
+
+		<!-- PK fields -->
+
+		<!-- Group instance -->
+        <column name="userRegistrationId" type="long"></column>
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <finder name="UserRegistrationId" return-type="Collection">
+            <finder-column name="userRegistrationId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="UserOneTimeCode" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="userOneTimeCodeId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="sharedSecret" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<column name="expiryDate" type="Date"></column>
+		<column name="TimestampExpiryDate" type="long"></column>
+		<column name="isUsed" type="int"></column>
+		<finder name="UserId" return-type="UserOneTimeCode">
+            <finder-column name="userId"></finder-column>
+        </finder>
+        <finder name="UserIdCollection" return-type="Collection">
+            <finder-column name="userId"></finder-column>
+        </finder>
+        <finder name="UserIdSecret" return-type="UserOneTimeCode">
+            <finder-column name="userId"></finder-column>
+            <finder-column name="sharedSecret"></finder-column>
+        </finder>
+	</entity>
+	<entity name="MypageUserRole" local-service="true">
+		<!-- PK fields -->
+
+		<column name="mypageUserRoleId" primary="true" type="long"></column>
+		<column name="name" type="String"></column>
+		<column name="active" type="int"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+	<entity name="MypageUserGroup" local-service="true">
+		<!-- PK fields -->
+
+		<column name="mypageUserGroupId" primary="true" type="long"></column>
+		<column name="name" type="String"></column>
+		<column name="active" type="int"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+	<entity name="MypageGroupUser" local-service="true">
+		<!-- PK fields -->
+
+		<column name="mypageGroupUserId" primary="true" type="long"></column>
+		<column name="mypageGroupId" type="long"></column>
+		<column name="mypageUserId" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<finder name="mypageGroupId" return-type="Collection">
+	        <finder-column name="mypageGroupId"></finder-column>
+	    </finder>
+	    <finder name="mypageUserId" return-type="Object">
+	        <finder-column name="mypageUserId"></finder-column>
+	    </finder>
+	</entity>
+</service-builder>
